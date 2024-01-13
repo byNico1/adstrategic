@@ -1,7 +1,6 @@
 import "styles/tailwind.css"
 import "styles/hero.css"
 import Image from "next/image"
-import MobileMenu from "./components/MobileMenu"
 import ShowModal from "./components/ShowModal"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
