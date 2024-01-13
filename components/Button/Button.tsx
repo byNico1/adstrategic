@@ -4,6 +4,7 @@ import { twMerge } from "tailwind-merge"
 
 const button = cva(
   [
+    "cursor-pointer",
     "justify-center",
     "inline-flex",
     "items-center",
@@ -33,15 +34,15 @@ const button = cva(
   }
 )
 
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLAnchorElement>, VariantProps<typeof button> {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof button> {
   underline?: boolean
-  href: string
+  href?: string
 }
 
 export function Button({ className, intent, size, underline, ...props }: ButtonProps) {
   return (
-    <a className={twMerge(button({ intent, size, className, underline }))} {...props}>
+    <button className={twMerge(button({ intent, size, className, underline }))} {...props}>
       {props.children}
-    </a>
+    </button>
   )
 }
