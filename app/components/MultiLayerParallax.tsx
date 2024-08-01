@@ -17,10 +17,10 @@ const MultiLayerParallax = () => {
   return (
     <section
       ref={ref}
-      className="relative grid h-screen place-items-center overflow-hidden px-4 py-16 pb-8 text-center"
+      className="relative grid h-screen place-items-center overflow-hidden px-4 py-28 pb-8 text-center sm:py-16"
     >
       <motion.div className="z-30 mx-auto place-self-center" style={{ y: textY }}>
-        <p className="mb-8 text-lg font-medium text-[#ffffff]">Effortless Business Growth</p>
+        <h1 className="mb-8 text-lg font-medium text-[#ffffff]">Adstrategic - Effortless Business Growth</h1>
 
         <Reveal>
           <h2 className="mb-8 max-w-2xl text-3xl font-extrabold !leading-tight tracking-wide text-white md:text-4xl xl:text-5xl">

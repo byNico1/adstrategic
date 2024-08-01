@@ -21,7 +21,7 @@ export const WelcomeEmail = ({ userFirstName }: WelcomeEmailProps) => (
         />
         <Text style={paragraph}>Hi {userFirstName},</Text>
         <Text style={paragraph}>
-          Welcome to Adstrategic, the tool to exponential growth on Internet, we will contact you as soon as possible to
+          Welcome to Adstrategic, the team to exponential growth on Internet, we will contact you as soon as possible to
           start the process.
         </Text>
         <Text style={paragraph}>

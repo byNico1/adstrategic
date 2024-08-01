@@ -10,7 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="absolute inset-x-0 top-0 z-30 flex items-center justify-around px-5 pt-10 text-white">
             <div className="z-30 flex items-center gap-5">
               <Image src="/adstrategic-180.png" width={180} height={180} alt="" className="h-16 w-16" />
-              <h2 className="hidden text-2xl font-semibold sm:inline">ADSTRATEGIC</h2>
+              <h2 className="hidden text-2xl font-semibold md:inline">ADSTRATEGIC</h2>
             </div>
             <div className="font-semiboldbold z-30 hidden items-center gap-5 sm:flex [&_p]:text-lg ">
               <a href="#about" className="  hover:cursor-pointer hover:border-b-2 hover:border-b-brand">
