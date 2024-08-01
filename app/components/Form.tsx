@@ -97,7 +97,7 @@ const Form = () => {
       ) : //* check if loadingState is either ready or loading
       loadingState === "loading" ? (
         <div className="mx-auto w-full max-w-xl rounded-md bg-white p-16">
-          <img className="mx-auto" width={200} height={200} src="/loading-spinner.gif" alt="" />
+          <img className="mx-auto" width={200} height={200} src="/assets/icons/loading-spinner.gif" alt="" />
         </div>
       ) : loadingState === "error" ? (
         <div className="mx-auto w-full max-w-xl rounded-md bg-white p-16 text-lg font-semibold">

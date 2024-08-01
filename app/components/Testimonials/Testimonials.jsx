@@ -1,12 +1,12 @@
 "use client"
 
+import Image from "next/image"
 import { EffectCoverflow, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { testimonials } from "app/utils/testimonials"
 import "swiper/css"
 import "swiper/css/pagination"
 import "./Testimonials.css"
-import Image from "next/image"
 
 const Testimonials = () => {
   return (
@@ -30,7 +30,13 @@ const Testimonials = () => {
         {testimonials.map((testimonial) => (
           <SwiperSlide key={testimonial.name}>
             <div className="relative flex min-h-[500px] w-full flex-col justify-around p-10 pt-24">
-              <img src="/quote.png" alt="" width={60} height={60} className="absolute right-8 top-5 opacity-20" />
+              <img
+                src="/assets/icons/quote.png"
+                alt=""
+                width={60}
+                height={60}
+                className="absolute right-8 top-5 opacity-20"
+              />
               <p>{testimonial.content}</p>
               <div className="mt-5 flex items-center">
                 <div className="relative mr-3 h-16 w-16 overflow-hidden rounded-full ">

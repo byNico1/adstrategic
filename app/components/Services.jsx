@@ -55,7 +55,7 @@ const Services = () => {
             <ul className="mb-10 text-gray-500">
               {services.list.map((service, i) => (
                 <li key={`${i}-${services.title}-${services.id}`} className="flex items-center justify-start gap-4">
-                  <img src="/check-svgrepo-com.svg" alt="" width={30} height={30} />
+                  <img src="/assets/icons/check-svgrepo-com.svg" alt="" width={30} height={30} />
                   <span className="font-semibold">{service}</span>
                 </li>
               ))}
