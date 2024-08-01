@@ -2,8 +2,8 @@
 
 import { motion, useScroll, useTransform } from "framer-motion"
 import React, { useRef } from "react"
-import ShowModal from "./Modal/ShowModal"
-import Reveal from "./Reveal"
+import ShowModal from "@/components/Modal/ShowModal"
+import Reveal from "@/components/Reveal"
 
 const MultiLayerParallax = () => {
   const ref = useRef(null)

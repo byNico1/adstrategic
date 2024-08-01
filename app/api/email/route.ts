@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server"
 import { Resend } from "resend"
 
-import NewUser from "app/components/Emails/NewUser"
-import WelcomeEmail from "app/components/Emails/Welcome"
+import NewUser from "@/components/Emails/NewUser"
+import WelcomeEmail from "@/components/Emails/Welcome"
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
