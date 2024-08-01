@@ -18,10 +18,17 @@ const Services = () => {
       title: "Pro Plan:",
       subtitle: "All You Need To Grow Your Business",
       highlight: "ASAP.",
-      list: ["Web Development", "Video Editing", "Social Media Ads", "Social Media Management"],
+      list: [
+        "Web Development",
+        "Video Editing",
+        "Social Media Ads",
+        "Social Media Management",
+        "Branding Services (coming soon)",
+      ],
     },
     {
-      title: "video-pro",
+      id: "video-pro",
+      title: "Video Pro",
       subtitle: "The Best Plan To Skyrocket Your Video Content To The Next",
       highlight: "LEVEL.",
       list: [
