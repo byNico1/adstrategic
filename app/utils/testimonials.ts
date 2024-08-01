@@ -8,21 +8,21 @@ export const testimonials: testimonial[] = [
   {
     name: "Harold and Vantroy",
     content: `Hiring Adstrategic for the production and editing of our videos at Arca Group was an excellent decision. Their quality and creativity have significantly expanded our reach. The attention to detail and professionalism of the team exceeded our expectations. We will definitely turn to them again.`,
-    image: "/person-1.jpg",
+    image: "/assets/people/person-1.jpg",
   },
   {
     name: "Edwin Renteria",
     content: `Adstrategic exceeded my expectations with their design and branding work for my luxury car wash company, "Edwin's Detaling" They created logos, banners, slogans, and digital business cards in an exceptional manner. I am very satisfied and will definitely hire them again.`,
-    image: "/person-2.jpg",
+    image: "/assets/people/person-2.jpg",
   },
   {
     name: "David Cruz",
     content: `Hiring Adstrategic was an exceptional decision for Casi's Shakers. Their web and graphic design, along with distinctive branding and impactful advertising strategies, have transformed our presence in the market. Their professionalism and attention to detail exceeded all our expectations. We will definitely work with them again.`,
-    image: "/person-3.jpg",
+    image: "/assets/people/person-3.jpg",
   },
   {
     name: "Alexander Reed",
     content: `Hiring Adstrategic for the design and branding of my air conditioning installation company was a wise decision. Their work on web and graphic design has elevated our professional image, and their approach to branding has been exceptional. Their attention to detail and creativity exceeded our expectations. We will definitely work with them again.`,
-    image: "/person-4.jpg",
+    image: "/assets/people/person-4.jpg",
   },
 ]
