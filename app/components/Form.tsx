@@ -27,23 +27,21 @@ const Form = () => {
 
     console.log(formData)
 
-    setTimeout(() => {
-      setLoadingState("ready")
-    }, 3000)
+    const data = await fetch("/api/email", {
+      method: "POST",
+      body: JSON.stringify({
+        userFirstName: formData.userFirstName,
+        userEmail: formData.userEmail,
+        userPhone: formData.userPhone,
+      }),
+    })
 
-    // const data = await fetch("/api/email", {
-    //   method: "POST",
-    //   body: JSON.stringify({
-    //     userFirstName: formData.userFirstName,
-    //     userEmail: formData.userEmail,
-    //     userPhone: formData.userPhone,
-    //   }),
-    // })
+    if (!data.ok) {
+      setLoadingState("error")
+      return
+    }
 
-    // if (!data.ok) {
-    //   setLoadingState("error")
-    //   return
-    // }
+    setLoadingState("ready")
   }
 
   return (

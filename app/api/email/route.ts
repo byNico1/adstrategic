@@ -35,7 +35,7 @@ export async function POST(request: Request) {
         react: WelcomeEmail({ userFirstName }),
       },
       {
-        from: "Adstrategic Website <adstrategicbusiness@gmail.com>",
+        from: "Adstrategic Website <adstrategicbusiness@adstrategic.org>",
         to: ["adstrategicbusiness@gmail.com"],
         subject: "New Adstrategic user has sent you an email",
         react: NewUser({ userFirstName, userEmail, userPhone }),
