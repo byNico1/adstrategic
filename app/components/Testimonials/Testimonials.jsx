@@ -10,7 +10,10 @@ import "./Testimonials.css"
 
 const Testimonials = () => {
   return (
-    <section className="gradient-bg relative flex items-center justify-center overflow-hidden py-20 sm:px-0">
+    <section
+      id="testimonials"
+      className="gradient-bg relative flex items-center justify-center overflow-hidden py-20 sm:px-0"
+    >
       <Swiper
         pagination={true}
         modules={[EffectCoverflow, Pagination]}

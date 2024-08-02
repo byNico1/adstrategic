@@ -1,6 +1,7 @@
 import "styles/tailwind.css"
 import "styles/hero.css"
 import Image from "next/image"
+import Footer from "@/components/Footer"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -29,9 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </header>
         {children}
-        <footer className="flex flex-col items-center justify-center gap-2 pb-10 pt-14">
-          <p>Adstrategic - &copy;2023 All Rights Reserved</p>
-        </footer>
+        <Footer />
       </body>
     </html>
   )
