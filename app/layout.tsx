@@ -1,3 +1,4 @@
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google"
 import "styles/tailwind.css"
 import "styles/hero.css"
 import Image from "next/image"
@@ -6,6 +7,7 @@ import Footer from "@/components/Footer"
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-K3RWQCCM" />
       <body>
         <header>
           <div className="absolute inset-x-0 top-0 z-30 flex items-center justify-around px-5 pt-10 text-white">
@@ -32,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Footer />
       </body>
+      <GoogleAnalytics gaId="GTM-K3RWQCCM" />
     </html>
   )
 }
