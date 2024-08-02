@@ -10,7 +10,7 @@ import Testimonials from "@/components/Testimonials/Testimonials"
 export const metadata: Metadata = {
   title: "Adstrategic - Effortless business growth",
   description:
-    "At Adstrategic, we specialize in transforming your online presence. Our expert team delivers top-notch video editing, comprehensive social media management, creative content creation, innovative software development, and targeted social media ads. Partner with us to elevate your brand and achieve your digital marketing goals.",
+    "At Adstrategic, we specialize in transforming your online presence. Our expert team delivers top-notch video editing, innovative software development, social media management and advertising.",
 }
 
 export default function Web() {
