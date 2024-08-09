@@ -24,6 +24,10 @@
     "coupling-graph": "npx madge --extensions js,jsx,ts,tsx,css,md,mdx ./ --exclude '.next|tailwind.config.js|reset.d.ts|prettier.config.js|postcss.config.js|playwright.config.ts|next.config.js|next-env.d.ts|instrumentation.ts|e2e/|README.md|.storybook/|.eslintrc.js' --image graph.svg"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^5.16.6",
+    "@mui/material": "^5.16.6",
     "@next/bundle-analyzer": "^14.0.3",
     "@next/third-parties": "^14.2.5",
     "@radix-ui/react-accordion": "^1.1.2",
@@ -52,6 +56,7 @@
     "@vercel/otel": "^0.3.0",
     "class-variance-authority": "^0.7.0",
     "framer-motion": "^10.18.0",
+    "highlight.js": "^11.10.0",
     "lodash": "^4.17.21",
     "next": "^14.0.3",
     "next-compose-plugins": "^2.2.1",
@@ -83,6 +88,7 @@
     "@storybook/react": "^7.5.3",
     "@storybook/test-runner": "^0.15.2",
     "@storybook/testing-library": "^0.2.2",
+    "@tailwindcss/typography": "^0.5.14",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.1.2",
     "@total-typescript/ts-reset": "^0.5.1",
