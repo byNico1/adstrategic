@@ -8,6 +8,7 @@ import Services from "@/components/Services"
 import Testimonials from "@/components/Testimonials/Testimonials"
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://adstrategic.org/"),
   title: "Adstrategic - Effortless business growth",
   description:
     "At Adstrategic, we specialize in transforming your online presence. Our expert team delivers top-notch video editing, innovative software development, social media management and advertising.",
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function Web() {
   return (
-    <>
+    <main>
       <MultiLayerParallax />
       <section className="mx-auto max-w-screen-xl px-4 py-16 sm:py-24 lg:px-6">
         <Reveal center>
@@ -23,7 +24,6 @@ export default function Web() {
             Who are <span className="text-brand">We</span>?
           </h2>
         </Reveal>
-
         <p className="mx-auto max-w-4xl text-center">
           We&apos;re an agency that grows businesses by delivering top-tier leads through strategic advertising on
           popular social media sites. Our targeted approach not only frees you up to concentrate on your work but also
@@ -31,10 +31,8 @@ export default function Web() {
           efficient.
         </p>
       </section>
-
       <Services />
-
-      <section className="mx-auto max-w-screen-xl px-4  py-16 sm:py-24 lg:px-6">
+      <section className="mx-auto max-w-screen-xl px-4 py-16 sm:py-24 lg:px-6">
         <Reveal center>
           <h2
             className="mb-8 text-center text-3xl font-extrabold !leading-tight md:text-4xl xl:mb-12 xl:text-5xl"
@@ -43,7 +41,6 @@ export default function Web() {
             Our <span className="text-brand">Process</span>?
           </h2>
         </Reveal>
-
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
           <div className="Card">
             <div className="flex flex-col justify-center gap-10 xl:flex-row xl:justify-start">
@@ -84,9 +81,7 @@ export default function Web() {
           </div>
         </div>
       </section>
-
       <Testimonials />
-
       <section id="info" className="relative grid min-h-[70vh] px-4 py-16 text-center sm:py-24">
         <Image
           alt=""
@@ -108,12 +103,10 @@ export default function Web() {
               Within 30 days
             </p>
           </Reveal>
-
           <Form />
         </div>
       </section>
-
       <Scroller />
-    </>
+    </main>
   )
 }
