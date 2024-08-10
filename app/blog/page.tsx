@@ -5,9 +5,7 @@ import Container from "@/components/Container/Container"
 import Reveal from "@/components/Reveal"
 import type { Post, QueryPostsList } from "@/types/posts"
 import { query } from "@/utils/hashnode"
-
-export const dynamic = "force-dynamic"
-
+import { unstable_noStore } from "next/cache"
 // fix image metadata
 
 export const metadata: Metadata = {
@@ -26,6 +24,8 @@ export const metadata: Metadata = {
 }
 
 export default async function Blog() {
+  unstable_noStore()
+
   const {
     data: { publication },
   } = (await query({
