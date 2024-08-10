@@ -6,6 +6,8 @@ import Reveal from "@/components/Reveal"
 import type { Post, QueryPostsList } from "@/types/posts"
 import { query } from "@/utils/hashnode"
 
+export const dynamic = "force-dynamic"
+
 // fix image metadata
 
 export const metadata: Metadata = {
