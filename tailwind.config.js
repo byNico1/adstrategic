@@ -5,7 +5,6 @@ const defaultTheme = require("tailwindcss/defaultTheme")
 module.exports = {
   darkMode: "class",
   content: [
-    "./node_modules/flowbite-react/lib/**/*.js",
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -40,6 +39,8 @@ module.exports = {
         },
       },
       fontFamily: {
+        roboto: ["var(--font-roboto)"],
+        inter: ["var(--font-inter)"],
         body: [
           "Inter",
           "ui-sans-serif",
