@@ -16,8 +16,8 @@ export async function query({ query, variables, tags }: Query) {
     }),
     next: {
       tags,
-      revalidate: 300,
     },
+    cache: "no-store",
   }).then((r) => r.json())
   return data
 }
