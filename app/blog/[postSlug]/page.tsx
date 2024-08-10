@@ -148,7 +148,7 @@ export default async function PostPage({ params }: PostParams) {
                 />
               </div>
               <article className="mx-auto w-full xl:order-1">
-                <h1 className="mb-8 text-4xl font-normal uppercase leading-none sm:text-6xl">{post.title}</h1>
+                <h1 className="font-roboto mb-8 text-5xl font-normal uppercase leading-none">{post.title}</h1>
                 <div className="mb-8 flex max-w-3xl items-center gap-4">
                   <Image
                     width="48"
