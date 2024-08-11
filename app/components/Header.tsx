@@ -40,7 +40,7 @@ export const Header = () => {
 
       <div className="flex h-full items-center justify-around px-5 backdrop-blur">
         <Link href={"/"} className="z-50 flex items-center gap-5">
-          <Image src="/adstrategic-180.png" width={180} height={180} alt="" className="h-10 w-10" />
+          <Image src="/adstrategic-180.png" width={180} height={180} alt="logo" className="h-10 w-10" />
           <h2 className="hidden text-2xl font-semibold sm:inline">ADSTRATEGIC</h2>
         </Link>
 
@@ -63,7 +63,10 @@ export const Header = () => {
           </div>
         </div>
         <div className="md:hidden">
-          <button onClick={handleClick}>{isOpened ? <CloseIcon /> : <MenuIcon />}</button>
+          <button aria-label="mobile-menu" onClick={handleClick}>
+            {isOpened ? <CloseIcon /> : <MenuIcon />}
+            <span className="sr-only">Mobile menu</span>
+          </button>
         </div>
       </div>
     </header>

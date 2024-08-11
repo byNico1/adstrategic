@@ -32,7 +32,7 @@ const Footer = () => {
         <div className="mt-8 flex justify-center space-x-6">
           <a
             href="https://www.facebook.com/profile.php?id=61555157255389"
-            className="text-gray-400 hover:text-gray-500"
+            className="text-gray-500 hover:text-gray-900"
           >
             <span className="sr-only">Facebook</span>
             <svg className="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
@@ -43,7 +43,7 @@ const Footer = () => {
               ></path>
             </svg>
           </a>
-          <a href="https://www.instagram.com/adstrategic.agency/" className="text-gray-400 hover:text-gray-500">
+          <a href="https://www.instagram.com/adstrategic.agency/" className="text-gray-500 hover:text-gray-900">
             <span className="sr-only">Instagram</span>
             <svg className="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -54,7 +54,7 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-        <p className="mt-8 text-center text-base leading-6 text-gray-400">
+        <p className="mt-8 text-center text-base leading-6 text-gray-500">
           © 2023 Adstrategic, Inc. All rights reserved.
         </p>
       </div>
