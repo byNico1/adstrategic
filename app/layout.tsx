@@ -23,6 +23,9 @@ const roboto = Roboto({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${roboto.variable} ${inter.className}`}>
+      <head>
+        <meta name="facebook-domain-verification" content="b59t0xdxprwjqsdk3808wfek478um5" />
+      </head>
       <GoogleTagManager gtmId="GTM-K3RWQCCM" />
       <body>
         <Header />
