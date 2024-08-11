@@ -9,10 +9,11 @@ export interface Post {
   author: {
     name: string
     profilePicture: string
-    socialMediaLinks: {
+    socialMediaLinks?: {
       twitter: string
     }
   }
+  readTimeInMinutes: string
   content: {
     html: string
   }
