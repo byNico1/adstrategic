@@ -7,8 +7,7 @@ import { BlogForm } from "@/components/Form"
 import MarkdownToHtml from "@/components/MarkdownToHtml"
 import Reveal from "@/components/Reveal"
 import { FacebookIcon, IGIcon } from "@/components/UI/Icons"
-import type { Post, QueryPostResult } from "@/types/posts"
-import { query } from "@/utils/hashnode"
+import { getPostBySlug } from "@/utils/posts"
 
 interface PostParams {
   params: {
@@ -16,51 +15,9 @@ interface PostParams {
   }
 }
 
-async function fetchPost({ params }: PostParams) {
-  const {
-    data: { publication },
-  } = (await query({
-    query: `
-    query($host: String!, $slug: String!) {
-      publication(host: $host) {
-        post(slug: $slug) {
-          seo {
-            title
-            description
-          }
-          ogMetaData {
-        image
-      }
-          author {
-            name
-            profilePicture
-            socialMediaLinks {
-              twitter
-            }
-          }
-          content {
-            html
-          }
-          coverImage {
-            url
-          }
-          id
-          publishedAt
-          title
-        }
-      }
-    }
-  `,
-    variables: {
-      host: "adstrategic.hashnode.dev",
-      slug: params.postSlug,
-    },
-  })) as QueryPostResult
-  return publication?.post as Post
-}
-
 export async function generateMetadata({ params }: PostParams): Promise<Metadata> {
-  const post = await fetchPost({ params })
+  const post = await getPostBySlug(params.postSlug)
+
   return {
     title: post.title,
     description: post?.seo?.description,
@@ -77,7 +34,7 @@ export async function generateMetadata({ params }: PostParams): Promise<Metadata
 }
 
 export default async function PostPage({ params }: PostParams) {
-  const post = await fetchPost({ params })
+  const post = await getPostBySlug(params.postSlug)
 
   return (
     <div className="">
@@ -128,7 +85,7 @@ export default async function PostPage({ params }: PostParams) {
                     Get 10 New Top-Tier Leads
                   </h2>
                   <Reveal center>
-                    <p className="max-w-2xl text-2xl font-extrabold !leading-tight tracking-wide text-brand md:text-3xl xl:text-4xl">
+                    <p className="max-w-2xl text-2xl font-extrabold !leading-tight tracking-wide text-[#4b9594] md:text-3xl xl:text-4xl">
                       Within 30 days
                     </p>
                   </Reveal>
@@ -148,25 +105,31 @@ export default async function PostPage({ params }: PostParams) {
                 />
               </div>
               <article className="mx-auto w-full xl:order-1">
-                <h1 className="font-roboto mb-8 text-5xl font-normal uppercase leading-none">{post.title}</h1>
-                <div className="mb-8 flex max-w-3xl items-center gap-4">
-                  <Image
-                    width="48"
-                    height="48"
-                    className="h-auto w-12 rounded-full"
-                    src={post.author.profilePicture}
-                    alt=""
-                  />
-                  <div>
+                <h1 className="mb-8 font-roboto text-3xl font-normal uppercase leading-none sm:text-5xl">
+                  {post.title}
+                </h1>
+                <div className="mb-8 flex w-full flex-row flex-wrap items-center justify-start gap-2">
+                  <div className="flex items-center gap-2">
+                    <Image
+                      width="48"
+                      height="48"
+                      className="h-auto w-12 rounded-full"
+                      src={post.author.profilePicture}
+                      alt=""
+                    />
                     <p className="mb-[.1rem] text-lg font-bold">{post.author.name}</p>
-                    <ul className="flex gap-3">
-                      <li className="text-sm">
-                        <a className="hover:text-blue-500 hover:underline" href={post.author.socialMediaLinks.twitter}>
-                          Twitter
-                        </a>
-                      </li>
-                    </ul>
                   </div>
+                  <span className="block font-bold">·</span>
+                  <time dateTime={`${new Date(post.publishedAt)}`}>
+                    {new Date(post.publishedAt).toLocaleDateString("en-us", {
+                      weekday: "long",
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
+                    })}
+                  </time>
+                  <span className="block font-bold">·</span>
+                  <p className="hover:underline">{post.readTimeInMinutes} min read</p>
                 </div>
                 <p className="mb-6 italic text-zinc-500">
                   Published on
