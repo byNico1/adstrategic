@@ -9,6 +9,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     query: `
     query($host: String!) {
       publication(host: $host) {
+        id
         posts(first: 10) {
           edges {
             node {
