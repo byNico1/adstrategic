@@ -97,11 +97,12 @@ export default async function PostPage({ params }: PostParams) {
             <div className="mx-auto mt-10 flex-1 px-4 sm:max-w-[80%] md:mt-0 md:max-w-[58%] md:flex-[0_0_58%]">
               <div className="mb-12 aspect-video overflow-hidden rounded xl:order-2">
                 <Image
-                  width="984"
-                  height="554"
+                  width="1080"
+                  height="720"
+                  priority
                   className="mb-6 h-auto w-full object-contain xl:mb-12"
                   src={post.coverImage.url}
-                  alt=""
+                  alt="cover"
                 />
               </div>
               <article className="mx-auto w-full xl:order-1">

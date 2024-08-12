@@ -1,35 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Post, QueryPostsList } from "@/types/posts"
-import { query } from "@/utils/hashnode"
+import { Post } from "@/types/posts"
+import { getListOfPosts } from "@/utils/posts"
 
 async function BlogList() {
-  const {
-    data: { publication },
-  } = (await query({
-    query: `
-    query ($host: String!) {
-      publication(host: $host) {
-        posts(first: 10) {
-         edges {
-            node {
-              coverImage {
-                url
-              }
-              id
-              publishedAt
-              slug
-              title
-            }
-          }
-        }
-      }
-    }
-  `,
-    variables: {
-      host: "adstrategic.hashnode.dev",
-    },
-  })) as QueryPostsList
+  const publication = await getListOfPosts()
 
   const posts: Array<Post> = publication.posts.edges.map(({ node }: { node: Post }) => node)
 
@@ -44,11 +19,13 @@ async function BlogList() {
             >
               <Link href={`/blog/${post.slug}`} className="mb-16 grid grid-cols-1 gap-8">
                 <Image
-                  width="600"
-                  height="400"
+                  width="640"
+                  height="427"
                   loading="eager"
                   className="rounded-lg border border-zinc-200 shadow-lg"
                   src={post.coverImage.url}
+                  quality={50}
+                  priority
                   alt=""
                 />
                 <div>

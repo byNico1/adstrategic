@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Learn and expand your Digital Marketing and Software Development knowledge with detailed tutoriales and examples.",
 }
 
-export default function Blog() {
+export default async function Blog() {
   return (
     <>
       <section className="mt-24">
