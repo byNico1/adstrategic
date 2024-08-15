@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 import Container from "@/components/Container/Container"
-import Form, { BlogForm } from "@/components/Form/Form"
+import Form from "@/components/Form/Form"
 import MarkdownToHtml from "@/components/MarkdownToHtml"
 import Reveal from "@/components/Reveal"
 import { FacebookIcon, IGIcon } from "@/components/UI/Icons"
