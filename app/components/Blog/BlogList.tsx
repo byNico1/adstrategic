@@ -3,13 +3,9 @@ import Link from "next/link"
 import { Post } from "@/types/posts"
 import { getListOfPosts } from "@/utils/posts"
 
-async function BlogList() {
-  const publication = await getListOfPosts()
-
-  const posts: Array<Post> = publication.posts.edges.map(({ node }: { node: Post }) => node)
-
+function RenderPosts({ posts }: { posts: Array<Post> }) {
   return (
-    <ul className="mx-auto mt-16 grid max-w-[26rem] grid-cols-1 gap-6 px-4 sm:mt-20 sm:max-w-[52.5rem] sm:grid-cols-2 sm:px-6 lg:max-w-7xl lg:grid-cols-3 lg:gap-y-8 lg:px-8 xl:gap-x-8">
+    <ul className="mx-auto mt-16 grid max-w-[26rem] grid-cols-1 gap-6 px-4 sm:max-w-[52.5rem] sm:grid-cols-2 sm:px-6 lg:max-w-7xl lg:grid-cols-3 lg:gap-y-8 lg:px-8 xl:gap-x-8">
       {posts.map((post) => {
         return (
           <>
@@ -50,4 +46,20 @@ async function BlogList() {
   )
 }
 
-export default BlogList
+export default async function BlogList() {
+  const publication = await getListOfPosts()
+
+  const posts: Array<Post> = publication.posts.edges.map(({ node }: { node: Post }) => node)
+
+  return <RenderPosts posts={posts} />
+}
+
+export async function LastThreePosts() {
+  const publication = await getListOfPosts()
+
+  const posts: Array<Post> = publication.posts.edges.map(({ node }: { node: Post }) => node)
+
+  console.log(posts)
+
+  return <RenderPosts posts={posts.slice(0, 3)} />
+}
