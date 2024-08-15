@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Modal from "./Modal"
 import { Button } from "../Button/Button"
-import Form from "../Form"
+import Form from "../Form/Form"
 
 const ShowModal = () => {
   const [modalState, setModalState] = useState(false)

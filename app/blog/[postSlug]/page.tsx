@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 import Container from "@/components/Container/Container"
-import { BlogForm } from "@/components/Form"
+import Form, { BlogForm } from "@/components/Form/Form"
 import MarkdownToHtml from "@/components/MarkdownToHtml"
 import Reveal from "@/components/Reveal"
 import { FacebookIcon, IGIcon } from "@/components/UI/Icons"
@@ -77,10 +77,9 @@ export default async function PostPage({ params }: PostParams) {
       <div className="mt-28">
         <Container>
           <div className="-mx-4 md:flex md:flex-row md:flex-wrap md:justify-between">
-            {/* fix width: */}
             <div className="mx-auto w-full flex-1 px-4 sm:max-w-[80%]">
-              <div className="sticky md:top-40 lg:top-44">
-                <div className="mx-auto rounded-md border border-black/10 p-5 text-center">
+              <div className="sticky rounded-md border border-cyan-900 md:top-40 md:max-h-[calc(100vh-200px)] md:overflow-y-scroll lg:top-44">
+                <div className="mx-auto p-5 pb-0 text-center">
                   <h2 className="mb-2 max-w-2xl text-2xl font-extrabold !leading-tight tracking-wide text-black md:text-3xl">
                     Get 10 New Top-Tier Leads
                   </h2>
@@ -89,7 +88,7 @@ export default async function PostPage({ params }: PostParams) {
                       Within 30 days
                     </p>
                   </Reveal>
-                  <BlogForm />
+                  <Form />
                 </div>
               </div>
             </div>

@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import React, { useRef } from "react"
 import ShowModal from "@/components/Modal/ShowModal"
 import Reveal from "@/components/Reveal"
+import { Button } from "./Button/Button"
 
 const MultiLayerParallax = () => {
   const ref = useRef(null)
@@ -34,7 +35,9 @@ const MultiLayerParallax = () => {
           For A <span className="text-brand underline">Limited Time</span> Only
         </p>
 
-        <ShowModal />
+        <Button>
+          <a href="#contact">Get started</a>
+        </Button>
       </motion.div>
 
       <motion.div
