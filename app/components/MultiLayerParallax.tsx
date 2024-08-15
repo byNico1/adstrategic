@@ -2,7 +2,6 @@
 
 import { motion, useScroll, useTransform } from "framer-motion"
 import React, { useRef } from "react"
-import ShowModal from "@/components/Modal/ShowModal"
 import Reveal from "@/components/Reveal"
 import { Button } from "./Button/Button"
 
