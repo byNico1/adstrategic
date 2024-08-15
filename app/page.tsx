@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 import Image from "next/image"
-import Form from "@/components/Form"
+import Form from "@/components/Form/Form"
 import MultiLayerParallax from "@/components/MultiLayerParallax"
 import Reveal from "@/components/Reveal"
 import Scroller from "@/components/Scroller"
@@ -82,7 +82,7 @@ export default function Web() {
         </div>
       </section>
       <Testimonials />
-      <section id="info" className="relative grid min-h-[70vh] px-4 py-16 text-center sm:py-24">
+      <section id="contact" className="relative grid min-h-[70vh] px-4 py-16 text-center sm:py-24">
         <Image
           alt=""
           fill
@@ -94,7 +94,7 @@ export default function Web() {
           className="hero z-10"
         />
         <div className="absolute inset-0 z-10 bg-[#000000c3]" />
-        <div className="z-10 mx-auto place-self-center" id="contact">
+        <div className="z-10 mx-auto place-self-center">
           <h2 className="mb-2 max-w-2xl text-3xl font-extrabold !leading-tight tracking-wide text-white md:text-4xl xl:text-5xl">
             Get 10 New Top-Tier Leads
           </h2>

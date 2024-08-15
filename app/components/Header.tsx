@@ -11,7 +11,6 @@ const LINKS = [
   { name: "Blog", url: "/blog" },
   { name: "About Us", url: "/#about" },
   { name: "Services", url: "/#services" },
-  { name: "Process", url: "/#process" },
   { name: "Contact", url: "/#contact" },
 ]
 
