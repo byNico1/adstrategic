@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { EffectCoverflow, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { testimonials } from "app/utils/testimonials"
+import { testimonials } from "@/utils/testimonials"
 import "swiper/css"
 import "swiper/css/pagination"
 import "./Testimonials.css"

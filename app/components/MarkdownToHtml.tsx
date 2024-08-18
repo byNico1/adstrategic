@@ -1,4 +1,4 @@
-import { Post } from "@/types/posts"
+import { Post } from "types/posts"
 import "highlight.js/styles/monokai.css"
 
 interface Props {
