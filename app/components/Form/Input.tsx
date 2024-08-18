@@ -2,8 +2,8 @@ import ErrorIcon from "@mui/icons-material/Error"
 import { AnimatePresence, motion } from "framer-motion"
 import { Control, Controller, useFormContext } from "react-hook-form"
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input"
-import { FormData } from "@/types/form"
 import { findInputError, isFormInvalid } from "@/utils/form"
+import { FormData } from "types/form"
 
 import "react-phone-number-input/style.css"
 
@@ -23,7 +23,7 @@ export const CustomPhoneInput = ({ control }: { control: Control<FormData> }) =>
 
   return (
     <div className="mb-4 flex flex-col items-start justify-center gap-4 [&>.PhoneInput]:w-full">
-      <div className="flex w-full flex-wrap justify-between ">
+      <div className="flex w-full flex-wrap items-center justify-between gap-2">
         <label className="block pr-4 text-left font-bold text-gray-500" htmlFor="userPhone">
           Phone Number
         </label>
@@ -65,7 +65,7 @@ export const Input = ({ label, type, id, placeholder }: Props) => {
 
   return (
     <div className="mb-4 flex flex-col items-start justify-center gap-4">
-      <div className="flex w-full flex-wrap justify-between">
+      <div className="flex w-full flex-wrap items-center justify-between gap-2">
         <label className="block pr-4 text-left font-bold text-gray-500" htmlFor={id}>
           {label}
         </label>
@@ -92,7 +92,7 @@ export const Input = ({ label, type, id, placeholder }: Props) => {
 export const InputError = ({ message }: { message: string }) => {
   return (
     <motion.p
-      className="flex items-center gap-1 rounded-md bg-red-100 px-2 font-semibold text-red-500"
+      className="flex items-center gap-1 rounded-md bg-red-100 p-2 font-semibold text-red-500"
       {...framer_error}
     >
       <ErrorIcon />

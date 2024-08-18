@@ -6,7 +6,8 @@ import React, { useState } from "react"
 import { FormProvider, useForm } from "react-hook-form"
 import { Button } from "@/components/Button/Button"
 import { CustomPhoneInput, Input } from "@/components/Form/Input"
-import { FormData, UserSchema } from "@/types/form"
+import triggerFormContact from "fbServices/sendDataToFB"
+import { FormData, UserSchema } from "types/form"
 
 const Form = () => {
   const methods = useForm<FormData>({ resolver: zodResolver(UserSchema) })
@@ -29,6 +30,8 @@ const Form = () => {
       setLoadingState("error")
       return
     }
+
+    triggerFormContact(data)
 
     setLoadingState("ready")
     router.push("/thank-you")
