@@ -15,26 +15,30 @@ const Form = () => {
   const router = useRouter()
 
   const onSubmit = methods.handleSubmit(async (data) => {
-    setLoadingState("loading")
+    try {
+      setLoadingState("loading")
 
-    const dataToSend = await fetch("/api/email", {
-      method: "POST",
-      body: JSON.stringify({
-        userFirstName: data.userFirstName,
-        userEmail: data.userEmail,
-        userPhone: data.userPhone,
-      }),
-    })
+      const dataToSend = await fetch("/api/email", {
+        method: "POST",
+        body: JSON.stringify({
+          userFirstName: data.userFirstName,
+          userEmail: data.userEmail,
+          userPhone: data.userPhone,
+        }),
+      })
 
-    if (!dataToSend.ok) {
+      if (!dataToSend.ok) {
+        throw new Error("Error fetching")
+      }
+
+      triggerFormContact(data)
+
+      setLoadingState("success")
+      router.push("/thank-you")
+    } catch (err) {
+      console.error(err)
       setLoadingState("error")
-      return
     }
-
-    triggerFormContact(data)
-
-    setLoadingState("ready")
-    router.push("/thank-you")
   })
 
   return (
@@ -62,11 +66,17 @@ const Form = () => {
         <div className="mx-auto w-full max-w-xl rounded-md bg-white p-16">
           <img className="mx-auto" width={200} height={200} src="/assets/icons/loading-spinner.gif" alt="" />
         </div>
+      ) : loadingState === "error" ? (
+        <div className="mx-auto w-full max-w-xl rounded-md bg-white p-16 text-lg font-semibold">
+          <p>There was an error</p>
+          <p>Try again.</p>
+        </div>
       ) : (
-        loadingState === "error" && (
-          <div className="mx-auto w-full max-w-xl rounded-md bg-white p-16 text-lg font-semibold">
-            <p>There was an error</p>
-            <p>Try again.</p>
+        loadingState === "success" && (
+          <div className="mx-auto w-full max-w-xl rounded-md bg-white p-16 text-center">
+            <p className="mb-8 text-green-900">Email Sent Succesfully</p>
+            <h1 className="mb-4 text-4xl font-extrabold ">Thank you for submitting our form</h1>
+            <p>We will contact you ASAP⚡.</p>
           </div>
         )
       )}
