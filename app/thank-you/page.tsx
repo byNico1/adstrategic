@@ -1,9 +1,16 @@
+import { Metadata } from "next"
 import Link from "next/link"
 import { Suspense } from "react"
 import { LastThreePosts } from "@/components/Blog/BlogList"
 import { Button } from "@/components/Button/Button"
 import LoadingSkeleton from "@/components/LoadingSkeleton"
 import Reveal from "@/components/Reveal"
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+  },
+}
 
 export default function ThankYou() {
   return (
