@@ -1,4 +1,4 @@
-import { Post, QueryPostResult, QueryPostsList } from "@/types/posts"
+import { Post, QueryPostResult, QueryPostsList } from "types/posts"
 import { query } from "./hashnode"
 
 export async function getPostBySlug(slug: string) {
