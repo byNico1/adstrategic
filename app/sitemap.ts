@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next"
-import { Post, QueryPostsList } from "@/types/posts"
 import { query } from "@/utils/hashnode"
+import { Post, QueryPostsList } from "types/posts"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const {
