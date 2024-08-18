@@ -78,13 +78,13 @@ export default async function PostPage({ params }: PostParams) {
         <Container>
           <div className="-mx-4 md:flex md:flex-row md:flex-wrap md:justify-between">
             <div className="mx-auto w-full flex-1 px-4 sm:max-w-[80%]">
-              <div className="sticky rounded-md border border-cyan-900 md:top-40 md:max-h-[calc(100vh-200px)] md:overflow-y-scroll lg:top-44">
-                <div className="mx-auto p-5 pb-0 text-center">
-                  <h2 className="mb-2 max-w-2xl text-2xl font-extrabold !leading-tight tracking-wide text-black md:text-3xl">
+              <div className="sticky rounded-md border border-cyan-900 md:top-40 md:max-h-[calc(100vh-250px)] md:overflow-y-scroll lg:top-44">
+                <div className="mx-auto px-5 pb-0 pt-8 text-center">
+                  <h2 className="mb-2 max-w-2xl text-2xl font-extrabold !leading-tight tracking-wide text-black lg:text-3xl">
                     Get 10 New Top-Tier Leads
                   </h2>
                   <Reveal center>
-                    <p className="max-w-2xl text-2xl font-extrabold !leading-tight tracking-wide text-[#4b9594] md:text-3xl xl:text-4xl">
+                    <p className="max-w-2xl text-2xl font-extrabold !leading-tight tracking-wide text-[#4b9594] lg:text-4xl">
                       Within 30 days
                     </p>
                   </Reveal>
