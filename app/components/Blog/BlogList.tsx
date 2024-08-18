@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Post } from "@/types/posts"
 import { getListOfPosts } from "@/utils/posts"
+import { Post } from "types/posts"
 
 function RenderPosts({ posts }: { posts: Array<Post> }) {
   return (
@@ -58,8 +58,6 @@ export async function LastThreePosts() {
   const publication = await getListOfPosts()
 
   const posts: Array<Post> = publication.posts.edges.map(({ node }: { node: Post }) => node)
-
-  console.log(posts)
 
   return <RenderPosts posts={posts.slice(0, 3)} />
 }
