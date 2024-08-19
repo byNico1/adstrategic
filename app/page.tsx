@@ -18,9 +18,9 @@ export default function Web() {
   return (
     <main>
       <MultiLayerParallax />
-      <section className="mx-auto max-w-screen-xl px-4 py-16 sm:py-24 lg:px-6">
+      <section className="mx-auto max-w-screen-xl px-4 py-16 sm:py-24 lg:px-6" id="about">
         <Reveal center>
-          <h2 className="mb-4 text-center text-3xl font-extrabold !leading-tight md:text-4xl xl:text-5xl" id="about">
+          <h2 className="mb-4 text-center text-3xl font-extrabold !leading-tight md:text-4xl xl:text-5xl">
             Who are <span className="text-brand">We</span>?
           </h2>
         </Reveal>
@@ -32,12 +32,9 @@ export default function Web() {
         </p>
       </section>
       <Services />
-      <section className="mx-auto max-w-screen-xl px-4 py-16 sm:py-24 lg:px-6">
+      <section className="mx-auto max-w-screen-xl px-4 py-16 sm:py-24 lg:px-6" id="process">
         <Reveal center>
-          <h2
-            className="mb-8 text-center text-3xl font-extrabold !leading-tight md:text-4xl xl:mb-12 xl:text-5xl"
-            id="process"
-          >
+          <h2 className="mb-8 text-center text-3xl font-extrabold !leading-tight md:text-4xl xl:mb-12 xl:text-5xl">
             Our <span className="text-brand">Process</span>?
           </h2>
         </Reveal>

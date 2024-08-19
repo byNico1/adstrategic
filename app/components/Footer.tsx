@@ -1,33 +1,26 @@
+import Link from "next/link"
+
+const LINKS = [
+  { name: "Blog", url: "/blog" },
+  { name: "About Us", url: "/#about" },
+  { name: "Process", url: "/#process" },
+  { name: "Services", url: "/#services" },
+  { name: "Testimonials", url: "/#testimonials" },
+  { name: "Contact", url: "/#contact" },
+]
+
 const Footer = () => {
   return (
     <footer className="bg-white">
       <div className="mx-auto max-w-screen-xl space-y-8 overflow-hidden px-4 py-12 sm:px-6 lg:px-8">
         <nav className="-mx-5 -my-2 flex flex-wrap justify-center">
-          <div className="px-5 py-2">
-            <a href="#about" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-              About
-            </a>
-          </div>
-          <div className="px-5 py-2">
-            <a href="#services" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-              Services
-            </a>
-          </div>
-          <div className="px-5 py-2">
-            <a href="#process" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-              Process
-            </a>
-          </div>
-          <div className="px-5 py-2">
-            <a href="#testimonials" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-              Testimonials
-            </a>
-          </div>
-          <div className="px-5 py-2">
-            <a href="#contact" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-              Contact
-            </a>
-          </div>
+          {LINKS.map((link) => (
+            <div key={`footer-${link.name}`} className="px-5 py-2">
+              <Link href={link.url} className="text-base leading-6 text-gray-500 hover:text-gray-900">
+                {link.name}
+              </Link>
+            </div>
+          ))}
         </nav>
         <div className="mt-8 flex justify-center space-x-6">
           <a

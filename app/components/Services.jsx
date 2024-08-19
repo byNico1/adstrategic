@@ -42,10 +42,8 @@ const Services = () => {
   ]
 
   return (
-    <div className="bg-blue-50 px-6 py-16 sm:py-24">
-      <h2 id="services" className="mb-14 text-center text-3xl font-semibold">
-        Services:
-      </h2>
+    <div className="bg-blue-50 px-6 py-16 sm:py-24" id="services">
+      <h2 className="mb-14 text-center text-3xl font-semibold">Services:</h2>
 
       <div className="mx-auto grid max-w-6xl grid-cols-[repeat(auto-fit,minmax(300px,_1fr))] justify-center gap-12 ">
         {servicesPlans.map((services) => (
