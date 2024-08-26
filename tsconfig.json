@@ -19,17 +19,30 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["app/components/*"],
-      "@/utils/*": ["utils/*"],
-      "@/types/*": ["types/*"]
+      "@/components/*": ["src/components/*"],
+      "@/home/*": ["src/components/Home/*"],
+      "@/styles/*": ["src/styles/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/types/*": ["src/types/*"],
+      "@/shadcn/*": ["src/components/ui/*"],
+      "@/fb/*": ["src/fbServices/*"],
+      "@/src/*": ["src/*"]
     },
-    "types": ["node", "jest", "@testing-library/jest-dom"],
+    "types": ["node"],
     "plugins": [
       {
         "name": "next"
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.mjs", "jest.config.js", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.mjs",
+    "jest.config.js",
+    ".next/types/**/*.ts",
+    "next.config.mjs"
+  ],
   "exclude": ["node_modules"]
 }

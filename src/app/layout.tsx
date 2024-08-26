@@ -1,0 +1,41 @@
+import { GoogleTagManager } from "@next/third-parties/google"
+import { Inter, Roboto } from "next/font/google"
+import "@/styles/tailwind.css"
+import "@/styles/hero.css"
+import Footer from "@/components/Footer"
+import Header from "@/components/Header"
+
+import { ThemeProvider } from "@/components/theme-provider"
+
+const inter = Inter({
+  weight: ["400", "500", "600", "700", "900"],
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+  adjustFontFallback: false,
+})
+
+const roboto = Roboto({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-roboto",
+  display: "swap",
+})
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" suppressHydrationWarning className={`${roboto.variable} ${inter.className}`}>
+      <head>
+        <meta name="facebook-domain-verification" content="b59t0xdxprwjqsdk3808wfek478um5" />
+      </head>
+      <GoogleTagManager gtmId="GTM-K3RWQCCM" />
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Header />
+          {children}
+        </ThemeProvider>
+        <Footer />
+      </body>
+    </html>
+  )
+}
