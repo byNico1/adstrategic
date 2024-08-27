@@ -57,6 +57,7 @@ const Services = () => {
             key={services.id}
             title={services.title}
             description={services.subtitle}
+            highlight={services.highlight}
           >
             <div className="relative z-20 mt-4 text-cyan-800 dark:text-muted-foreground">
               <Button className="mb-4 w-full">

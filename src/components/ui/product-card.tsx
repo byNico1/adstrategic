@@ -11,17 +11,20 @@ interface Props {
   title: string
   description: string
   children: React.ReactNode
+  highlight: string
   className?: string
 }
 
-export default function CardDemo({ title, description, children, className }: Props) {
+export default function CardDemo({ title, description, children, className, highlight }: Props) {
   return (
     <Card className={className}>
       <CardSkeletonContainer>
         <Skeleton title={title} />
       </CardSkeletonContainer>
       <CardTitle>{title}</CardTitle>
-      <CardDescription>{description}</CardDescription>
+      <CardDescription>
+        {description} <strong>{highlight}</strong>
+      </CardDescription>
       {children}
     </Card>
   )
