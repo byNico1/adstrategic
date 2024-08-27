@@ -14,7 +14,7 @@ const CarouselPrevious = dynamic(() => import("@/components/ui/carousel").then((
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="overflow-hidden py-10">
+    <section id="testimonials" className="overflow-hidden py-16 sm:py-24">
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -42,7 +42,7 @@ const Testimonials = () => {
                   <div className="mt-5 flex items-center gap-3 text-center">
                     <Image
                       className="aspect-square h-16 w-16 rounded-full object-cover"
-                      quality={60}
+                      quality={90}
                       src={testimonial.image}
                       alt=""
                       width={60}

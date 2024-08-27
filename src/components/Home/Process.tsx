@@ -4,7 +4,7 @@ import AnimateInView from "@/components/Animations/AnimateInView"
 
 export default function Process() {
   return (
-    <section className="mx-auto max-w-screen-xl px-4 py-16 sm:py-24 lg:px-6" id="process">
+    <section className="mx-auto max-w-screen-xl px-4 pt-16 sm:pt-24 lg:px-6" id="process">
       <AnimateInView givenDelay={0.05} stackIndex={1}>
         <h2 className="mb-8 text-center text-3xl font-extrabold !leading-tight md:text-4xl xl:mb-12 xl:text-5xl">
           Our <span className="text-brand">Process</span>?
