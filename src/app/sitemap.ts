@@ -1,32 +1,34 @@
 import { MetadataRoute } from "next"
-import { Post, QueryPostsList } from "@/types/posts"
-import { query } from "@/utils/hashnode"
+import { Post } from "@/types/posts"
+import { getListOfPosts } from "@/utils/posts"
+
+const MAX_POSTS = 1000
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const {
-    data: { publication },
-  } = (await query({
-    query: `
-    query($host: String!) {
-      publication(host: $host) {
-        id
-        posts(first: 10) {
-          edges {
-            node {
-              slug
-              publishedAt
-            }
-          }
-        }
-      }
-    }
-  `,
-    variables: {
-      host: "adstrategic.hashnode.dev",
-    },
-  })) as QueryPostsList
+  const publication = await getListOfPosts({ endData: null })
 
   const posts: Array<Post> = publication.posts.edges.map(({ node }) => node)
+
+  const initialPageInfo = publication.posts.pageInfo
+  const fetchPosts = async (after: string | null) => {
+    const publication = await getListOfPosts({ endData: after })
+
+    if (!publication) {
+      return
+    }
+    const pageInfo = publication.posts.pageInfo
+
+    posts.push(...publication.posts.edges.map((edge) => edge.node))
+
+    if (pageInfo.hasNextPage && posts.length < MAX_POSTS) {
+      await fetchPosts(pageInfo.endCursor)
+    }
+  }
+
+  if (initialPageInfo.hasNextPage) {
+    await fetchPosts(initialPageInfo.endCursor)
+  }
+
   const postEntries: MetadataRoute.Sitemap = posts.map(({ slug, publishedAt }) => ({
     url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${slug}`,
     lastModified: new Date(Date.parse(publishedAt)),

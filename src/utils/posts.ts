@@ -46,32 +46,37 @@ export async function getPostBySlug(slug: string) {
   return publication?.post as Post
 }
 
-export async function getListOfPosts() {
+export async function getListOfPosts({ endData }: { endData: string | null }) {
   const {
     data: { publication },
   } = (await query({
     query: `
-    query ($host: String!) {
+    query ($host: String!, $endData: String) {
       publication(host: $host) {
         id
-        posts(first: 10) {
-         edges {
-            node {
-              coverImage {
-                url
-              }
-              id
-              publishedAt
-              slug
-              title
+        posts(first: 10, after: $endData) {
+        edges {
+          node {
+            coverImage {
+              url
             }
+            id
+            publishedAt
+            slug
+            title
           }
+        }
+        pageInfo {
+          endCursor
+          hasNextPage
         }
       }
     }
+  }
   `,
     variables: {
       host: "adstrategic.hashnode.dev",
+      endData,
     },
   })) as QueryPostsList
 

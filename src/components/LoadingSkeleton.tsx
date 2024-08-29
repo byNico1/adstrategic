@@ -1,5 +1,3 @@
-import React from "react"
-
 export default function LoadingSkeleton() {
   return (
     <div className="mb-16 mt-28 flex flex-col gap-2 px-2 md:flex-row">

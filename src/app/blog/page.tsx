@@ -2,7 +2,8 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import { Suspense } from "react"
 import Reveal from "@/components/Animations/Reveal"
-import BlogList from "@/components/Blog/BlogList"
+
+import FirstRenderBlogs from "@/components/Blog/BlogList"
 import Container from "@/components/Container/Container"
 import LoadingSkeleton from "@/components/LoadingSkeleton"
 
@@ -32,7 +33,7 @@ export default async function Blog() {
         </div>
 
         <Suspense fallback={<LoadingSkeleton />}>
-          <BlogList />
+          <FirstRenderBlogs />
         </Suspense>
       </section>
     </>

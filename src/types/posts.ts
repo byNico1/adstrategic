@@ -41,6 +41,10 @@ export interface QueryPostsList {
         edges: Array<{
           node: Post
         }>
+        pageInfo: {
+          endCursor: string
+          hasNextPage: boolean
+        }
       }
     }
   }
