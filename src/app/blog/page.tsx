@@ -15,27 +15,27 @@ export const metadata: Metadata = {
 
 export default async function Blog() {
   return (
-    <>
-      <section className="mt-24">
-        <div className="relative mb-10 overflow-hidden border-b border-dashed border-black/10 py-20 text-center">
-          <Container className="relative z-20">
-            <Reveal center>
-              <h1 className="font-roboto mb-4 text-4xl font-medium">The Adstrategic Blog</h1>
-            </Reveal>
-            <p className="">
-              Learn and expand your Digital Marketing and Software Development knowledge with detailed tutoriales and
-              examples.
-            </p>
-          </Container>
-          <div className="absolute bottom-[-100px] right-[calc(50%-150px)] z-0 blur-lg grayscale">
-            <Image src="/adstrategic-180.webp" width={300} height={300} alt="" />
-          </div>
-        </div>
+    <section className="relative mt-24">
+      <div className="relative z-20 mb-10 overflow-hidden border-b border-dashed border-black/10 py-20 text-center dark:border-white/10">
+        <Container className="">
+          <Reveal center>
+            <h1 className="font-roboto mb-4 text-4xl font-medium">The Adstrategic Blog</h1>
+          </Reveal>
+          <p className="">
+            Learn and expand your Digital Marketing and Software Development knowledge with detailed tutoriales and
+            examples.
+          </p>
+        </Container>
+      </div>
+      <div className="fixed bottom-[calc(50vh-100px)] right-[calc(50%-150px)] z-10 blur-md grayscale dark:grayscale-0">
+        <Image src="/adstrategic-180.webp" width={300} height={300} alt="" />
+      </div>
 
-        <Suspense fallback={<LoadingSkeleton />}>
+      <Suspense fallback={<LoadingSkeleton />}>
+        <div className="relative z-20">
           <FirstRenderBlogs />
-        </Suspense>
-      </section>
-    </>
+        </div>
+      </Suspense>
+    </section>
   )
 }
