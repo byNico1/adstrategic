@@ -1,10 +1,10 @@
 "use client"
 
-import { motion } from "framer-motion"
 import dynamic from "next/dynamic"
 import Image from "next/image"
 import { LuQuote } from "react-icons/lu"
 import { testimonials } from "@/utils/testimonials"
+import AnimateInView from "../Animations/AnimateInView"
 
 const Carousel = dynamic(() => import("@/components/ui/carousel").then((mod) => mod.Carousel))
 const CarouselContent = dynamic(() => import("@/components/ui/carousel").then((mod) => mod.CarouselContent))
@@ -15,16 +15,7 @@ const CarouselPrevious = dynamic(() => import("@/components/ui/carousel").then((
 const Testimonials = () => {
   return (
     <section id="testimonials" className="overflow-hidden py-16 sm:py-24">
-      <motion.div
-        initial={{ opacity: 0.0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.2,
-          duration: 0.8,
-          ease: "easeInOut",
-        }}
-        className="px-4"
-      >
+      <AnimateInView className="px-4">
         <h2 className="mb-8 text-center text-3xl font-extrabold !leading-tight md:text-4xl xl:text-5xl">
           Testimonials
         </h2>
@@ -57,7 +48,7 @@ const Testimonials = () => {
           <CarouselPrevious className="dark:text-foreground" />
           <CarouselNext className="dark:text-foreground" />
         </Carousel>
-      </motion.div>
+      </AnimateInView>
     </section>
   )
 }

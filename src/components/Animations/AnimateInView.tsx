@@ -8,9 +8,10 @@ interface Props {
   stackIndex?: number
   givenDelay?: number
   once?: boolean
+  className?: string
 }
 
-const AnimateInView = ({ children, stackIndex = 1, givenDelay = 0.1, once }: Props) => {
+const AnimateInView = ({ children, stackIndex = 1, givenDelay = 0.1, once = true, className }: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0.0, y: 40 }}
@@ -21,6 +22,7 @@ const AnimateInView = ({ children, stackIndex = 1, givenDelay = 0.1, once }: Pro
         ease: "easeInOut",
       }}
       viewport={{ once }}
+      className={className}
     >
       {children}
     </motion.div>
