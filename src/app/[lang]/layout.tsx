@@ -7,7 +7,7 @@ import Header from "@/components/Header"
 
 import { ThemeProvider } from "@/components/theme-provider"
 
-import { i18n, type Locale } from "../i18n-config"
+import { i18n, type Locale } from "../../i18n-config"
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
