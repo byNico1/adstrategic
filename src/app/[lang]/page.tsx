@@ -27,7 +27,7 @@ export default async function Web({ params: { lang } }: { params: { lang: Locale
     <main>
       <Sheet>
         <SheetTrigger className="fixed bottom-0 z-[199] flex items-center justify-between gap-4 bg-muted pr-5 max-sm:inset-x-0 sm:left-5 sm:bg-transparent">
-          <div className="bg-primary px-5 py-2 sm:rounded-t-lg sm:p-4">
+          <div className="bg-primary px-5 py-2 text-primary-foreground sm:rounded-t-lg sm:p-4">
             <Bell />
           </div>
           <span className="text-xl font-bold sm:hidden sm:p-3">REQUEST PROPOSAL</span>
