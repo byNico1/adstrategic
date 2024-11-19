@@ -4,7 +4,7 @@ import { Suspense } from "react"
 import Reveal from "@/components/Animations/Reveal"
 
 import FirstRenderBlogs from "@/components/Blog/BlogList"
-import Container from "@/components/Container/Container"
+import Container from "@/components/Container"
 import LoadingSkeleton from "@/components/LoadingSkeleton"
 
 export const metadata: Metadata = {

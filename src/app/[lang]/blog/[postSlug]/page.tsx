@@ -2,8 +2,9 @@ import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 
+import { notFound } from "next/navigation"
 import Reveal from "@/components/Animations/Reveal"
-import Container from "@/components/Container/Container"
+import Container from "@/components/Container"
 import Form from "@/components/Form/Form"
 import { FacebookIcon, IGIcon } from "@/components/Icons/Icons"
 import MarkdownToHtml from "@/components/MarkdownToHtml"
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: PostParams): Promise<Metadata
   const post = await getPostBySlug(params.postSlug)
 
   return {
-    title: post.title,
+    title: post?.title,
     description: post?.seo?.description,
     openGraph: {
       images: [
@@ -35,6 +36,10 @@ export async function generateMetadata({ params }: PostParams): Promise<Metadata
 
 export default async function PostPage({ params }: PostParams) {
   const post = await getPostBySlug(params.postSlug)
+
+  if (!post) {
+    notFound()
+  }
 
   return (
     <div className="">

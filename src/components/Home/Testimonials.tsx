@@ -16,9 +16,7 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="overflow-hidden py-16 sm:py-24">
       <AnimateInView className="px-4">
-        <h2 className="mb-8 text-center text-3xl font-extrabold !leading-tight md:text-4xl xl:text-5xl">
-          Testimonials
-        </h2>
+        <h2 className="mb-8 text-center text-4xl font-extrabold !leading-tight sm:text-7xl">Testimonials</h2>
 
         <Carousel
           opts={{ loop: true }}

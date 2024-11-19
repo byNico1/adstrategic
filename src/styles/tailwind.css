@@ -76,6 +76,7 @@
 
 html {
   scroll-behavior: smooth;
+  text-wrap: balance;
 }
 
 .hashnode-content-style {

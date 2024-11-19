@@ -1327,6 +1327,45 @@
   resolved "https://registry.npmjs.org/@floating-ui/utils/-/utils-0.2.5.tgz"
   integrity sha512-sTcG+QZ6fdEUObICavU+aB3Mp8HY4n14wYHdxK4fXjPmv3PXZZeY5RaguJmGyeH/CJQhX3fqKUtS4qc1LoHwhQ==
 
+"@formatjs/ecma402-abstract@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@formatjs/ecma402-abstract/-/ecma402-abstract-2.0.0.tgz#39197ab90b1c78b7342b129a56a7acdb8f512e17"
+  integrity sha512-rRqXOqdFmk7RYvj4khklyqzcfQl9vEL/usogncBHRZfZBDOwMGuSRNFl02fu5KGHXdbinju+YXyuR+Nk8xlr/g==
+  dependencies:
+    "@formatjs/intl-localematcher" "0.5.4"
+    tslib "^2.4.0"
+
+"@formatjs/fast-memoize@2.2.0", "@formatjs/fast-memoize@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@formatjs/fast-memoize/-/fast-memoize-2.2.0.tgz#33bd616d2e486c3e8ef4e68c99648c196887802b"
+  integrity sha512-hnk/nY8FyrL5YxwP9e4r9dqeM6cAbo8PeU9UjyXojZMNvVad2Z06FAVHyR3Ecw6fza+0GH7vdJgiKIVXTMbSBA==
+  dependencies:
+    tslib "^2.4.0"
+
+"@formatjs/icu-messageformat-parser@2.7.8":
+  version "2.7.8"
+  resolved "https://registry.yarnpkg.com/@formatjs/icu-messageformat-parser/-/icu-messageformat-parser-2.7.8.tgz#f6d7643001e9bb5930d812f1f9a9856f30fa0343"
+  integrity sha512-nBZJYmhpcSX0WeJ5SDYUkZ42AgR3xiyhNCsQweFx3cz/ULJjym8bHAzWKvG5e2+1XO98dBYC0fWeeAECAVSwLA==
+  dependencies:
+    "@formatjs/ecma402-abstract" "2.0.0"
+    "@formatjs/icu-skeleton-parser" "1.8.2"
+    tslib "^2.4.0"
+
+"@formatjs/icu-skeleton-parser@1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@formatjs/icu-skeleton-parser/-/icu-skeleton-parser-1.8.2.tgz#2252c949ae84ee66930e726130ea66731a123c9f"
+  integrity sha512-k4ERKgw7aKGWJZgTarIcNEmvyTVD9FYh0mTrrBMHZ1b8hUu6iOJ4SzsZlo3UNAvHYa+PnvntIwRPt1/vy4nA9Q==
+  dependencies:
+    "@formatjs/ecma402-abstract" "2.0.0"
+    tslib "^2.4.0"
+
+"@formatjs/intl-localematcher@0.5.4", "@formatjs/intl-localematcher@^0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-localematcher/-/intl-localematcher-0.5.4.tgz#caa71f2e40d93e37d58be35cfffe57865f2b366f"
+  integrity sha512-zTwEpWOzZ2CiKcB93BLngUX59hQkuZjT2+SAQEscSm52peDW/getsawMcWF1rGRpMCX6D7nSJA3CzJ8gn13N/g==
+  dependencies:
+    tslib "^2.4.0"
+
 "@grpc/grpc-js@^1.7.1":
   version "1.9.5"
   resolved "https://registry.npmjs.org/@grpc/grpc-js/-/grpc-js-1.9.5.tgz"
@@ -2256,6 +2295,31 @@
   resolved "https://registry.npmjs.org/@radix-ui/react-context/-/react-context-1.1.0.tgz"
   integrity sha512-OKrckBy+sMEgYM/sMmqmErVn0kZqrHPJze+Ql3DzYsDDp0hl0L62nx/2122/Bvps1qz645jlcu2tD9lrRSdf8A==
 
+"@radix-ui/react-context@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-context/-/react-context-1.1.1.tgz#82074aa83a472353bb22e86f11bcbd1c61c4c71a"
+  integrity sha512-UASk9zi+crv9WteK/NU4PLvOoL3OuE6BWVKNF6hPRBtYBDXQ2u5iu3O59zUlJiTVvkyuycnqrztsHVJwcK9K+Q==
+
+"@radix-ui/react-dialog@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-dialog/-/react-dialog-1.1.2.tgz#d9345575211d6f2d13e209e84aec9a8584b54d6c"
+  integrity sha512-Yj4dZtqa2o+kG61fzB0H2qUvmwBA2oyQroGLyNtBj1beo1khoQ3q1a2AO8rrQYjd8256CO9+N8L9tvsS+bnIyA==
+  dependencies:
+    "@radix-ui/primitive" "1.1.0"
+    "@radix-ui/react-compose-refs" "1.1.0"
+    "@radix-ui/react-context" "1.1.1"
+    "@radix-ui/react-dismissable-layer" "1.1.1"
+    "@radix-ui/react-focus-guards" "1.1.1"
+    "@radix-ui/react-focus-scope" "1.1.0"
+    "@radix-ui/react-id" "1.1.0"
+    "@radix-ui/react-portal" "1.1.2"
+    "@radix-ui/react-presence" "1.1.1"
+    "@radix-ui/react-primitive" "2.0.0"
+    "@radix-ui/react-slot" "1.1.0"
+    "@radix-ui/react-use-controllable-state" "1.1.0"
+    aria-hidden "^1.1.1"
+    react-remove-scroll "2.6.0"
+
 "@radix-ui/react-direction@1.1.0":
   version "1.1.0"
   resolved "https://registry.npmjs.org/@radix-ui/react-direction/-/react-direction-1.1.0.tgz"
@@ -2265,6 +2329,17 @@
   version "1.1.0"
   resolved "https://registry.npmjs.org/@radix-ui/react-dismissable-layer/-/react-dismissable-layer-1.1.0.tgz"
   integrity sha512-/UovfmmXGptwGcBQawLzvn2jOfM0t4z3/uKffoBlj724+n3FvBbZ7M0aaBOmkp6pqFYpO4yx8tSVJjx3Fl2jig==
+  dependencies:
+    "@radix-ui/primitive" "1.1.0"
+    "@radix-ui/react-compose-refs" "1.1.0"
+    "@radix-ui/react-primitive" "2.0.0"
+    "@radix-ui/react-use-callback-ref" "1.1.0"
+    "@radix-ui/react-use-escape-keydown" "1.1.0"
+
+"@radix-ui/react-dismissable-layer@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-dismissable-layer/-/react-dismissable-layer-1.1.1.tgz#cbdcb739c5403382bdde5f9243042ba643883396"
+  integrity sha512-QSxg29lfr/xcev6kSz7MAlmDnzbP1eI/Dwn3Tp1ip0KT5CUELsxkekFEMVBEoykI3oV39hKT4TKZzBNMbcTZYQ==
   dependencies:
     "@radix-ui/primitive" "1.1.0"
     "@radix-ui/react-compose-refs" "1.1.0"
@@ -2289,6 +2364,11 @@
   version "1.1.0"
   resolved "https://registry.npmjs.org/@radix-ui/react-focus-guards/-/react-focus-guards-1.1.0.tgz"
   integrity sha512-w6XZNUPVv6xCpZUqb/yN9DL6auvpGX3C/ee6Hdi16v2UUy25HV2Q5bcflsiDyT/g5RwbPQ/GIT1vLkeRb+ITBw==
+
+"@radix-ui/react-focus-guards@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-focus-guards/-/react-focus-guards-1.1.1.tgz#8635edd346304f8b42cae86b05912b61aef27afe"
+  integrity sha512-pSIwfrT1a6sIoDASCSpFwOasEwKTZWDw/iBdtnqKO7v6FeOzYJ7U53cPzYFVR3geGGXgVHaH+CdngrrAzqUGxg==
 
 "@radix-ui/react-focus-scope@1.1.0":
   version "1.1.0"
@@ -2380,10 +2460,26 @@
     "@radix-ui/react-primitive" "2.0.0"
     "@radix-ui/react-use-layout-effect" "1.1.0"
 
+"@radix-ui/react-portal@1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-portal/-/react-portal-1.1.2.tgz#51eb46dae7505074b306ebcb985bf65cc547d74e"
+  integrity sha512-WeDYLGPxJb/5EGBoedyJbT0MpoULmwnIPMJMSldkuiMsBAv7N1cRdsTWZWht9vpPOiN3qyiGAtbK2is47/uMFg==
+  dependencies:
+    "@radix-ui/react-primitive" "2.0.0"
+    "@radix-ui/react-use-layout-effect" "1.1.0"
+
 "@radix-ui/react-presence@1.1.0":
   version "1.1.0"
   resolved "https://registry.npmjs.org/@radix-ui/react-presence/-/react-presence-1.1.0.tgz"
   integrity sha512-Gq6wuRN/asf9H/E/VzdKoUtT8GC9PQc9z40/vEr0VCJ4u5XvvhWIrSsCB6vD2/cH7ugTdSfYq9fLJCcM00acrQ==
+  dependencies:
+    "@radix-ui/react-compose-refs" "1.1.0"
+    "@radix-ui/react-use-layout-effect" "1.1.0"
+
+"@radix-ui/react-presence@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-presence/-/react-presence-1.1.1.tgz#98aba423dba5e0c687a782c0669dcd99de17f9b1"
+  integrity sha512-IeFXVi4YS1K0wVZzXNrbaaUvIJ3qdY+/Ih4eHFhWA9SwGR9UDX7Ck8abvL57C4cv3wwMvUE0OG69Qc3NCcTe/A==
   dependencies:
     "@radix-ui/react-compose-refs" "1.1.0"
     "@radix-ui/react-use-layout-effect" "1.1.0"
@@ -3038,6 +3134,11 @@
   version "0.0.29"
   resolved "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
+
+"@types/negotiator@^0.6.3":
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/@types/negotiator/-/negotiator-0.6.3.tgz#29e8fce64e35f57f6fe9c624f8e4ed304357745a"
+  integrity sha512-JkXTOdKs5MF086b/pt8C3+yVp3iDUwG635L7oCH6HvJvvr6lSUU5oe/gLXnPEfYRROHjJIPgCV6cuAg8gGkntQ==
 
 "@types/node@*", "@types/node@>=10.0.0", "@types/node@>=12.12.47", "@types/node@>=13.7.0", "@types/node@^20.10.0":
   version "20.10.0"
@@ -4057,9 +4158,9 @@ camelcase@^5.0.0:
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
 caniuse-lite@^1.0.30001464, caniuse-lite@^1.0.30001538, caniuse-lite@^1.0.30001579, caniuse-lite@^1.0.30001587:
-  version "1.0.30001593"
-  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001593.tgz"
-  integrity sha512-UWM1zlo3cZfkpBysd7AS+z+v007q9G1+fLTUU42rQnY6t2axoogPW/xol6T7juU5EUoOhML4WgBIdG+9yYqAjQ==
+  version "1.0.30001680"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001680.tgz"
+  integrity sha512-rPQy70G6AGUMnbwS1z6Xg+RkHYPAi18ihs47GH0jcxIG7wArmPgY3XbS2sRdBbxJljp3thdT8BIqv9ccCypiPA==
 
 chalk@4.1.2, chalk@^4.0.0, chalk@^4.1.0, chalk@^4.1.2:
   version "4.1.2"
@@ -4678,23 +4779,28 @@ electron-to-chromium@^1.4.668:
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.690.tgz"
   integrity sha512-+2OAGjUx68xElQhydpcbqH50hE8Vs2K6TkAeLhICYfndb67CVH0UsZaijmRUE3rHlIxU1u0jxwhgVe6fK3YANA==
 
-embla-carousel-react@^8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/embla-carousel-react/-/embla-carousel-react-8.2.0.tgz#4214ce960e2691575dff6cebf9c94ac573fdc569"
-  integrity sha512-dWqbmaEBQjeAcy/EKrcAX37beVr0ubXuHPuLZkx27z58V1FIvRbbMb4/c3cLZx0PAv/ofngX2QFrwUB+62SPnw==
+embla-carousel-autoplay@^8.3.1:
+  version "8.3.1"
+  resolved "https://registry.yarnpkg.com/embla-carousel-autoplay/-/embla-carousel-autoplay-8.3.1.tgz#62b45cf55dc001d82b2ac1829f6b3207e7af35a6"
+  integrity sha512-L8THF1AJJSQtlNa1wZ6lEKh/CiZssE3TsVFtabQNsS+pc1O1O/YTIYCC3khdQAztGMOBf3WfVDIY/4AIfQj3JQ==
+
+embla-carousel-react@^8.3.1:
+  version "8.3.1"
+  resolved "https://registry.yarnpkg.com/embla-carousel-react/-/embla-carousel-react-8.3.1.tgz#f6d91f484b00704411524cf01feb80fdcff7dde2"
+  integrity sha512-gBY0zM+2ASvKFwRpTIOn2SLifFqOKKap9R/y0iCpJWS3bc8OHVEn2gAThGYl2uq0N+hu9aBiswffL++OYZOmDQ==
   dependencies:
-    embla-carousel "8.2.0"
-    embla-carousel-reactive-utils "8.2.0"
+    embla-carousel "8.3.1"
+    embla-carousel-reactive-utils "8.3.1"
 
-embla-carousel-reactive-utils@8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/embla-carousel-reactive-utils/-/embla-carousel-reactive-utils-8.2.0.tgz#2abe9a01d639641617486a41704525c1de506021"
-  integrity sha512-ZdaPNgMydkPBiDRUv+wRIz3hpZJ3LKrTyz+XWi286qlwPyZFJDjbzPBiXnC3czF9N/nsabSc7LTRvGauUzwKEg==
+embla-carousel-reactive-utils@8.3.1:
+  version "8.3.1"
+  resolved "https://registry.yarnpkg.com/embla-carousel-reactive-utils/-/embla-carousel-reactive-utils-8.3.1.tgz#8e92407f92f55e5f38ef22d24c018077476f1e11"
+  integrity sha512-Js6rTTINNGnUGPu7l5kTcheoSbEnP5Ak2iX0G9uOoI8okTNLMzuWlEIpYFd1WP0Sq82FFcLkKM2oiO6jcElZ/Q==
 
-embla-carousel@8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/embla-carousel/-/embla-carousel-8.2.0.tgz#b6cee975d4f43f127a77787673477bf618df7610"
-  integrity sha512-rf2GIX8rab9E6ZZN0Uhz05746qu2KrDje9IfFyHzjwxLwhvGjUt6y9+uaY1Sf+B0OPSa3sgas7BE2hWZCtopTA==
+embla-carousel@8.3.1:
+  version "8.3.1"
+  resolved "https://registry.yarnpkg.com/embla-carousel/-/embla-carousel-8.3.1.tgz#8f5dcd0dc001977efd2bca54d620b6e6736a1a85"
+  integrity sha512-DutFjtEO586XptDn4cwvBJwsR/8fMa4jUk5Jk2g+/elKgu8mdn0Z2sx33g4JskvbLc1/6P8Xg4QlfELGJFcP5A==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -6072,6 +6178,16 @@ internal-slot@^1.0.5:
     has "^1.0.3"
     side-channel "^1.0.4"
 
+intl-messageformat@^10.5.14:
+  version "10.5.14"
+  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-10.5.14.tgz#e5bb373f8a37b88fbe647d7b941f3ab2a37ed00a"
+  integrity sha512-IjC6sI0X7YRjjyVH9aUgdftcmZK7WXdHeil4KwbjDnRWjnVitKpAx3rr6t6di1joFp5188VqKcobOPA6mCLG/w==
+  dependencies:
+    "@formatjs/ecma402-abstract" "2.0.0"
+    "@formatjs/fast-memoize" "2.2.0"
+    "@formatjs/icu-messageformat-parser" "2.7.8"
+    tslib "^2.4.0"
+
 into-stream@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npmjs.org/into-stream/-/into-stream-7.0.0.tgz"
@@ -7218,6 +7334,15 @@ next-compose-plugins@^2.2.1:
   resolved "https://registry.npmjs.org/next-compose-plugins/-/next-compose-plugins-2.2.1.tgz"
   integrity sha512-OjJ+fV15FXO2uQXQagLD4C0abYErBjyjE0I0FHpOEIB8upw0hg1ldFP6cqHTJBH1cZqy96OeR3u1dJ+Ez2D4Bg==
 
+next-intl@^3.20.0:
+  version "3.20.0"
+  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-3.20.0.tgz#8ff83d8e02c0fdf65bace78eb1db5316f86786bc"
+  integrity sha512-0bCZcc38HfAZk/T+PNNcnJZknC+caS5rBK+WYRd1HsOL5O6puEu2H3kya8oT9s8piHjrTf7P0UHeahOFleOnrw==
+  dependencies:
+    "@formatjs/intl-localematcher" "^0.5.4"
+    negotiator "^0.6.3"
+    use-intl "^3.20.0"
+
 next-themes@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.3.0.tgz#b4d2a866137a67d42564b07f3a3e720e2ff3871a"
@@ -8235,12 +8360,31 @@ react-remove-scroll-bar@^2.3.4:
     react-style-singleton "^2.2.1"
     tslib "^2.0.0"
 
+react-remove-scroll-bar@^2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/react-remove-scroll-bar/-/react-remove-scroll-bar-2.3.6.tgz#3e585e9d163be84a010180b18721e851ac81a29c"
+  integrity sha512-DtSYaao4mBmX+HDo5YWYdBWQwYIQQshUV/dVxFxK+KM26Wjwp1gZ6rv6OC3oujI6Bfu6Xyg3TwK533AQutsn/g==
+  dependencies:
+    react-style-singleton "^2.2.1"
+    tslib "^2.0.0"
+
 react-remove-scroll@2.5.7:
   version "2.5.7"
   resolved "https://registry.npmjs.org/react-remove-scroll/-/react-remove-scroll-2.5.7.tgz"
   integrity sha512-FnrTWO4L7/Bhhf3CYBNArEG/yROV0tKmTv7/3h9QCFvH6sndeFf1wPqOcbFVu5VAulS5dV1wGT3GZZ/1GawqiA==
   dependencies:
     react-remove-scroll-bar "^2.3.4"
+    react-style-singleton "^2.2.1"
+    tslib "^2.1.0"
+    use-callback-ref "^1.3.0"
+    use-sidecar "^1.1.2"
+
+react-remove-scroll@2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/react-remove-scroll/-/react-remove-scroll-2.6.0.tgz#fb03a0845d7768a4f1519a99fdb84983b793dc07"
+  integrity sha512-I2U4JVEsQenxDAKaVa3VZ/JeJZe0/2DxPWL8Tj8yLKctQJQiZM52pn/GWFpSp8dftjM3pSAHVJZscAnC/y+ySQ==
+  dependencies:
+    react-remove-scroll-bar "^2.3.6"
     react-style-singleton "^2.2.1"
     tslib "^2.1.0"
     use-callback-ref "^1.3.0"
@@ -9482,6 +9626,14 @@ use-callback-ref@^1.3.0:
   integrity sha512-3FT9PRuRdbB9HfXhEq35u4oZkvpJ5kuYbpqhCfmiZyReuRgpnhDlbr2ZEnnuS0RrJAPn6l23xjFg9kpDM+Ms7w==
   dependencies:
     tslib "^2.0.0"
+
+use-intl@^3.20.0:
+  version "3.20.0"
+  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-3.20.0.tgz#df847fdb02acf865eb9a71aa3c2ff3456c89bf00"
+  integrity sha512-5WQs6yZVWI9K7vw3134P0bhKNp4mi8NbmqKOCuhD9nQUMTKdmpBXwjk62+axwvEbj4XrZxj4X93mQMLXU5ZsCg==
+  dependencies:
+    "@formatjs/fast-memoize" "^2.2.0"
+    intl-messageformat "^10.5.14"
 
 use-sidecar@^1.1.2:
   version "1.1.2"

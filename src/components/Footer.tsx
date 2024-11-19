@@ -3,8 +3,8 @@ import { Button } from "@/shadcn/button"
 
 const LINKS = [
   { name: "Blog", url: "/blog" },
-  { name: "About Us", url: "/#about" },
   { name: "Process", url: "/#process" },
+  { name: "Why us?", url: "/#why-us" },
   { name: "Services", url: "/#services" },
   { name: "Testimonials", url: "/#testimonials" },
   { name: "Contact", url: "/#contact" },
@@ -24,11 +24,8 @@ const Footer = () => {
           ))}
         </nav>
         <div className="mt-8 flex justify-center space-x-6">
-          <Button variant="ghost">
-            <a
-              href="https://www.facebook.com/profile.php?id=61555157255389"
-              className="text-foreground hover:bg-accent"
-            >
+          <a href="https://www.facebook.com/profile.php?id=61555157255389">
+            <Button variant="ghost">
               <span className="sr-only">Facebook</span>
               <svg className="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -37,10 +34,10 @@ const Footer = () => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-            </a>
-          </Button>
-          <Button variant="ghost">
-            <a href="https://www.instagram.com/adstrategic.agency/" className="text-foreground hover:bg-accent">
+            </Button>
+          </a>
+          <a href="https://www.instagram.com/adstrategic.agency/">
+            <Button variant="ghost">
               <span className="sr-only">Instagram</span>
               <svg className="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -49,8 +46,8 @@ const Footer = () => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-            </a>
-          </Button>
+            </Button>
+          </a>
         </div>
         <p className="mt-8 text-center text-base leading-6 text-foreground">
           © 2023 Adstrategic, Inc. All rights reserved.

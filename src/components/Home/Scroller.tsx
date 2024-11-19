@@ -1,8 +1,8 @@
-import { LP_GRID_ITEMS } from "lp-items"
+import { LP_GRID_ITEMS } from "@/utils/lp-items"
 
 const Scroller = () => {
   return (
-    <section className="mx-auto mt-12 flex w-full max-w-2xl flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+    <section className="mx-auto flex w-full max-w-2xl flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
       <div className="flex animate-infinite-scroll items-center justify-center md:justify-start ">
         {LP_GRID_ITEMS.map((singleItem) => (
           <div

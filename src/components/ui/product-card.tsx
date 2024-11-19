@@ -1,9 +1,9 @@
 "use client"
 
+import { InstagramLogoIcon } from "@radix-ui/react-icons"
 import { animate } from "framer-motion"
+import { Code } from "lucide-react"
 import React, { useEffect } from "react"
-import { MdAnimation } from "react-icons/md"
-import { RiNextjsFill } from "react-icons/ri"
 
 import { cn } from "@/utils/utils"
 
@@ -35,25 +35,25 @@ const IconsToRender = ({ title }: { title: string }) => {
     <div className="relative flex h-full items-center justify-center overflow-hidden p-8">
       {title.toLowerCase().includes("software") && (
         <Container className="circle-3">
-          <RiNextjsFill className="h-8 w-8 dark:text-white" />
+          <Code className="h-8 w-8 dark:text-white" />
         </Container>
       )}
-      {title.toLowerCase().includes("plan") && (
+      {title.toLowerCase().includes("+") && (
         <div className="flex shrink-0 flex-row items-center justify-center gap-2">
           <Container className="circle-2 h-12 w-12">
-            <RiNextjsFill className="h-6 w-6 dark:text-white" />
+            <Code className="h-6 w-6 dark:text-white" />
           </Container>
           <Container className="circle-3">
             <MetaIconOutline className="h-8 w-8 dark:text-white" />
           </Container>
           <Container className="circle-4 h-12 w-12">
-            <MdAnimation className="h-8 w-8 dark:text-white" />
+            <InstagramLogoIcon className="h-8 w-8 dark:text-white" />
           </Container>
         </div>
       )}
-      {title.toLowerCase().includes("video") && (
+      {title === "Digital Marketing" && (
         <Container className="circle-3">
-          <MdAnimation className="h-8 w-8 dark:text-white" />
+          <InstagramLogoIcon className="h-8 w-8 dark:text-white" />
         </Container>
       )}
     </div>

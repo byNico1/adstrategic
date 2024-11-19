@@ -1,54 +1,55 @@
 import dynamic from "next/dynamic"
-import { Button } from "@/shadcn/button"
 
 const CardDemo = dynamic(() => import("@/shadcn/product-card"))
 
 const Services = () => {
   const servicesPlans = [
     {
-      id: "software-pro",
-      title: "Software Pro",
-      subtitle: "The Perfect Plan To Start Or Grow Your Software Business",
+      id: "web-dev",
+      title: "Web And Software Development",
+      subtitle: "Take your online presence to the web to increase your conversions and your customers trust",
       highlight: "TODAY.",
       list: [
-        "Web Development",
-        "Web Design",
-        "Front-End Development",
-        "Full-Stack Development",
-        "Back-End Development",
+        "UI/UX Website Design",
+        "E-commerce Website Design",
+        "Landing Page Design",
+        "Responsive Website Design & Development",
+        "Website Maintenance",
       ],
     },
     {
-      id: "pro-plan",
-      title: "Pro Plan:",
-      subtitle: "All You Need To Grow Your Business",
-      highlight: "ASAP.",
-      list: [
-        "Web Development",
-        "Video Editing",
-        "Social Media Ads",
-        "Social Media Management",
-        "Branding Services (coming soon)",
-      ],
-    },
-    {
-      id: "video-pro",
-      title: "Video Pro",
-      subtitle: "The Best Plan To Skyrocket Your Video Content To The Next",
+      id: "mix-plan",
+      title: "Digital Marketing + Web Development",
+      subtitle: "The WHOLE package to skyrocket your business to other",
       highlight: "LEVEL.",
       list: [
+        "All Of Web Development",
+        "All Of Digital Marketing",
         "Video Editing",
-        "Simple Cut",
-        "Linear Video Editing",
-        "Non-linear Video Editing",
-        "Assemble Video Editing",
+        "Social Media Marketing",
+        "Advertising",
+        "Branding",
+      ],
+    },
+    {
+      id: "digital-marketing",
+      title: "Digital Marketing",
+      subtitle: "Explode your online presence through strategical social media and advertising",
+      highlight: "ASAP.",
+      list: [
+        "SEO Optimization",
+        "Social Media Marketing",
+        "Influencer Marketing",
+        "Content Marketing",
+        "Video Editing",
+        "Email Marketing",
       ],
     },
   ]
 
   return (
     <div className="bg-background px-2 pt-16 sm:px-6 sm:pt-24" id="services">
-      <h2 className="mb-14 text-center text-3xl font-semibold">Services:</h2>
+      <h2 className="mb-14 text-center text-5xl font-extrabold sm:text-7xl">Services:</h2>
 
       <div className="mx-auto grid max-w-6xl grid-cols-[repeat(auto-fit,minmax(300px,_1fr))] justify-center gap-12">
         {servicesPlans.map((services) => (
@@ -60,9 +61,6 @@ const Services = () => {
             highlight={services.highlight}
           >
             <div className="relative z-20 mt-4 text-cyan-800 dark:text-muted-foreground">
-              <Button className="mb-4 w-full">
-                <a href="#contact">Get More Info</a>
-              </Button>
               <ul className="mt-2 list-none">
                 {services.list.map((product) => (
                   <Step title={product} key={`single-product-${product}`} />

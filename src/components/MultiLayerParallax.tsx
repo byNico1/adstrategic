@@ -1,50 +1,66 @@
 "use client"
 
-import { motion, useScroll, useTransform } from "framer-motion"
-import Image from "next/image"
-import React, { useRef } from "react"
+import { StarFilledIcon } from "@radix-ui/react-icons"
 import { Button } from "@/shadcn/button"
+import { ResultsCarousel } from "./ui/custom-carousel"
 
 const MultiLayerParallax = () => {
-  const ref = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  })
-
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"])
-
   return (
-    <section
-      ref={ref}
-      className="relative grid h-screen grid-rows-1 place-items-center overflow-hidden px-4 py-28 pb-8 text-center sm:py-16"
-    >
-      <motion.div className="z-30 mx-auto max-w-2xl place-self-center" style={{ y: textY }}>
-        <h1 className="mb-8 text-lg font-medium text-[#ffffff]">Adstrategic - Effortless Business Growth</h1>
-        <p className="mb-8 text-3xl font-extrabold leading-tight tracking-wide text-white md:text-4xl">
-          Experience <span className="text-brand">growth</span> in your <span className="text-brand">business</span>{" "}
-          effortlesly as we bring you
-          <span className="text-brand"> top-tier leads</span>
-        </p>
-        <p className="mb-8 text-lg font-medium text-white">
-          For A <span className="text-brand underline">Limited Time</span> Only
+    <section className="grid min-h-screen grid-rows-1 place-items-center overflow-hidden px-4 pt-28 text-center">
+      <div className="z-30 mx-auto max-w-3xl place-self-center">
+        <div className="mb-10 flex flex-wrap justify-center gap-4 sm:flex-nowrap">
+          <div className="hidden sm:block">
+            <p className="inline-flex">
+              {Array(5)
+                .fill(false)
+                .map((star, i) => (
+                  <span key={`star-${i}-testimonial-2`}>
+                    <StarFilledIcon className="text-yellow-600" />
+                  </span>
+                ))}
+            </p>
+            <p className="text-sm">Hiring Adstrategic was an exceptional decision for Casi&apos;s Shakers</p>
+          </div>
+          <div>
+            <p className="inline-flex">
+              {Array(5)
+                .fill(false)
+                .map((star, i) => (
+                  <span key={`star-${i}-testimonial-1`}>
+                    <StarFilledIcon className="text-yellow-600" />
+                  </span>
+                ))}
+            </p>
+            <p className="text-sm">
+              Adstrategic exceeded my expectations with their design and branding work for my luxury car wash company
+            </p>
+          </div>
+          <div className="hidden sm:block">
+            <p className="inline-flex">
+              {Array(5)
+                .fill(false)
+                .map((star, i) => (
+                  <span key={`star-${i}-testimonial-3`}>
+                    <StarFilledIcon className="text-yellow-600" />
+                  </span>
+                ))}
+            </p>
+            <p className="text-sm">Their work on web and graphic design has elevated our professional image</p>
+          </div>
+        </div>
+        <h1 className="mb-8 text-[45px] font-extrabold leading-none sm:text-7xl">
+          Get <span className="text-brand">Digital Services</span> That Drive <span className="text-brand">Growth</span>
+        </h1>
+        <p className="mb-8 text-lg font-medium">
+          Elevate the design of your <span className="text-brand underline">Website</span> and ignite your Digital
+          Marketing results with Adstrategic!
         </p>
         <Button size="lg">
           <a href="#contact">Get started</a>
         </Button>
-      </motion.div>
-      <div className="absolute inset-0 z-10">
-        <Image
-          alt="hero"
-          src="/hero.webp"
-          quality={75}
-          fill
-          style={{
-            objectFit: "cover",
-          }}
-        />
       </div>
-      <div className="absolute inset-0 z-20 bg-[#1e1e1ed7]" />
+
+      <ResultsCarousel />
     </section>
   )
 }

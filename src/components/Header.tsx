@@ -9,7 +9,7 @@ import { ModeToggle } from "@/shadcn/mode-toggle"
 
 const LINKS = [
   { name: "Blog", url: "/blog" },
-  { name: "About Us", url: "/#about" },
+  { name: "Process", url: "/#process" },
   { name: "Services", url: "/#services" },
   { name: "Contact", url: "/#contact" },
 ]

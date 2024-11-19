@@ -7,6 +7,12 @@ import Header from "@/components/Header"
 
 import { ThemeProvider } from "@/components/theme-provider"
 
+import { i18n, type Locale } from "../i18n-config"
+
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }))
+}
+
 const inter = Inter({
   weight: ["400", "500", "600", "700", "900"],
   subsets: ["latin"],
@@ -22,9 +28,9 @@ const roboto = Roboto({
   display: "swap",
 })
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children, params }: { children: React.ReactNode; params: { lang: Locale } }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${roboto.variable} ${inter.className}`}>
+    <html lang={params.lang} suppressHydrationWarning className={`${roboto.variable} ${inter.className}`}>
       <head>
         <meta name="facebook-domain-verification" content="b59t0xdxprwjqsdk3808wfek478um5" />
       </head>

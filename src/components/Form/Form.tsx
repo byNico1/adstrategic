@@ -13,7 +13,7 @@ import { FormData, UserSchema } from "@/types/form"
 const CustomPhoneInput = dynamic(() => import("@/components/Form/Input").then((mod) => mod.CustomPhoneInput))
 const Input = dynamic(() => import("@/components/Form/Input").then((mod) => mod.Input))
 
-const Form = () => {
+const Form = ({ className }: { className?: string }) => {
   const methods = useForm<FormData>({ resolver: zodResolver(UserSchema) })
   const [loadingState, setLoadingState] = useState<string | null>(null)
   const router = useRouter()
@@ -54,7 +54,7 @@ const Form = () => {
             noValidate
             className="mx-auto w-full max-w-xl rounded-md bg-background py-8"
           >
-            <div className="mx-auto flex w-3/4 flex-col">
+            <div className={`mx-auto flex w-3/4 flex-col ${className}`}>
               <Input label="Full Name" type="text" id="userFirstName" placeholder="Full Name" />
               <Input label="Email" type="email" id="userEmail" placeholder="Email" />
               <CustomPhoneInput control={methods.control} />
@@ -77,8 +77,8 @@ const Form = () => {
         </div>
       ) : (
         loadingState === "success" && (
-          <div className="mx-auto w-full max-w-xl rounded-md bg-background p-16 text-center">
-            <p className="mb-8 text-green-900">Email Sent Succesfully</p>
+          <div className="mx-auto w-full max-w-xl rounded-md bg-background px-2 py-16 text-center">
+            <p className="mb-8 text-green-900 dark:text-green-400">Email Sent Succesfully</p>
             <h1 className="mb-4 text-4xl font-extrabold ">Thank you for submitting our form</h1>
             <p>We will contact you ASAP⚡.</p>
           </div>
