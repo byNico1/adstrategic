@@ -17,7 +17,7 @@ const SheetOpener = () => {
         <div className="bg-primary px-5 py-2 text-primary-foreground sm:rounded-t-lg sm:p-4">
           <Bell />
         </div>
-        <span className="text-xl font-bold sm:hidden sm:p-3">REQUEST PROPOSAL</span>
+        <span className="text-xl font-bold sm:sr-only sm:p-3">REQUEST PROPOSAL</span>
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
