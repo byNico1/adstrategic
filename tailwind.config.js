@@ -20,9 +20,9 @@ module.exports = {
     },
     extend: {
       colors: {
+        brand: "var(--brand)",
         blured: "var(--blured)",
         "blured-foreground": "hsl(var(--blured-foreground))",
-        brand: "#55A7A6",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -5,12 +5,12 @@ import * as React from "react"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 
 const imagesObj = [
-  "/assets/results/selfimprovingbooks.png",
-  "/assets/results/e-commerce.png",
+  "/assets/results/selfimprovingbooks.webp",
+  "/assets/results/e-commerce.webp",
   "/assets/results/nico-portfolio.webp",
-  "/assets/results/adstrategic-website.png",
-  "/assets/results/google-analytics.png",
-  "/assets/results/youtube-analytics.png",
+  "/assets/results/adstrategic-website.webp",
+  "/assets/results/google-analytics.webp",
+  "/assets/results/youtube-analytics.webp",
 ]
 
 export function ResultsCarousel() {

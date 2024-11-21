@@ -42,7 +42,7 @@ const WhyUs = () => {
         </div>
         <div className="mb-4 flex items-center justify-center gap-4 text-right text-lg md:col-start-1 md:m-0 md:justify-end md:pr-5">
           <p>Website content</p>
-          <Image width={25} height={25} src="/assets/icons/images.png" alt="sdf" />
+          <Image width={25} height={25} src="/assets/icons/images.webp" alt="sdf" />
         </div>
         <div className="h-full bg-primary p-4 text-lg text-primary-foreground md:flex md:items-center md:justify-center md:py-3">
           <p className="md:hidden">Us:</p>
@@ -61,7 +61,7 @@ const WhyUs = () => {
         </div>
         <div className="mb-4 flex items-center justify-center gap-4 text-right text-lg md:col-start-1 md:m-0 md:justify-end md:pr-5">
           <p>Design + Development</p>
-          <Image width={25} height={25} src="/assets/icons/diseno.png" alt="sdf" />
+          <Image width={25} height={25} src="/assets/icons/diseno.webp" alt="sdf" />
         </div>
         <div className="h-full bg-primary p-4 text-lg text-primary-foreground md:flex md:items-center md:justify-center md:py-3">
           <p className="md:hidden">Us:</p>
@@ -83,7 +83,7 @@ const WhyUs = () => {
         </div>
         <div className="mx-auto mb-4 flex max-w-80 items-center justify-center gap-4 px-8 text-lg md:col-start-1 md:m-0 md:justify-end md:pl-0 md:pr-5 md:text-right">
           <p>Mobile responsive web design</p>
-          <Image width={25} height={25} src="/assets/icons/mobile.png" alt="sdf" />
+          <Image width={25} height={25} src="/assets/icons/mobile.webp" alt="sdf" />
         </div>
         <div className="h-full bg-primary p-4 text-lg text-primary-foreground md:flex md:items-center md:justify-center md:py-3">
           <p className="md:hidden">Us:</p>

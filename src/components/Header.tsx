@@ -1,11 +1,13 @@
 "use client"
 
+import dynamic from "next/dynamic"
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import { IoMdClose, IoMdMenu } from "react-icons/io"
 import { Button } from "@/shadcn/button"
-import { ModeToggle } from "@/shadcn/mode-toggle"
+
+const ModeToggle = dynamic(() => import("@/shadcn/mode-toggle").then((mod) => mod.ModeToggle))
 
 const LINKS = [
   { name: "Blog", url: "/blog" },
