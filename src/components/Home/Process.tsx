@@ -120,12 +120,12 @@ export default function Process() {
           {option === "web" ? (
             <div className="relative mb-4 aspect-square w-full overflow-hidden rounded-2xl sm:aspect-video">
               <video
-                width="320"
-                height="240"
+                width="800"
+                height="450"
                 autoPlay
                 muted
                 loop
-                className="absolute inset-0 w-full object-cover object-top"
+                className="absolute inset-0 h-full w-full object-cover object-top"
               >
                 <source src={processInformation[option].steps.step2.image} type="video/webm" />
                 Your browser does not support the video tag.
