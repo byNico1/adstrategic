@@ -1,5 +1,221 @@
 {
-  "products": {
-    "cart": "Toevoegen aan Winkelwagen"
-  }
+  "metadata": {
+    "title": "Adstrategic - Obtenga servicios digitales para aumentar su presencia en línea",
+    "description": "En Adstrategic, nos especializamos en transformar su presencia en línea. Nuestro equipo de expertos ofrece edición de video de primer nivel, desarrollo de software innovador, gestión de redes sociales y publicidad."
+  },
+  "sheetOpener": { "text": "SOLICITAR PROPUESTA", "title": "Solicite una propuesta de diseño web y marketing" },
+  "hero": {
+    "reviews": [
+      "Contratar a Adstrategic fue una decisión excepcional para Casi&apos;s Shakers",
+      "Adstrategic superó mis expectativas con su trabajo de diseño y marca para mi empresa de lavado de autos de lujo",
+      "Su trabajo en diseño web y gráfico ha elevado nuestra imagen profesional"
+    ],
+    "intro": "Obten <span class='text-brand'>Servicios Digitales</span> Que Traigan <span class='text-brand'>Crecimiento</span>",
+    "paragraph": "¡Eleve el diseño de su <span class='text-brand underline'>sitio web</span> y encienda sus resultados de marketing digital con Adstrategic!",
+    "cta": "Comienza Ahora"
+  },
+  "process": {
+    "title": "Nuestro <span class='text-brand'>Proceso</span>?",
+    "processInformation": {
+      "marketing": {
+        "title": "Marketing Digital",
+        "id": "marketing",
+        "description": "Te ayudamos a crear contenido atractivo para las redes sociales, llegar a tu público objetivo y construir una identidad de marca sólida.",
+        "steps": {
+          "step1": {
+            "title": "Definir Objetivos",
+            "image": "/assets/process/marketing/define-goals.webp",
+            "description": "Escuchamos sus metas y las alineamos con sus objetivos comerciales."
+          },
+          "step2": {
+            "title": "Definir el público objetivo",
+            "image": "/assets/process/marketing/target-audience.webp",
+            "description": "Hacemos una investigación de mercados para entender cuál es el cliente perfecto para ti, por lo que nuestro objetivo es llegar a ellos."
+          },
+          "step3": {
+            "title": "Crear el contenido",
+            "image": "/assets/process/marketing/record-content.webp",
+            "description": "Desarrollamos el contenido de redes sociales teniendo en cuenta los objetivos definidos y el público objetivo para que todo esté alineado."
+          },
+          "step4": {
+            "title": "Optimizar y mejorar el perfil",
+            "image": "/assets/process/marketing/optimization.webp",
+            "description": "Optimizamos tu perfil y estrategia para implementar lo que está funcionando mejor."
+          }
+        }
+      },
+      "web": {
+        "title": "Desarrollo Web",
+        "id": "web",
+        "description": "Construimos sitios web personalizados utilizando tecnologías web modernas, lo que garantiza que su marca sea reconocible y atractiva al instante.",
+        "steps": {
+          "step1": {
+            "title": "Diseño + Wireframe",
+            "image": "/assets/process/web/wireframe-preview.webp",
+            "description": "Describimos todas las páginas y secciones del sitio para tener una idea clara de cuál va a ser el resultado deseado."
+          },
+          "step2": {
+            "title": "Branding + Contenido",
+            "image": "/assets/process/web/wireframe-dev.webm",
+            "description": "Personalizamos su sitio web con su marca e información de la empresa."
+          },
+          "step3": {
+            "title": "Revision + Feedback",
+            "image": "/assets/process/web/reviews.webp",
+            "description": "Escuchamos sus comentarios para que podamos realizar rápidamente los ajustes necesarios."
+          },
+          "step4": {
+            "title": "Publicar",
+            "description": "Después de los controles de calidad finales, conectamos su sitio a su dominio personalizado y publicamos."
+          }
+        }
+      }
+    }
+  },
+  "services": {
+    "title": "Servicios:",
+    "servicesPlans": [
+      {
+        "id": "web-dev",
+        "title": "Desarrollo Web y de Software",
+        "subtitle": "Lleva tu presencia online a la web para aumentar tus conversiones y la confianza de tus clientes",
+        "highlight": "HOY.",
+        "list": [
+          "Diseño web UI/UX",
+          "Diseño de sitios web de comercio electrónico",
+          "Diseño de Landing Page",
+          "Diseño y desarrollo de sitios web responsivos",
+          "Mantenimiento del sitio web"
+        ]
+      },
+      {
+        "id": "mix-plan",
+        "title": "Marketing Digital + Desarrollo Web",
+        "subtitle": "El paquete COMPLETO para disparar su negocio a otro",
+        "highlight": "NIVEL.",
+        "list": [
+          "Todo el paquete de desarrollo web",
+          "Todo el paquete de marketing digital",
+          "Edicion de video",
+          "Marketing en redes sociales",
+          "Anuncios",
+          "Branding"
+        ]
+      },
+      {
+        "id": "digital-marketing",
+        "title": "Marketing Digital",
+        "subtitle": "Explote su presencia en línea a través de redes sociales y publicidad estratégica",
+        "highlight": "LO MAS RAPIDO QUE PUEDA.",
+        "list": [
+          "Optimizacion SEO",
+          "Marketing en redes sociales",
+          "Marketing de influencers",
+          "Marketing de contenidos",
+          "Edicion de video",
+          "Marketing de email"
+        ]
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonios",
+    "testimonialsData": [
+      {
+        "name": "Harold y Vantroy",
+        "content": "Contratar a Adstrategic para la producción y edición de nuestros videos en Arca Group fue una excelente decisión. Su calidad y creatividad han ampliado significativamente nuestro alcance. La atención al detalle y la profesionalidad del equipo superaron nuestras expectativas. Sin duda, volveremos a recurrir a ellos.",
+        "image": "/assets/people/harold.webp"
+      },
+      {
+        "name": "Edwin Renteria",
+        "content": "Adstrategic superó mis expectativas con su trabajo de diseño y marca para mi empresa de lavado de autos de lujo, \"Edwin's Detaling\". Crearon logotipos, pancartas, eslóganes y tarjetas de presentación digitales de una manera excepcional. Estoy muy satisfecho y definitivamente los volveré a contratar.",
+        "image": "/assets/people/edwin.webp"
+      },
+      {
+        "name": "David Cruz",
+        "content": "Contratar a Adstrategic fue una decisión excepcional para Casi's Shakers. Su diseño web y gráfico, junto con una marca distintiva y estrategias publicitarias impactantes, han transformado nuestra presencia en el mercado. Su profesionalismo y atención al detalle superó todas nuestras expectativas. Definitivamente volveremos a trabajar con ellos.",
+        "image": "/assets/people/david.webp"
+      },
+      {
+        "name": "Alexander Reed",
+        "content": "Contratar a Adstrategic para el diseño y la marca de mi empresa de instalación de aire acondicionado fue una decisión acertada. Su trabajo en diseño web y gráfico ha elevado nuestra imagen profesional, y su enfoque de la marca ha sido excepcional. Su atención al detalle y creatividad superaron nuestras expectativas. Definitivamente volveremos a trabajar con ellos.",
+        "image": "/assets/people/alexander.webp"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Obten una propuesta de <span class='text-[#55A7A6]'>Diseño Web</span> y <span class='text-[#55A7A6]'>Marketing</span>"
+  },
+  "whyUs": {
+    "title": "¿Por qué <span class='text-brand'>elegirnos</span>?",
+    "subtitle": "Hay una razón por la que somos la opción #1 para el diseño de sitios web.",
+    "keywords": ["Nosotros:", "Otros:", "Hecho", "No incluido", "Diseño o desarrollo", "6-10 Dias", "2-4 Meses"],
+    "features": [
+      "Tiempo de respuesta",
+      "Costo total",
+      "Contenido",
+      "Diseño + Desarrollo",
+      "Desarrollo web responsivo",
+      "Publicar sitio"
+    ]
+  },
+  "form": {
+    "fullNamePlaceholder": "Nombre completo",
+    "phoneNumberPlaceholder": "Numero de telefono",
+    "errorMessages": ["Hubo un error", "Intenta de nuevo."],
+    "successMessages": [
+      "E-mail enviado correctamente",
+      "¡Gracias por llenar nuestro formulario!",
+      "Te contactaremos tan rapido como podamos⚡."
+    ],
+    "cta": "Enviame mi propuesta"
+  },
+  "faqs": {
+    "title": "Responde a tus <span class='text-brand'>preguntas</span>",
+    "faqsData": [
+      {
+        "header": "¿Cuánto cuesta crear un sitio web profesional con tu agencia?",
+        "text": "Nuestros paquetes de desarrollo de sitios web comienzan en solo $ 300, lo que lo convierte en una solución asequible para empresas de todos los tamaños. Esto incluye un diseño responsivo optimizado para computadoras de escritorio, tabletas y dispositivos móviles. Para funciones avanzadas, personalización o proyectos más grandes, le proporcionaremos un presupuesto detallado adaptado a sus necesidades. El desarrollo de sitios web asequibles que brinde resultados es nuestra prioridad."
+      },
+      {
+        "header": "¿Mi sitio web será responsivo y estará totalmente optimizado para la visibilidad en línea?",
+        "text": "Sí, todos los sitios web que creamos son totalmente responsivos y están diseñados para proporcionar una experiencia de usuario fluida en todos los dispositivos. Además, incorporamos las mejores prácticas fundamentales de SEO para mejorar su visibilidad en línea y garantizar que su sitio tenga un buen rendimiento en las clasificaciones de los motores de búsqueda. Para una optimización SEO avanzada, ofrecemos servicios adicionales adaptados a sus objetivos."
+      },
+      {
+        "header": "¿Cuál es el tiempo estimado para entregar una solución completa de sitio web?",
+        "text": "Nuestro tiempo de respuesta para un sitio web estático básico con unas pocas páginas suele ser de una semana. Para proyectos más grandes o complejos, trabajamos en estrecha colaboración con usted para definir un cronograma que garantice la calidad y cumpla con sus plazos. La entrega rápida y eficiente del sitio web es una de nuestras principales fortalezas."
+      },
+      {
+        "header": "¿Qué servicios están incluidos en los planes de mantenimiento y soporte de su sitio web?",
+        "text": "Nuestros planes de mantenimiento del sitio web incluyen actualizaciones de contenido, ajustes de diseño, monitoreo del rendimiento y actualizaciones de seguridad para que su sitio web funcione sin problemas. Ya sea que necesite ediciones periódicas o soporte ocasional, nos aseguramos de que su sitio web se mantenga actualizado y funcione de la mejor manera. Confíe en nosotros para obtener servicios de administración de sitios web sin complicaciones."
+      },
+      {
+        "header": "¿Ofrecen diseños de sitios web personalizados para las necesidades específicas de mi negocio?",
+        "text": "¡Absolutamente! Nos especializamos en diseño web personalizado que refleja la identidad de su marca y atrae a su audiencia. Desde esquemas de color hasta funciones interactivas, cada aspecto de su sitio web se diseñará para cumplir con sus objetivos comerciales únicos. Destaca en línea con un sitio web diseñado específicamente para ti."
+      },
+      {
+        "header": "¿Qué sucede si quiero realizar cambios en el diseño inicial del sitio web?",
+        "text": "La satisfacción del cliente está en el corazón de nuestro proceso. Agradecemos los comentarios y proporcionamos revisiones ilimitadas al diseño de su sitio web durante la fase de desarrollo. Su sitio web reflejará exactamente lo que imagina, asegurándose de que esté 100% satisfecho antes del lanzamiento final."
+      }
+    ]
+  },
+  "scrollerData": [
+    { "title": "Especialistas de la industria" },
+    { "title": "Resultados Garantizados" },
+    { "title": "Diseño a medida" }
+  ],
+  "HeaderLinks": [
+    { "name": "Blog", "url": "/blog" },
+    { "name": "Proceso", "url": "/#process" },
+    { "name": "Servicios", "url": "/#services" },
+    { "name": "Contacto", "url": "/#contact" }
+  ],
+  "FooterLinks": [
+    { "name": "Blog", "url": "/blog" },
+    { "name": "Proceso", "url": "/#process" },
+    { "name": "¿Porque elegirnos?", "url": "/#why-us" },
+    { "name": "Servicios", "url": "/#services" },
+    { "name": "Testimonios", "url": "/#testimonials" },
+    { "name": "Contacto", "url": "/#contact" }
+  ]
 }

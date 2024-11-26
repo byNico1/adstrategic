@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import dynamic from "next/dynamic"
+import Contact from "@/components/Home/Contact"
 import FAQs from "@/components/Home/FAQs"
 import SheetOpener from "@/components/Home/SheetOpener"
 import Testimonials from "@/components/Home/Testimonials"
@@ -11,35 +11,40 @@ import Services from "@/home/Services"
 import { getDictionary } from "@/src/get-dictionary"
 import { Locale } from "@/src/i18n-config"
 
-const Contact = dynamic(() => import("@/components/Home/Contact"))
+export async function generateMetadata({ params: { lang } }: { params: { lang: Locale } }): Promise<Metadata> {
+  const dictionary = await getDictionary(lang)
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://adstrategic.org/"),
-  title: "Adstrategic - Get digital services to grow your online presence",
-  description:
-    "At Adstrategic, we specialize in transforming your online presence. Our expert team delivers top-notch video editing, innovative software development, social media management and advertising.",
+  return {
+    metadataBase: new URL("https://adstrategic.org/"),
+    title: dictionary.metadata.title,
+    description: dictionary.metadata.description,
+  }
 }
 
 export default async function Web({ params: { lang } }: { params: { lang: Locale } }) {
   const dictionary = await getDictionary(lang)
 
   return (
-    <main>
-      <SheetOpener />
+    <>
+      <main>
+        <SheetOpener formDictionary={dictionary.form} dictionary={dictionary.sheetOpener} />
 
-      <MultiLayerParallax />
+        <MultiLayerParallax dictionary={dictionary.hero} />
 
-      <Process />
+        <Process dictionary={dictionary.process} />
 
-      <Services />
+        <Services dictionary={dictionary.services} />
 
-      <WhyUs />
+        <WhyUs dictionary={dictionary.whyUs} />
 
-      <Testimonials />
+        <Testimonials dictionary={dictionary.testimonials} />
 
-      <Contact />
-      <FAQs />
-      <Scroller />
-    </main>
+        <Contact dictionary={dictionary.contact} formDictionary={dictionary.form} />
+
+        <FAQs dictionary={dictionary.faqs} />
+
+        <Scroller dictionary={dictionary.scrollerData} />
+      </main>
+    </>
   )
 }

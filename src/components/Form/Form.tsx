@@ -8,12 +8,19 @@ import React, { useState } from "react"
 import { FormProvider, useForm } from "react-hook-form"
 import triggerFormContact from "@/fb/sendDataToFB"
 import { Button } from "@/shadcn/button"
+import { type getDictionary } from "@/src/get-dictionary"
 import { FormData, UserSchema } from "@/types/form"
 
 const CustomPhoneInput = dynamic(() => import("@/components/Form/Input").then((mod) => mod.CustomPhoneInput))
 const Input = dynamic(() => import("@/components/Form/Input").then((mod) => mod.Input))
 
-const Form = ({ className }: { className?: string }) => {
+const Form = ({
+  className,
+  dictionary,
+}: {
+  className?: string
+  dictionary?: Awaited<ReturnType<typeof getDictionary>>["form"]
+}) => {
   const methods = useForm<FormData>({ resolver: zodResolver(UserSchema) })
   const [loadingState, setLoadingState] = useState<string | null>(null)
   const router = useRouter()
@@ -55,12 +62,20 @@ const Form = ({ className }: { className?: string }) => {
             className="mx-auto w-full max-w-xl rounded-md bg-background py-8"
           >
             <div className={`mx-auto flex w-3/4 flex-col ${className}`}>
-              <Input label="Full Name" type="text" id="userFirstName" placeholder="Full Name" />
-              <Input label="Email" type="email" id="userEmail" placeholder="Email" />
-              <CustomPhoneInput control={methods.control} />
+              <Input
+                label={dictionary?.fullNamePlaceholder || "Full Name"}
+                type="text"
+                id="userFirstName"
+                placeholder={dictionary?.fullNamePlaceholder || "Full Number"}
+              />
+              <Input label="E-mail" type="email" id="userEmail" placeholder="E-mail" />
+              <CustomPhoneInput
+                placeholder={dictionary?.phoneNumberPlaceholder || "Phone Number"}
+                control={methods.control}
+              />
 
               <Button onClick={onSubmit} size="lg" type="submit" className="mt-4 w-full">
-                Send Me My Service
+                {dictionary?.cta || "Send me my proposal"}
               </Button>
             </div>
           </form>
@@ -71,16 +86,20 @@ const Form = ({ className }: { className?: string }) => {
           <Image className="mx-auto" width={200} height={200} src="/assets/icons/loading-spinner.gif" alt="" />
         </div>
       ) : loadingState === "error" ? (
-        <div className="mx-auto w-full max-w-xl rounded-md p-16 text-lg font-semibold">
-          <p>There was an error</p>
-          <p>Try again.</p>
+        <div className="mx-auto w-full max-w-xl rounded-md bg-background p-16 text-lg font-semibold text-destructive dark:text-red-400">
+          <p>{dictionary?.errorMessages[0] || "There was an error"}</p>
+          <p>{dictionary?.errorMessages[1] || "Try again."}</p>
         </div>
       ) : (
         loadingState === "success" && (
           <div className="mx-auto w-full max-w-xl rounded-md bg-background px-2 py-16 text-center">
-            <p className="mb-8 text-green-900 dark:text-green-400">Email Sent Succesfully</p>
-            <h1 className="mb-4 text-4xl font-extrabold ">Thank you for submitting our form</h1>
-            <p>We will contact you ASAP⚡.</p>
+            <p className="mb-8 text-green-900 dark:text-green-400">
+              {dictionary?.successMessages[0] || "Email Sent Succesfully"}
+            </p>
+            <p className="mb-4 text-4xl font-extrabold">
+              {dictionary?.successMessages[1] || "Thank you for submitting our form"}
+            </p>
+            <p>{dictionary?.successMessages[2] || "We will contact you ASAP⚡."}</p>
           </div>
         )
       )}

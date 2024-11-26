@@ -1,21 +1,16 @@
 import Link from "next/link"
 import { Button } from "@/shadcn/button"
+import { Locale } from "@/src/i18n-config"
+import { getDictionary } from "../get-dictionary"
 
-const LINKS = [
-  { name: "Blog", url: "/blog" },
-  { name: "Process", url: "/#process" },
-  { name: "Why us?", url: "/#why-us" },
-  { name: "Services", url: "/#services" },
-  { name: "Testimonials", url: "/#testimonials" },
-  { name: "Contact", url: "/#contact" },
-]
+export default async function Footer({ params: { lang } }: { params: { lang: Locale } }) {
+  const { FooterLinks } = await getDictionary(lang)
 
-const Footer = () => {
   return (
     <footer className="">
       <div className="mx-auto max-w-screen-xl space-y-8 overflow-hidden px-4 py-12 sm:px-6 lg:px-8">
         <nav className="-mx-5 -my-2 flex flex-wrap justify-center">
-          {LINKS.map((link) => (
+          {FooterLinks.map((link) => (
             <Button variant="ghost" key={`footer-${link.name}`}>
               <Link href={link.url} className="text-base leading-6 text-foreground">
                 {link.name}
@@ -56,5 +51,3 @@ const Footer = () => {
     </footer>
   )
 }
-
-export default Footer

@@ -2,9 +2,10 @@
 
 import { StarFilledIcon } from "@radix-ui/react-icons"
 import { Button } from "@/shadcn/button"
+import { type getDictionary } from "@/src/get-dictionary"
 import { ResultsCarousel } from "./ui/custom-carousel"
 
-const MultiLayerParallax = () => {
+const MultiLayerParallax = ({ dictionary }: { dictionary: Awaited<ReturnType<typeof getDictionary>>["hero"] }) => {
   const starsArray = Array(5).fill(false)
 
   return (
@@ -19,7 +20,7 @@ const MultiLayerParallax = () => {
                 </span>
               ))}
             </p>
-            <p className="text-sm">Hiring Adstrategic was an exceptional decision for Casi&apos;s Shakers</p>
+            <p className="text-sm">{dictionary.reviews[0]}</p>
           </div>
           <div>
             <p className="inline-flex">
@@ -29,9 +30,7 @@ const MultiLayerParallax = () => {
                 </span>
               ))}
             </p>
-            <p className="text-sm">
-              Adstrategic exceeded my expectations with their design and branding work for my luxury car wash company
-            </p>
+            <p className="text-sm">{dictionary.reviews[1]}</p>
           </div>
           <div className="hidden sm:block">
             <p className="inline-flex">
@@ -41,18 +40,16 @@ const MultiLayerParallax = () => {
                 </span>
               ))}
             </p>
-            <p className="text-sm">Their work on web and graphic design has elevated our professional image</p>
+            <p className="text-sm">{dictionary.reviews[2]}</p>
           </div>
         </div>
-        <h1 className="mb-8 text-[45px] font-extrabold leading-none sm:text-7xl">
-          Get <span className="text-brand">Digital Services</span> That Drive <span className="text-brand">Growth</span>
-        </h1>
-        <p className="mb-8 text-lg font-medium">
-          Elevate the design of your <span className="text-brand underline">Website</span> and ignite your Digital
-          Marketing results with Adstrategic!
-        </p>
+        <h1
+          className="mb-8 text-[45px] font-extrabold leading-none sm:text-7xl"
+          dangerouslySetInnerHTML={{ __html: dictionary.intro }}
+        ></h1>
+        <p className="mb-8 text-lg font-medium" dangerouslySetInnerHTML={{ __html: dictionary.paragraph }}></p>
         <Button size="lg">
-          <a href="#contact">Get started</a>
+          <a href="#contact">{dictionary.cta}</a>
         </Button>
       </div>
 

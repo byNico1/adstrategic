@@ -1,48 +1,33 @@
 "use client"
 import React, { useState } from "react"
 
-const FAQs = () => {
+import { type getDictionary } from "@/src/get-dictionary"
+
+const FAQs = ({ dictionary }: { dictionary: Awaited<ReturnType<typeof getDictionary>>["faqs"] }) => {
   return (
     <section className="relative z-20 overflow-hidden pb-12 pt-20 lg:pb-[90px] lg:pt-[120px]">
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div className="mx-auto mb-[60px] max-w-[520px] text-center lg:mb-20">
-              <h2 className=" mb-4 text-5xl font-extrabold sm:text-7xl dark:text-white">
-                Answers to your <span className="text-brand">questions</span>
-              </h2>
+              <h2
+                className=" mb-4 text-5xl font-extrabold sm:text-7xl dark:text-white"
+                dangerouslySetInnerHTML={{ __html: dictionary.title }}
+              ></h2>
             </div>
           </div>
         </div>
 
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 lg:w-1/2">
-            <AccordionItem
-              header="How much does it cost to build a professional website with your agency?"
-              text="Our website development packages start at just $300, making it an affordable solution for businesses of all sizes. This includes a responsive design optimized for desktop, tablet, and mobile devices. For advanced features, customization, or larger projects, we’ll provide a detailed quote tailored to your needs. Affordable website development that delivers results is our priority."
-            />
-            <AccordionItem
-              header="Will my website be responsive and fully optimized for online visibility?"
-              text="Yes, every website we create is fully responsive and designed to provide a seamless user experience across all devices. Additionally, we incorporate foundational SEO best practices to enhance your online visibility and ensure your site performs well in search engine rankings. For advanced SEO optimization, we offer additional services tailored to your goals."
-            />
-            <AccordionItem
-              header="What is the estimated time to deliver a complete website solution?"
-              text="Our turnaround time for a basic static website with a few pages is typically one week. For larger or more complex projects, we work closely with you to define a timeline that ensures quality while meeting your deadlines. Fast and efficient website delivery is one of our core strengths."
-            />
+            {dictionary.faqsData.slice(0, 3).map((data) => (
+              <AccordionItem key={data.header} header={data.header} text={data.text} />
+            ))}
           </div>
           <div className="w-full px-4 lg:w-1/2">
-            <AccordionItem
-              header="What services are included in your website upkeep and support plans?"
-              text="Our website maintenance plans include content updates, layout adjustments, performance monitoring, and security updates to keep your website running smoothly. Whether you need regular edits or occasional support, we ensure your website stays current and performs at its best. Trust us for hassle-free website management services."
-            />
-            <AccordionItem
-              header="Do you offer tailored website designs crafted for my specific business needs?"
-              text="Absolutely! We specialize in custom web design that reflects your brand identity and engages your audience. From color schemes to interactive features, every aspect of your website will be designed to meet your unique business goals. Stand out online with a website tailored specifically for you."
-            />
-            <AccordionItem
-              header="What happens if I want to make changes to the initial website layout?"
-              text="Client satisfaction is at the heart of our process. We welcome feedback and provide unlimited revisions to your website layout during the development phase. Your website will reflect exactly what you envision, ensuring you are 100% satisfied before the final launch."
-            />
+            {dictionary.faqsData.slice(3).map((data) => (
+              <AccordionItem key={data.header} header={data.header} text={data.text} />
+            ))}
           </div>
         </div>
       </div>

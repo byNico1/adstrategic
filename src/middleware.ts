@@ -47,6 +47,8 @@ export function middleware(request: NextRequest) {
       "/assets/icons/images.webp",
       "/assets/icons/tailored-design.webp",
       "/assets/icons/recruitment.webp",
+      "/assets/icons/usaflag.svg",
+      "/assets/icons/spainflag.svg",
       "/assets/people/alexander.webp",
       "/assets/people/edwin.webp",
       "/assets/people/harold.webp",
@@ -59,6 +61,7 @@ export function middleware(request: NextRequest) {
       "/assets/results/youtube-analytics.webp",
       "/adstrategic-180.webp",
       "/info.jpg",
+      "/favicon.ico",
       // Your other files in `public`
     ].includes(pathname)
   )

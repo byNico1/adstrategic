@@ -86,11 +86,11 @@ export default async function PostPage({ params }: PostParams) {
               <div className="sticky rounded-md border border-border md:top-40 md:max-h-[calc(100vh-250px)] md:overflow-y-scroll lg:top-44">
                 <div className="mx-auto px-5 pb-0 pt-8 text-center">
                   <h2 className="mb-2 max-w-2xl text-2xl font-extrabold !leading-tight tracking-wide lg:text-3xl">
-                    Get 10 New Top-Tier Leads
+                    Get a <span className="text-brand">WEB DESIGN</span> and marketing
                   </h2>
                   <Reveal center>
-                    <p className="max-w-2xl text-2xl font-extrabold !leading-tight tracking-wide text-[#4b9594] lg:text-4xl">
-                      Within 30 days
+                    <p className="max-w-2xl text-2xl font-extrabold !leading-tight tracking-wide text-brand lg:text-4xl">
+                      Proposal
                     </p>
                   </Reveal>
                   <Form />

@@ -14,7 +14,7 @@ interface Props {
   placeholder: string
 }
 
-export const CustomPhoneInput = ({ control }: { control: Control<FormData> }) => {
+export const CustomPhoneInput = ({ control, placeholder }: { control: Control<FormData>; placeholder: string }) => {
   const {
     formState: { errors },
   } = useFormContext()
@@ -25,7 +25,7 @@ export const CustomPhoneInput = ({ control }: { control: Control<FormData> }) =>
     <div className="mb-4 flex flex-col items-start justify-center gap-4 [&>.PhoneInput]:w-full">
       <div className="flex w-full flex-wrap items-center justify-between gap-2">
         <label className="block pr-4 text-left font-bold text-muted-foreground" htmlFor="userPhone">
-          Phone Number
+          {placeholder}
         </label>
         <AnimatePresence mode="wait" initial={false}>
           {isInvalid && <InputError message={"Invalid Phone Number"} key={"Invalid Phone Number"} />}

@@ -51,7 +51,7 @@ const IconsToRender = ({ title }: { title: string }) => {
           </Container>
         </div>
       )}
-      {title === "Digital Marketing" && (
+      {(title === "Digital Marketing" || title === "Marketing Digital") && (
         <Container className="circle-3">
           <InstagramLogoIcon className="h-8 w-8 dark:text-white" />
         </Container>

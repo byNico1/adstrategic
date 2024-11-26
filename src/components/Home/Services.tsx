@@ -1,58 +1,15 @@
 import dynamic from "next/dynamic"
+import { type getDictionary } from "@/src/get-dictionary"
 
 const CardDemo = dynamic(() => import("@/shadcn/product-card"))
 
-const Services = () => {
-  const servicesPlans = [
-    {
-      id: "web-dev",
-      title: "Web And Software Development",
-      subtitle: "Take your online presence to the web to increase your conversions and your customers trust",
-      highlight: "TODAY.",
-      list: [
-        "UI/UX Website Design",
-        "E-commerce Website Design",
-        "Landing Page Design",
-        "Responsive Website Design & Development",
-        "Website Maintenance",
-      ],
-    },
-    {
-      id: "mix-plan",
-      title: "Digital Marketing + Web Development",
-      subtitle: "The WHOLE package to skyrocket your business to other",
-      highlight: "LEVEL.",
-      list: [
-        "All Of Web Development",
-        "All Of Digital Marketing",
-        "Video Editing",
-        "Social Media Marketing",
-        "Advertising",
-        "Branding",
-      ],
-    },
-    {
-      id: "digital-marketing",
-      title: "Digital Marketing",
-      subtitle: "Explode your online presence through strategical social media and advertising",
-      highlight: "ASAP.",
-      list: [
-        "SEO Optimization",
-        "Social Media Marketing",
-        "Influencer Marketing",
-        "Content Marketing",
-        "Video Editing",
-        "Email Marketing",
-      ],
-    },
-  ]
-
+const Services = ({ dictionary }: { dictionary: Awaited<ReturnType<typeof getDictionary>>["services"] }) => {
   return (
     <div className="bg-background px-2 pt-16 sm:px-6 sm:pt-24" id="services">
-      <h2 className="mb-14 text-center text-5xl font-extrabold sm:text-7xl">Services:</h2>
+      <h2 className="mb-14 text-center text-5xl font-extrabold sm:text-7xl">{dictionary.title}</h2>
 
       <div className="mx-auto grid max-w-6xl grid-cols-[repeat(auto-fit,minmax(300px,_1fr))] justify-center gap-12">
-        {servicesPlans.map((services) => (
+        {dictionary.servicesPlans.map((services) => (
           <CardDemo
             className={services.title.includes("Plan") ? "bg-gray-200 dark:bg-[rgba(20,20,20,0.7)]" : ""}
             key={services.id}

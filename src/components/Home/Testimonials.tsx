@@ -3,8 +3,9 @@
 import dynamic from "next/dynamic"
 import Image from "next/image"
 import { LuQuote } from "react-icons/lu"
-import { testimonials } from "@/utils/testimonials"
-import AnimateInView from "../Animations/AnimateInView"
+import { type getDictionary } from "@/src/get-dictionary"
+
+const AnimateInView = dynamic(() => import("../Animations/AnimateInView"))
 
 const Carousel = dynamic(() => import("@/components/ui/carousel").then((mod) => mod.Carousel))
 const CarouselContent = dynamic(() => import("@/components/ui/carousel").then((mod) => mod.CarouselContent))
@@ -12,18 +13,18 @@ const CarouselItem = dynamic(() => import("@/components/ui/carousel").then((mod)
 const CarouselNext = dynamic(() => import("@/components/ui/carousel").then((mod) => mod.CarouselNext))
 const CarouselPrevious = dynamic(() => import("@/components/ui/carousel").then((mod) => mod.CarouselPrevious))
 
-const Testimonials = () => {
+const Testimonials = ({ dictionary }: { dictionary: Awaited<ReturnType<typeof getDictionary>>["testimonials"] }) => {
   return (
     <section id="testimonials" className="overflow-hidden py-16 sm:py-24">
       <AnimateInView className="px-4">
-        <h2 className="mb-8 text-center text-4xl font-extrabold !leading-tight sm:text-7xl">Testimonials</h2>
+        <h2 className="mb-8 text-center text-4xl font-extrabold !leading-tight sm:text-7xl">{dictionary.title}</h2>
 
         <Carousel
           opts={{ loop: true }}
           className="mx-auto w-full max-w-[calc(100vw-110px)]  sm:max-md:max-w-md md:max-w-[calc(100vw-130px)] xl:max-w-5xl"
         >
           <CarouselContent className="">
-            {testimonials.map((testimonial) => (
+            {dictionary.testimonialsData.map((testimonial) => (
               <CarouselItem className="md:basis-1/2 lg:basis-1/3 " key={testimonial.name}>
                 <div className="relative  flex h-full min-h-[500px] w-full flex-col justify-around rounded-lg border border-black/10 p-4 !pt-24 min-[375px]:p-10 dark:border-white/10">
                   <LuQuote className="absolute right-8 top-5 opacity-20" size={60} />

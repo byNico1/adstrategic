@@ -1,22 +1,25 @@
 "use client"
 
-import dynamic from "next/dynamic"
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { IoMdClose, IoMdMenu } from "react-icons/io"
 import { Button } from "@/shadcn/button"
+import { ModeToggle } from "@/shadcn/mode-toggle"
+import { type getDictionary } from "@/src/get-dictionary"
+import { Locale } from "@/src/i18n-config"
+import { LanguageToggle } from "../ui/language-toggle"
 
-const ModeToggle = dynamic(() => import("@/shadcn/mode-toggle").then((mod) => mod.ModeToggle))
+export const Header = ({
+  headerLinks,
+  lang,
+}: {
+  headerLinks: Awaited<ReturnType<typeof getDictionary>>["HeaderLinks"]
+  lang: Locale
+}) => {
+  const pathname = usePathname()
 
-const LINKS = [
-  { name: "Blog", url: "/blog" },
-  { name: "Process", url: "/#process" },
-  { name: "Services", url: "/#services" },
-  { name: "Contact", url: "/#contact" },
-]
-
-export const Header = () => {
   const [isOpened, setIsOpened] = useState(false)
 
   function handleClick() {
@@ -41,7 +44,7 @@ export const Header = () => {
           }`}
         >
           <div className="flex w-full flex-col items-center justify-center gap-8 px-5 font-semibold max-lg:text-lg lg:flex-row">
-            {LINKS.map((link) => (
+            {headerLinks.map((link) => (
               <Link onClick={() => setIsOpened(false)} key={link.name} href={`${link.url}`}>
                 <Button
                   variant="ghost"
@@ -52,6 +55,7 @@ export const Header = () => {
                 </Button>
               </Link>
             ))}
+            {(pathname === "/" || pathname === "/es" || pathname === "/en") && <LanguageToggle lang={lang} />}
           </div>
         </div>
         <div className="relative flex items-center justify-center gap-5">
