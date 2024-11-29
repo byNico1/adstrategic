@@ -24,6 +24,10 @@ function getLocale(request: NextRequest): string | undefined {
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
 
+  // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.
+  // If you have one
+  if (["/adstrategic-180.webp", "/info.jpg"].includes(pathname) || pathname.startsWith("/assets")) return
+
   if (pathname === "/" || pathname === "/en" || pathname === "/es") {
     // Check if there is any supported locale in the pathname
     const pathnameIsMissingLocale = i18n.locales.every(
@@ -49,7 +53,9 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   // Matcher ignoring `/_next/` and `/api/`
-  // matcher: ["/", "/en", "/es"],
-  matcher: ["/((?!api|.*\\.|_next/static|_next/image).*)", "/robots.txt", "/sitemap.xml"],
-  // matcher: ["/((?!api|_next/static|_next/image).*)"],
+  matcher: [
+    "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)",
+    "/opengraph-image.png",
+    "/twitter-image.png",
+  ],
 }
