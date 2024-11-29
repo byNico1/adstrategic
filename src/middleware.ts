@@ -24,49 +24,6 @@ function getLocale(request: NextRequest): string | undefined {
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
 
-  // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.
-  // If you have one
-  if (
-    [
-      "/assets/process/web/wireframe-preview.webp",
-      "/assets/process/web/loading-ready.svg",
-      "/assets/process/web/wireframe-dev.webm",
-      "/assets/process/web/reviews.webp",
-      "/assets/process/marketing/define-goals.webp",
-      "/assets/process/marketing/record-content.webp",
-      "/assets/process/marketing/target-audience.webp",
-      "/assets/process/marketing/optimization.webp",
-      "/assets/icons/advertising.webp",
-      "/assets/icons/performance.webp",
-      "/assets/icons/check-svgrepo-com.svg",
-      "/assets/icons/guarantee-certificate.webp",
-      "/assets/icons/loading-spinner.gif",
-      "/assets/icons/quote.webp",
-      "/assets/icons/diseno.webp",
-      "/assets/icons/mobile.webp",
-      "/assets/icons/images.webp",
-      "/assets/icons/tailored-design.webp",
-      "/assets/icons/recruitment.webp",
-      "/assets/icons/usaflag.svg",
-      "/assets/icons/spainflag.svg",
-      "/assets/people/alexander.webp",
-      "/assets/people/edwin.webp",
-      "/assets/people/harold.webp",
-      "/assets/people/david.webp",
-      "/assets/results/adstrategic-website.webp",
-      "/assets/results/nico-portfolio.webp",
-      "/assets/results/e-commerce.webp",
-      "/assets/results/selfimprovingbooks.webp",
-      "/assets/results/google-analytics.webp",
-      "/assets/results/youtube-analytics.webp",
-      "/adstrategic-180.webp",
-      "/info.jpg",
-      "/favicon.ico",
-      // Your other files in `public`
-    ].includes(pathname)
-  )
-    return
-
   if (pathname === "/" || pathname === "/en" || pathname === "/es") {
     // Check if there is any supported locale in the pathname
     const pathnameIsMissingLocale = i18n.locales.every(
@@ -93,5 +50,6 @@ export function middleware(request: NextRequest) {
 export const config = {
   // Matcher ignoring `/_next/` and `/api/`
   // matcher: ["/", "/en", "/es"],
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+  matcher: ["/((?!api|.*\\.|_next/static|_next/image).*)", "/robots.txt", "/sitemap.xml"],
+  // matcher: ["/((?!api|_next/static|_next/image).*)"],
 }
