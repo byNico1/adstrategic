@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next"
+import { getListOfPosts } from "@/src/lib/posts"
 import { Post } from "@/types/posts"
-import { getListOfPosts } from "@/utils/posts"
 
 const MAX_POSTS = 1000
 

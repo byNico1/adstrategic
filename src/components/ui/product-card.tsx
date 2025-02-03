@@ -5,7 +5,7 @@ import { animate } from "framer-motion"
 import { Code } from "lucide-react"
 import React, { useEffect } from "react"
 
-import { cn } from "@/utils/utils"
+import { cn } from "@/src/lib/utils"
 
 interface Props {
   title: string

@@ -1,8 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Card, CardContent, CardFooter, CardHeader } from "@/shadcn/card"
+import { getListOfPosts } from "@/src/lib/posts"
 import { Post } from "@/types/posts"
-import { getListOfPosts } from "@/utils/posts"
 
 import BlogList from "./MorePosts"
 

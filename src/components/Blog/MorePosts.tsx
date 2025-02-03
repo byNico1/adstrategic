@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 import { Button } from "@/shadcn/button"
+import { getListOfPosts } from "@/src/lib/posts"
 import { Post } from "@/types/posts"
-import { getListOfPosts } from "@/utils/posts"
 
 import { RenderPosts } from "./BlogList"
 
