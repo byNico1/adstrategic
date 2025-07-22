@@ -25,26 +25,24 @@ export default async function Web({ params: { lang } }: { params: { lang: Locale
   const dictionary = await getDictionary(lang)
 
   return (
-    <>
-      <main>
-        <SheetOpener formDictionary={dictionary.form} dictionary={dictionary.sheetOpener} />
+    <main>
+      <SheetOpener formDictionary={dictionary.form} dictionary={dictionary.sheetOpener} />
 
-        <MultiLayerParallax dictionary={dictionary.hero} />
+      <MultiLayerParallax dictionary={dictionary.hero} />
 
-        <Process dictionary={dictionary.process} />
+      <Process dictionary={dictionary.process} />
 
-        <Services dictionary={dictionary.services} />
+      <Services dictionary={dictionary.services} />
 
-        <WhyUs dictionary={dictionary.whyUs} />
+      <WhyUs dictionary={dictionary.whyUs} />
 
-        <Testimonials dictionary={dictionary.testimonials} />
+      <Testimonials dictionary={dictionary.testimonials} />
 
-        <Contact dictionary={dictionary.contact} formDictionary={dictionary.form} />
+      <Contact dictionary={dictionary.contact} formDictionary={dictionary.form} />
 
-        <FAQs dictionary={dictionary.faqs} />
+      <FAQs dictionary={dictionary.faqs} />
 
-        <Scroller dictionary={dictionary.scrollerData} />
-      </main>
-    </>
+      <Scroller dictionary={dictionary.scrollerData} />
+    </main>
   )
 }
