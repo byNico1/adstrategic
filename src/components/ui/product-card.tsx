@@ -2,10 +2,9 @@
 
 import { InstagramLogoIcon } from "@radix-ui/react-icons"
 import { animate } from "framer-motion"
-import { Code } from "lucide-react"
+import { AppWindow, BookOpenText, Code } from "lucide-react"
 import React, { useEffect } from "react"
-
-import { cn } from "@/src/lib/utils"
+import { cn } from "@/utils/utils"
 
 interface Props {
   title: string
@@ -33,27 +32,27 @@ export default function CardDemo({ title, description, children, className, high
 const IconsToRender = ({ title }: { title: string }) => {
   return (
     <div className="relative flex h-full items-center justify-center overflow-hidden p-8">
-      {title.toLowerCase().includes("software") && (
+      {title.toLowerCase().includes("+") && (
+        <div className="flex shrink-0 flex-row items-center justify-center gap-2">
+          <Container className="circle-2 h-12 w-12">
+            <AppWindow className="h-6 w-6 dark:text-white" />
+          </Container>
+          <Container className="circle-3">
+            <Code color="#095ef3" className="h-8 w-8 dark:text-white" />
+          </Container>
+          <Container className="circle-4 h-12 w-12">
+            <BookOpenText className="h-8 w-8 dark:text-white" />
+          </Container>
+        </div>
+      )}
+      {(title === "Web Development" || title === "Desarrollo Web") && (
         <Container className="circle-3">
           <Code className="h-8 w-8 dark:text-white" />
         </Container>
       )}
-      {title.toLowerCase().includes("+") && (
-        <div className="flex shrink-0 flex-row items-center justify-center gap-2">
-          <Container className="circle-2 h-12 w-12">
-            <Code className="h-6 w-6 dark:text-white" />
-          </Container>
-          <Container className="circle-3">
-            <MetaIconOutline className="h-8 w-8 dark:text-white" />
-          </Container>
-          <Container className="circle-4 h-12 w-12">
-            <InstagramLogoIcon className="h-8 w-8 dark:text-white" />
-          </Container>
-        </div>
-      )}
-      {(title === "Digital Marketing" || title === "Marketing Digital") && (
+      {(title === "Business Software Development" || title === "Desarrollo de Software Empresarial") && (
         <Container className="circle-3">
-          <InstagramLogoIcon className="h-8 w-8 dark:text-white" />
+          <AppWindow className="h-8 w-8 dark:text-white" />
         </Container>
       )}
     </div>

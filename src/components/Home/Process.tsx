@@ -5,7 +5,7 @@ import { useState } from "react"
 import { type getDictionary } from "@/src/get-dictionary"
 import { Button } from "../ui/button"
 export default function Process({ dictionary }: { dictionary: Awaited<ReturnType<typeof getDictionary>>["process"] }) {
-  const [option, setOption] = useState<"web" | "marketing">("web")
+  const [option, setOption] = useState<"web" | "software">("web")
 
   return (
     <section className="mx-auto max-w-screen-xl px-4 pt-16 sm:pt-24 lg:px-6" id="process">
@@ -21,7 +21,7 @@ export default function Process({ dictionary }: { dictionary: Awaited<ReturnType
             size="lg"
             variant={option === key ? "default" : "ghost"}
             key={key}
-            onClick={() => setOption(key as "marketing" | "web")}
+            onClick={() => setOption(key as "software" | "web")}
           >
             {/* {key === "web" ? "Web Development" : key === "marketing" ? "Digital Marketing" : "Coming Soon"} */}
             {dictionary.processInformation[key as keyof typeof dictionary.processInformation].title}
@@ -76,7 +76,7 @@ export default function Process({ dictionary }: { dictionary: Awaited<ReturnType
               </video>
             </div>
           ) : (
-            option === "marketing" && (
+            option === "software" && (
               <div className="relative mb-4 aspect-square w-full sm:aspect-video">
                 <Image
                   className="rounded-2xl"
@@ -138,7 +138,7 @@ export default function Process({ dictionary }: { dictionary: Awaited<ReturnType
               </div>
             </div>
           ) : (
-            option === "marketing" && (
+            option === "software" && (
               <div className="relative mb-4 aspect-square w-full sm:aspect-video">
                 <Image
                   className="rounded-2xl"

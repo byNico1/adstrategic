@@ -1,46 +1,49 @@
 {
   "metadata": {
-    "title": "Adstrategic - Obtenga servicios digitales para aumentar su presencia en línea",
-    "description": "En Adstrategic, nos especializamos en transformar su presencia en línea. Nuestro equipo de expertos ofrece edición de video de primer nivel, desarrollo de software innovador, gestión de redes sociales y publicidad."
+    "title": "Adstrategic - Soluciones de desarrollo de software y sitios web profesionales",
+    "description": "En Adstrategic, desarrollamos soluciones tecnológicas personalizadas. Ofrecemos software empresarial a medida y sitios web profesionales para transformar la operación y presencia online de tu negocio."
   },
-  "sheetOpener": { "text": "SOLICITAR PROPUESTA", "title": "Solicite una propuesta de diseño web y marketing" },
+  "sheetOpener": {
+    "text": "SOLICITAR PROPUESTA",
+    "title": "Solicite una propuesta de diseño web y software personalizado"
+  },
   "hero": {
     "reviews": [
-      "Contratar a Adstrategic fue una decisión excepcional para Casi&apos;s Shakers",
-      "Adstrategic superó mis expectativas con su trabajo de diseño y marca para mi empresa de lavado de autos de lujo",
-      "Su trabajo en diseño web y gráfico ha elevado nuestra imagen profesional"
+      "Contratar a Adstrategic fue una decisión excepcional para nuestra solución de reservas internas",
+      "Adstrategic superó mis expectativas con su sistema a medida para mi empresa de logística",
+      "Su trabajo en desarrollo web y software mejoró nuestra eficiencia y presencia profesional"
     ],
-    "intro": "Obten <span class='text-brand'>Servicios Digitales</span> Que Traigan <span class='text-brand'>Crecimiento</span>",
-    "paragraph": "¡Eleve el diseño de su <span class='text-brand underline'>sitio web</span> y encienda sus resultados de marketing digital con Adstrategic!",
+    "intro": "Impulsa tu empresa con <span class='text-brand'>Software</span> a medida y <span class='text-brand'>sitios web</span> <span class='text-brand'>Profesionales</span>",
+    "paragraph": "Eleva tu tu empresa con <span class='text-brand underline'> software personalizado y presencia web</span> profesional desarrollada por Adstrategic.",
     "cta": "Comienza Ahora"
   },
   "process": {
     "title": "Nuestro <span class='text-brand'>Proceso</span>?",
     "processInformation": {
-      "marketing": {
-        "title": "Marketing Digital",
-        "id": "marketing",
-        "description": "Te ayudamos a crear contenido atractivo para las redes sociales, llegar a tu público objetivo y construir una identidad de marca sólida.",
+      "software": {
+        "title": "Soluciones de Software a Medida",
+        "id": "software",
+        "description": "Desarrollamos software empresarial personalizado que se adapta a tus necesidades, optimizando procesos y mejorando tu eficiencia operativa.",
         "steps": {
           "step1": {
-            "title": "Definir Objetivos",
-            "image": "/assets/process/marketing/define-goals.webp",
-            "description": "Escuchamos sus metas y las alineamos con sus objetivos comerciales."
+            "title": "Diagnóstico de Necesidades",
+            "image": "/assets/process/software/reunionimagen.jpg",
+            "description": "Analizamos tus retos operativos y objetivos de negocio para diseñar la solución ideal."
           },
           "step2": {
-            "title": "Definir el público objetivo",
-            "image": "/assets/process/marketing/target-audience.webp",
-            "description": "Hacemos una investigación de mercados para entender cuál es el cliente perfecto para ti, por lo que nuestro objetivo es llegar a ellos."
+            "title": "Diseño de Funcionalidades",
+            "image": "/assets/process/software/define.jpeg",
+            "description": "Definimos flujos de usuario, pantallas clave y arquitectura funcional del software."
           },
           "step3": {
-            "title": "Crear el contenido",
-            "image": "/assets/process/marketing/record-content.webp",
-            "description": "Desarrollamos el contenido de redes sociales teniendo en cuenta los objetivos definidos y el público objetivo para que todo esté alineado."
+            "title": "Desarrollo Iterativo",
+            "image": "/assets/process/software/sdesarrolloimagen.jpg",
+            "description": "Construimos tu sistema por módulos, con entregas funcionales y revisiones continuas."
           },
           "step4": {
-            "title": "Optimizar y mejorar el perfil",
-            "image": "/assets/process/marketing/optimization.webp",
-            "description": "Optimizamos tu perfil y estrategia para implementar lo que está funcionando mejor."
+            "title": "Entrega + Soporte",
+            "image": "/assets/process/software/llamada.jpg",
+            "description": "Instalamos, entregamos tu software y ofrecemos garantía o mantenimiento según tus necesidades."
           }
         }
       },
@@ -77,7 +80,7 @@
     "servicesPlans": [
       {
         "id": "web-dev",
-        "title": "Desarrollo Web y de Software",
+        "title": "Desarrollo Web",
         "subtitle": "Lleva tu presencia online a la web para aumentar tus conversiones y la confianza de tus clientes",
         "highlight": "HOY.",
         "list": [
@@ -90,30 +93,27 @@
       },
       {
         "id": "mix-plan",
-        "title": "Marketing Digital + Desarrollo Web",
-        "subtitle": "El paquete COMPLETO para disparar su negocio a otro",
+        "title": "Software A La Medida + Desarrollo Web",
+        "subtitle": "La combinación perfecta para digitalizar y escalar tu operación.",
         "highlight": "NIVEL.",
         "list": [
-          "Todo el paquete de desarrollo web",
-          "Todo el paquete de marketing digital",
-          "Edicion de video",
-          "Marketing en redes sociales",
-          "Anuncios",
-          "Branding"
+          "Diseño y desarrollo de sitios web",
+          "Arquitectura de software a medida",
+          "Flujos personalizados de usuarios",
+          "Implementación de paneles administrativos",
+          "Integraciones con herramientas externas"
         ]
       },
       {
-        "id": "digital-marketing",
-        "title": "Marketing Digital",
-        "subtitle": "Explote su presencia en línea a través de redes sociales y publicidad estratégica",
-        "highlight": "LO MAS RAPIDO QUE PUEDA.",
+        "id": "software",
+        "title": "Desarrollo de Software Empresarial",
+        "subtitle": "Soluciones inteligentes que automatizan tus procesos internos y externos.",
+        "highlight": "A TU MEDIDA.",
         "list": [
-          "Optimizacion SEO",
-          "Marketing en redes sociales",
-          "Marketing de influencers",
-          "Marketing de contenidos",
-          "Edicion de video",
-          "Marketing de email"
+          "Software de gestión (CRM, ERP, reservas, facturación)",
+          "Aplicaciones web y móviles personalizadas",
+          "Desarrollo por módulos con entregas progresivas",
+          "Sistemas responsivos, escalables y seguros"
         ]
       }
     ]
@@ -140,11 +140,16 @@
         "name": "Alexander Reed",
         "content": "Contratar a Adstrategic para el diseño y la marca de mi empresa de instalación de aire acondicionado fue una decisión acertada. Su trabajo en diseño web y gráfico ha elevado nuestra imagen profesional, y su enfoque de la marca ha sido excepcional. Su atención al detalle y creatividad superaron nuestras expectativas. Definitivamente volveremos a trabajar con ellos.",
         "image": "/assets/people/alexander.webp"
+      },
+      {
+        "name": "Pablo Alzate",
+        "content": "Trabajar con Adstrategic en el desarrollo de nuestro sitio web fue una experiencia excelente. Puedo decir con confianza que su trabajo elevó significativamente la presencia en línea de CIMA Produce Inc. La atención al detalle, la rapidez y la calidad general del desarrollo superaron nuestras expectativas. Estamos muy satisfechos y esperamos volver a trabajar con ellos en el futuro.",
+        "image": "/assets/people/pablo.webp"
       }
     ]
   },
   "contact": {
-    "title": "Obten una propuesta de <span class='text-[#55A7A6]'>Diseño Web</span> y <span class='text-[#55A7A6]'>Marketing</span>"
+    "title": "Obten una propuesta de <span class='text-[#55A7A6]'>Pagina Web</span> o <span class='text-[#55A7A6]'>Software</span>"
   },
   "whyUs": {
     "title": "¿Por qué <span class='text-brand'>elegirnos</span>?",

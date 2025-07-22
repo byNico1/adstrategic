@@ -25,4 +25,9 @@ export const testimonials: testimonial[] = [
     content: `Hiring Adstrategic for the design and branding of my air conditioning installation company was a wise decision. Their work on web and graphic design has elevated our professional image, and their approach to branding has been exceptional. Their attention to detail and creativity exceeded our expectations. We will definitely work with them again.`,
     image: "/assets/people/alexander.webp",
   },
+  {
+    name: "Pablo Alzate",
+    content: `Working with Adstrategic on the development of our website was an excellent experience. I can confidently say that their work significantly elevated CIMA's online presence. The attention to detail, speed, and overall quality of the development surpassed our expectations. We are extremely satisfied and look forward to collaborating with them again in the future.`,
+    image: "/assets/people/pablo.webp",
+  },
 ]
