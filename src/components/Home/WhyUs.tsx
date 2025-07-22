@@ -36,7 +36,7 @@ const WhyUs = ({ dictionary }: { dictionary: Awaited<ReturnType<typeof getDictio
         </p>
         <div className="h-full bg-primary p-4 text-lg text-primary-foreground md:flex md:items-center md:justify-center md:py-3">
           <p className="md:hidden">{dictionary.keywords[0]}</p>
-          <p>300+ USD</p>
+          <p>600+ USD</p>
         </div>
         <div className="mb-4 bg-destructive p-4 text-lg text-destructive-foreground md:mb-0 md:bg-transparent md:py-0 md:text-muted-foreground">
           <p className="md:hidden">{dictionary.keywords[1]}</p>

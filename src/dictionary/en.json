@@ -1,72 +1,72 @@
 {
   "metadata": {
-    "title": "Adstrategic - Get digital services to grow your online presence",
-    "description": "At Adstrategic, we specialize in transforming your online presence. Our expert team delivers top-notch video editing, innovative software development, social media management and advertising."
+    "title": "Adstrategic - Professional Software Development & Website Solutions",
+    "description": "At Adstrategic, we develop custom technology solutions. We offer tailored business software and professional websites to transform your business operations and online presence."
   },
-  "sheetOpener": { "text": "REQUEST PROPOSAL", "title": "Request a Web Design and Marketing Proposal" },
+  "sheetOpener": { "text": "REQUEST PROPOSAL", "title": "Request a web design & marketing proposal" },
   "hero": {
     "reviews": [
-      "Hiring Adstrategic was an exceptional decision for Casi&apos;s Shakers",
-      "Adstrategic exceeded my expectations with their design and branding work for my luxury car wash company",
-      "Their work on web and graphic design has elevated our professional image"
+      "Hiring Adstrategic was an exceptional decision for our internal booking solution",
+      "Adstrategic exceeded my expectations with their custom system for my logistics company",
+      "Their web and software development work improved our efficiency and professional presence"
     ],
-    "intro": "Get <span class='text-brand'>Digital Services</span> That Drive <span class='text-brand'>Growth</span>",
-    "paragraph": "Elevate the design of your <span class='text-brand underline'>Website</span> and ignite your Digital Marketing results with Adstrategic!",
-    "cta": "Get Started"
+    "intro": "Boost your business with <span class='text-brand'>Software</span> and Professional <span class='text-brand'>Websites</span>",
+    "paragraph": "Elevate your business with <span class='text-brand underline'>custom software and professional web presence</span> developed by Adstrategic.",
+    "cta": "Start Now"
   },
   "process": {
-    "title": "Our <span class='text-brand'>Process</span>?",
+    "title": "Our <span class='text-brand'>Process</span>",
     "processInformation": {
-      "marketing": {
-        "title": "Digital Marketing",
-        "id": "marketing",
-        "description": "We help you create engaging social media content, reach your target audience, and build a strong brand identity.",
+      "software": {
+        "title": "Custom Software Solutions",
+        "id": "software",
+        "description": "We develop custom business software tailored to your needs, optimizing processes and improving operational efficiency.",
         "steps": {
           "step1": {
-            "title": "Define goals",
-            "image": "/assets/process/marketing/define-goals.webp",
-            "description": "We hear your goals and align them with your business objectives"
+            "title": "Needs Assessment",
+            "image": "/assets/process/software/reunionimagen.jpg",
+            "description": "We analyze your operational challenges and business goals to design the ideal solution."
           },
           "step2": {
-            "title": "Define target audience",
-            "image": "/assets/process/marketing/target-audience.webp",
-            "description": "We make a marketing research to understand what is the perfect client for you so our goal is to reach them."
+            "title": "Feature Design",
+            "image": "/assets/process/software/define.jpeg",
+            "description": "We define user flows, key screens, and the functional architecture of the software."
           },
           "step3": {
-            "title": "Create content",
-            "image": "/assets/process/marketing/record-content.webp",
-            "description": "We develop the social media content taking in count the defined goals, and target audience so everything is aligned."
+            "title": "Iterative Development",
+            "image": "/assets/process/software/sdesarrolloimagen.jpg",
+            "description": "We build your system in modules, with functional deliveries and continuous reviews."
           },
           "step4": {
-            "title": "Optimize and improve profile",
-            "image": "/assets/process/marketing/optimization.webp",
-            "description": "We optimize your profile and strategy to implement what is working better."
+            "title": "Delivery + Support",
+            "image": "/assets/process/software/llamada.jpg",
+            "description": "We install, deliver your software, and offer warranty or maintenance as needed."
           }
         }
       },
       "web": {
         "title": "Web Development",
         "id": "web",
-        "description": "We build custom websites using modern web technologies, ensuring your brand is instantly recognizable and engaging.",
+        "description": "We build custom websites using modern web technologies, ensuring your brand is instantly recognizable and attractive.",
         "steps": {
           "step1": {
             "title": "Design + Wireframe",
             "image": "/assets/process/web/wireframe-preview.webp",
-            "description": "We outline all site pages and sections to get a clear idea of what the desired result is going to be."
+            "description": "We outline all pages and sections of the site for a clear idea of the desired result."
           },
           "step2": {
             "title": "Branding + Content",
             "image": "/assets/process/web/wireframe-dev.webm",
-            "description": "We customize your website with your branding and company info."
+            "description": "We personalize your website with your brand and company information."
           },
           "step3": {
-            "title": "Revision + Feedback",
+            "title": "Review + Feedback",
             "image": "/assets/process/web/reviews.webp",
-            "description": "We hear your feedback so we can quickly make necessary adjustments."
+            "description": "We listen to your feedback so we can quickly make the necessary adjustments."
           },
           "step4": {
-            "title": "Launch",
-            "description": "After final quality checks, we connect your site to your custom domain and publish!"
+            "title": "Publish",
+            "description": "After final quality checks, we connect your site to your custom domain and publish."
           }
         }
       }
@@ -77,11 +77,11 @@
     "servicesPlans": [
       {
         "id": "web-dev",
-        "title": "Web And Software Development",
-        "subtitle": "Take your online presence to the web to increase your conversions and your customers trust",
+        "title": "Web Development",
+        "subtitle": "Take your online presence to the web to increase conversions and customer trust",
         "highlight": "TODAY.",
         "list": [
-          "UI/UX Website Design",
+          "UI/UX Web Design",
           "E-commerce Website Design",
           "Landing Page Design",
           "Responsive Website Design & Development",
@@ -90,30 +90,27 @@
       },
       {
         "id": "mix-plan",
-        "title": "Digital Marketing + Web Development",
-        "subtitle": "The WHOLE package to skyrocket your business to other",
+        "title": "Custom Software + Web Development",
+        "subtitle": "The perfect combination to digitize and scale your operation.",
         "highlight": "LEVEL.",
         "list": [
-          "All Of Web Development",
-          "All Of Digital Marketing",
-          "Video Editing",
-          "Social Media Marketing",
-          "Advertising",
-          "Branding"
+          "Website Design & Development",
+          "Custom Software Architecture",
+          "Custom User Flows",
+          "Admin Panel Implementation",
+          "Integrations with External Tools"
         ]
       },
       {
         "id": "digital-marketing",
-        "title": "Digital Marketing",
-        "subtitle": "Explode your online presence through strategical social media and advertising",
-        "highlight": "ASAP.",
+        "title": "Business Software Development",
+        "subtitle": "Smart solutions that automate your internal and external processes.",
+        "highlight": "TAILORED.",
         "list": [
-          "SEO Optimization",
-          "Social Media Marketing",
-          "Influencer Marketing",
-          "Content Marketing",
-          "Video Editing",
-          "Email Marketing"
+          "Management Software (CRM, ERP, booking, invoicing)",
+          "Custom Web & Mobile Applications",
+          "Modular Development with Progressive Deliveries",
+          "Responsive, Scalable & Secure Systems"
         ]
       }
     ]
@@ -122,83 +119,92 @@
     "title": "Testimonials",
     "testimonialsData": [
       {
-        "name": "Harold and Vantroy",
-        "content": "Hiring Adstrategic for the production and editing of our videos at Arca Group was an excellent decision. Their quality and creativity have significantly expanded our reach. The attention to detail and professionalism of the team exceeded our expectations. We will definitely turn to them again.",
+        "name": "Harold & Vantroy",
+        "content": "Hiring Adstrategic for our video production and editing at Arca Group was an excellent decision. Their quality and creativity have significantly expanded our reach. The team's attention to detail and professionalism exceeded our expectations. We will definitely work with them again.",
         "image": "/assets/people/harold.webp"
       },
       {
         "name": "Edwin Renteria",
-        "content": "Adstrategic exceeded my expectations with their design and branding work for my luxury car wash company, \"Edwin's Detaling\" They created logos, banners, slogans, and digital business cards in an exceptional manner. I am very satisfied and will definitely hire them again.",
+        "content": "Adstrategic exceeded my expectations with their design and branding work for my luxury car wash business, \"Edwin's Detaling\". They created logos, banners, slogans, and digital business cards exceptionally. I am very satisfied and will definitely hire them again.",
         "image": "/assets/people/edwin.webp"
       },
       {
         "name": "David Cruz",
-        "content": "Hiring Adstrategic was an exceptional decision for Casi's Shakers. Their web and graphic design, along with distinctive branding and impactful advertising strategies, have transformed our presence in the market. Their professionalism and attention to detail exceeded all our expectations. We will definitely work with them again.",
+        "content": "Hiring Adstrategic was an exceptional decision for Casi's Shakers. Their web and graphic design, along with distinctive branding and impactful advertising strategies, have transformed our market presence. Their professionalism and attention to detail exceeded all our expectations. We will definitely work with them again.",
         "image": "/assets/people/david.webp"
       },
       {
         "name": "Alexander Reed",
-        "content": "Hiring Adstrategic for the design and branding of my air conditioning installation company was a wise decision. Their work on web and graphic design has elevated our professional image, and their approach to branding has been exceptional. Their attention to detail and creativity exceeded our expectations. We will definitely work with them again.",
+        "content": "Hiring Adstrategic for the design and branding of my air conditioning installation company was a wise decision. Their web and graphic design work has elevated our professional image, and their branding approach has been exceptional. Their attention to detail and creativity exceeded our expectations. We will definitely work with them again.",
         "image": "/assets/people/alexander.webp"
+      },
+      {
+        "name": "Pablo Alzate",
+        "content": "Working with Adstrategic on our website development was an excellent experience. I can confidently say their work significantly elevated CIMA Produce Inc.'s online presence. The attention to detail, speed, and overall quality of development exceeded our expectations. We are very satisfied and look forward to working with them again in the future.",
+        "image": "/assets/people/pablo.webp"
       }
     ]
   },
   "contact": {
-    "title": "Get a <span class='text-[#55A7A6]'>Web Design</span> and <span class='text-[#55A7A6]'>Marketing</span> Proposal"
+    "title": "Get a proposal for a <span class='text-[#55A7A6]'>Website</span> or <span class='text-[#55A7A6]'>Software</span>"
   },
   "whyUs": {
     "title": "Why <span class='text-brand'>choose us</span>?",
-    "subtitle": "There's a reason we are the #1 choice for website design.",
-    "keywords": ["Us:", "Others:", "Done for you", "Not included", "Design or development", "6-10 Days", "2-4 Months"],
+    "subtitle": "There's a reason we're the #1 choice for website design.",
+    "keywords": ["Us:", "Others:", "Included", "Not included", "Design or development", "6-10 Days", "2-4 Months"],
     "features": [
-      "Turnaround Time",
-      "Total Cost",
-      "Website content",
+      "Response time",
+      "Total cost",
+      "Content",
       "Design + Development",
-      "Mobile responsive web design",
+      "Responsive web development",
       "Publish site"
     ]
   },
   "form": {
-    "fullNamePlaceholder": "Full Name",
-    "phoneNumberPlaceholder": "Phone Number",
+    "fullNamePlaceholder": "Full name",
+    "phoneNumberPlaceholder": "Phone number",
     "errorMessages": ["There was an error", "Try again."],
-    "successMessages": ["Email Sent Succesfully", "Thank you for submitting our form", "We will contact you ASAP⚡."],
-    "cta": "Send Me My Service"
+    "successMessages": [
+      "E-mail sent successfully",
+      "Thank you for filling out our form!",
+      "We will contact you as soon as possible⚡."
+    ],
+    "cta": "Send me my proposal"
   },
   "faqs": {
-    "title": "Answers to your <span class='text-brand'>questions</span>",
+    "title": "Answer your <span class='text-brand'>questions</span>",
     "faqsData": [
       {
-        "header": "How much does it cost to build a professional website with your agency?",
-        "text": "Our website development packages start at just $300, making it an affordable solution for businesses of all sizes. This includes a responsive design optimized for desktop, tablet, and mobile devices. For advanced features, customization, or larger projects, we'll provide a detailed quote tailored to your needs. Affordable website development that delivers results is our priority."
+        "header": "How much does it cost to create a professional website with your agency?",
+        "text": "Our website development packages start at just $300, making it an affordable solution for businesses of all sizes. This includes a responsive design optimized for desktops, tablets, and mobile devices. For advanced features, customization, or larger projects, we will provide a detailed quote tailored to your needs. Affordable website development that delivers results is our priority."
       },
       {
         "header": "Will my website be responsive and fully optimized for online visibility?",
-        "text": "Yes, every website we create is fully responsive and designed to provide a seamless user experience across all devices. Additionally, we incorporate foundational SEO best practices to enhance your online visibility and ensure your site performs well in search engine rankings. For advanced SEO optimization, we offer additional services tailored to your goals."
+        "text": "Yes, all the websites we create are fully responsive and designed to provide a smooth user experience on all devices. We also incorporate fundamental SEO best practices to improve your online visibility and ensure your site performs well in search engine rankings. For advanced SEO optimization, we offer additional services tailored to your goals."
       },
       {
         "header": "What is the estimated time to deliver a complete website solution?",
-        "text": "Our turnaround time for a basic static website with a few pages is typically one week. For larger or more complex projects, we work closely with you to define a timeline that ensures quality while meeting your deadlines. Fast and efficient website delivery is one of our core strengths."
+        "text": "Our turnaround time for a basic static website with a few pages is usually one week. For larger or more complex projects, we work closely with you to define a timeline that ensures quality and meets your deadlines. Fast and efficient website delivery is one of our main strengths."
       },
       {
-        "header": "What services are included in your website upkeep and support plans?",
-        "text": "Our website maintenance plans include content updates, layout adjustments, performance monitoring, and security updates to keep your website running smoothly. Whether you need regular edits or occasional support, we ensure your website stays current and performs at its best. Trust us for hassle-free website management services."
+        "header": "What services are included in your website maintenance and support plans?",
+        "text": "Our website maintenance plans include content updates, design tweaks, performance monitoring, and security updates to keep your website running smoothly. Whether you need regular edits or occasional support, we ensure your website stays up-to-date and performs at its best. Trust us for hassle-free website management services."
       },
       {
-        "header": "Do you offer tailored website designs crafted for my specific business needs?",
-        "text": "Absolutely! We specialize in custom web design that reflects your brand identity and engages your audience. From color schemes to interactive features, every aspect of your website will be designed to meet your unique business goals. Stand out online with a website tailored specifically for you."
+        "header": "Do you offer custom website designs for my business's specific needs?",
+        "text": "Absolutely! We specialize in custom web design that reflects your brand identity and attracts your audience. From color schemes to interactive features, every aspect of your website will be designed to meet your unique business goals. Stand out online with a website designed just for you."
       },
       {
-        "header": "What happens if I want to make changes to the initial website layout?",
-        "text": "Client satisfaction is at the heart of our process. We welcome feedback and provide unlimited revisions to your website layout during the development phase. Your website will reflect exactly what you envision, ensuring you are 100% satisfied before the final launch."
+        "header": "What if I want to make changes to the initial website design?",
+        "text": "Customer satisfaction is at the heart of our process. We welcome feedback and provide unlimited revisions to your website design during the development phase. Your website will reflect exactly what you envision, ensuring you are 100% satisfied before the final launch."
       }
     ]
   },
   "scrollerData": [
     { "title": "Industry Specialists" },
-    { "title": "Results Guaranteed" },
-    { "title": "Tailored Design" }
+    { "title": "Guaranteed Results" },
+    { "title": "Custom Design" }
   ],
   "HeaderLinks": [
     { "name": "Blog", "url": "/blog" },
@@ -209,7 +215,7 @@
   "FooterLinks": [
     { "name": "Blog", "url": "/blog" },
     { "name": "Process", "url": "/#process" },
-    { "name": "Why us?", "url": "/#why-us" },
+    { "name": "Why choose us?", "url": "/#why-us" },
     { "name": "Services", "url": "/#services" },
     { "name": "Testimonials", "url": "/#testimonials" },
     { "name": "Contact", "url": "/#contact" }

@@ -7,8 +7,9 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 const imagesObj = [
   "/assets/results/selfimprovingbooks.webp",
   "/assets/results/e-commerce.webp",
-  "/assets/results/nico-portfolio.webp",
-  "/assets/results/adstrategic-website.webp",
+  "/assets/results/cimapage.png",
+  "/assets/results/carrosedwind.png",
+  "/assets/results/casisbanner.png",
   "/assets/results/google-analytics.webp",
   "/assets/results/youtube-analytics.webp",
 ]
