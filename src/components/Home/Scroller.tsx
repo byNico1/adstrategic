@@ -1,5 +1,5 @@
 import { type getDictionary } from "@/src/get-dictionary"
-import { LP_GRID_ITEMS } from "@/utils/lp-items"
+import { LP_GRID_ITEMS } from "@/src/lib/lp-items"
 
 const Scroller = ({ dictionary }: { dictionary: Awaited<ReturnType<typeof getDictionary>>["scrollerData"] }) => {
   return (

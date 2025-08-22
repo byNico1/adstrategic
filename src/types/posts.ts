@@ -1,3 +1,11 @@
+export interface TableOfContentsItem {
+  id: string
+  level: number
+  slug: string
+  title: string
+  parentId: string | null
+}
+
 export interface Post {
   seo: {
     title: string
@@ -16,6 +24,12 @@ export interface Post {
   readTimeInMinutes: string
   content: {
     html: string
+  }
+  features: {
+    tableOfContents: {
+      isEnabled: boolean
+      items: TableOfContentsItem[]
+    }
   }
   id: string
   coverImage: {

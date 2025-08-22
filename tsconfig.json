@@ -22,7 +22,7 @@
       "@/components/*": ["src/components/*"],
       "@/home/*": ["src/components/Home/*"],
       "@/styles/*": ["src/styles/*"],
-      "@/utils/*": ["src/utils/*"],
+      "@/utils/*": ["src/lib/*"],
       "@/types/*": ["src/types/*"],
       "@/shadcn/*": ["src/components/ui/*"],
       "@/fb/*": ["src/fbServices/*"],

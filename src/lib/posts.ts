@@ -10,6 +10,18 @@ export async function getPostBySlug(slug: string) {
       publication(host: $host) {
         id
         post(slug: $slug) {
+          features {
+            tableOfContents {
+              isEnabled
+              items {
+                id
+                level
+                parentId
+                slug
+                title
+              }
+            }
+          }
           seo {
             title
             description
@@ -57,6 +69,10 @@ export async function getListOfPosts({ endData }: { endData: string | null }) {
         posts(first: 10, after: $endData) {
         edges {
           node {
+            seo {
+              title
+              description
+            }
             coverImage {
               url
             }
