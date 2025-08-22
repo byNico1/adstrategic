@@ -14,6 +14,14 @@
     "paragraph": "Elevate your business with <span class='text-brand underline'>custom software and professional web presence</span> developed by Adstrategic.",
     "cta": "Start Now"
   },
+  "sponsors": {
+    "title": "Companies that support us",
+    "description": "We work with leading companies that trust our experience and results",
+    "cta": {
+      "text": "Do you want to be part of our ecosystem of partners?",
+      "link": "Contact us"
+    }
+  },
   "process": {
     "title": "Our <span class='text-brand'>Process</span>",
     "processInformation": {

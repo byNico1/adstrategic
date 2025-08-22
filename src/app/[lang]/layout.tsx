@@ -1,6 +1,6 @@
 import { GoogleTagManager } from "@next/third-parties/google"
 import { Inter, Roboto } from "next/font/google"
-import "@/styles/tailwind.css"
+import "@/styles/globals.css"
 import Footer from "@/components/Footer"
 
 import HeaderContainer from "@/components/Header/HeaderContainer"

@@ -35,7 +35,9 @@ export const Header = ({
       <div className="flex h-full items-center justify-around px-5 backdrop-blur">
         <Link href={"/"} className="z-50 flex items-center gap-5">
           <Image priority src="/adstrategic-180.webp" width={180} height={180} alt="logo" className="h-10 w-10" />
-          <h2 className="hidden text-2xl font-semibold sm:inline">ADSTRATEGIC</h2>
+          <h2 className="hidden text-2xl font-semibold sm:inline">
+            AD<span className="text-brand">STRATEGIC</span>
+          </h2>
         </Link>
 
         <div

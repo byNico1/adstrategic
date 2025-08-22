@@ -20,6 +20,8 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": ["src/components/*"],
+      "@/config/*": ["src/config/*"],
+      "@/hooks/*": ["src/hooks/*"],
       "@/home/*": ["src/components/Home/*"],
       "@/styles/*": ["src/styles/*"],
       "@/utils/*": ["src/lib/*"],
