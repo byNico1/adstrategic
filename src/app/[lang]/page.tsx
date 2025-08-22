@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import Contact from "@/components/Home/Contact"
 import FAQs from "@/components/Home/FAQs"
 import SheetOpener from "@/components/Home/SheetOpener"
+import SponsorsSlider from "@/components/Home/SponsorsSlider"
 import Testimonials from "@/components/Home/Testimonials"
 import WhyUs from "@/components/Home/WhyUs"
 import MultiLayerParallax from "@/components/MultiLayerParallax"
@@ -29,6 +30,8 @@ export default async function Web({ params: { lang } }: { params: { lang: Locale
       <SheetOpener formDictionary={dictionary.form} dictionary={dictionary.sheetOpener} />
 
       <MultiLayerParallax dictionary={dictionary.hero} />
+
+      <SponsorsSlider dictionary={dictionary.sponsors} />
 
       <Process dictionary={dictionary.process} />
 

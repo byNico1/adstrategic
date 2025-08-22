@@ -13,9 +13,17 @@
       "Adstrategic superó mis expectativas con su sistema a medida para mi empresa de logística",
       "Su trabajo en desarrollo web y software mejoró nuestra eficiencia y presencia profesional"
     ],
-    "intro": "Impulsa tu empresa con <span class='text-brand'>Software</span> a medida y <span class='text-brand'>sitios web</span> <span class='text-brand'>Profesionales</span>",
+    "intro": "Impulsa tu empresa con <span class='text-brand'>Software a medida</span> y <span class='text-brand'>sitios web profesionales</span>",
     "paragraph": "Eleva tu tu empresa con <span class='text-brand underline'> software personalizado y presencia web</span> profesional desarrollada por Adstrategic.",
     "cta": "Comienza Ahora"
+  },
+  "sponsors": {
+    "title": "Empresas que nos respaldan",
+    "description": "Trabajamos con empresas líderes que confían en nuestra experiencia y resultados",
+    "cta": {
+      "text": "¿Quieres ser parte de nuestro ecosistema de partners?",
+      "link": "Contáctanos"
+    }
   },
   "process": {
     "title": "Nuestro <span class='text-brand'>Proceso</span>?",
