@@ -29,13 +29,13 @@ export async function POST(request: Request) {
 
     const data = await resend.batch.send([
       {
-        from: "ADDSTRATEGIC <addstrategic@addstrategic.com>",
+        from: "ADDSTRATEGIC <addstrategic@news.addstrategic.com>",
         to: [userEmail],
         subject: "Welcome to ADDSTRATEGIC",
         react: WelcomeEmail({ userFirstName }),
       },
       {
-        from: "ADDSTRATEGIC Website <addstrategicbusiness@addstrategic.com>",
+        from: "ADDSTRATEGIC Website <addstrategic@news.addstrategic.com>",
         to: ["adstrategicbusiness@gmail.com"],
         subject: "New ADDSTRATEGIC user has sent you an email",
         react: NewUser({ userFirstName, userEmail, userPhone }),

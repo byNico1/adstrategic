@@ -26,7 +26,7 @@ export default function SponsorsSlider({ className = "", dictionary }: SponsorsS
           transition={{ duration: 0.6 }}
           className="mb-12 text-center"
         >
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl">{dictionary.title}</h2>
+          <h2 className="mb-4 text-3xl font-bold text-brand md:text-4xl">{dictionary.title}</h2>
           <p className="mx-auto max-w-2xl text-lg">{dictionary.description}</p>
         </motion.div>
 
