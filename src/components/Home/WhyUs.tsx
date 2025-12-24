@@ -16,7 +16,7 @@ const WhyUs = ({ dictionary }: { dictionary: Awaited<ReturnType<typeof getDictio
 
       <div className="mx-auto grid w-full max-w-3xl rounded-lg bg-muted p-2 max-md:max-w-lg md:grid-cols-[1fr_1.2fr_1fr] md:items-center md:justify-center md:p-4">
         <div className="mb-4 rounded-t-lg bg-primary pb-4 pt-8 text-primary-foreground md:col-start-2 md:mb-0">
-          <h2 className="text-2xl font-semibold">ADSTRATEGIC</h2>
+          <h2 className="text-2xl font-semibold">ADDSTRATEGIC</h2>
         </div>
         <p className="mb-4 flex items-center justify-center gap-4 text-right text-lg md:col-start-1 md:m-0 md:justify-end md:pr-5">
           {dictionary.features[0]}

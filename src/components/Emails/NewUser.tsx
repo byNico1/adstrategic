@@ -26,7 +26,7 @@ export const NewUser = ({ userFirstName, userEmail, userPhone }: NewUserProps) =
         <Text style={paragraph}>Client Phone: {userPhone}</Text>
         <Text style={paragraph}>Get in touch with the client ASAP</Text>
         <Hr style={hr} />
-        <Text style={footer}>Adstrategic Inc.</Text>
+        <Text style={footer}>ADDSTRATEGIC LLC.</Text>
       </Container>
     </Body>
   </Html>

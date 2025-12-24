@@ -16,7 +16,7 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: L
   const dictionary = await getDictionary(lang)
 
   return {
-    metadataBase: new URL("https://adstrategic.org/"),
+    metadataBase: new URL("https://addstrategic.com/"),
     title: dictionary.metadata.title,
     description: dictionary.metadata.description,
   }

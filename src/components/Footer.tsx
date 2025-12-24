@@ -31,7 +31,7 @@ export default async function Footer({ params: { lang } }: { params: { lang: Loc
               </svg>
             </Button>
           </a>
-          <a href="https://www.instagram.com/adstrategic.agency/">
+          <a href="https://www.instagram.com/addstrategic/">
             <Button variant="ghost">
               <span className="sr-only">Instagram</span>
               <svg className="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
@@ -45,7 +45,7 @@ export default async function Footer({ params: { lang } }: { params: { lang: Loc
           </a>
         </div>
         <p className="mt-8 text-center text-base leading-6 text-foreground">
-          © 2023 Adstrategic, Inc. All rights reserved.
+          © 2023 ADDSTRATEGIC, Inc. All rights reserved.
         </p>
       </div>
     </footer>

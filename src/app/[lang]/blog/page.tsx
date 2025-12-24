@@ -8,7 +8,7 @@ import Container from "@/components/Container"
 import LoadingSkeleton from "@/components/LoadingSkeleton"
 
 export const metadata: Metadata = {
-  title: "The Adstrategic Blog | Improve your Marketing and Software skills",
+  title: "The ADDSTRATEGIC Blog | Improve your Marketing and Software skills",
   description:
     "Learn and expand your Digital Marketing and Software Development knowledge with detailed tutoriales and examples.",
 }
@@ -19,7 +19,7 @@ export default async function Blog() {
       <div className="relative z-20 mb-10 overflow-hidden border-b border-dashed border-black/10 py-20 text-center dark:border-white/10">
         <Container className="">
           <Reveal center>
-            <h1 className="font-roboto mb-4 text-4xl font-medium">The Adstrategic Blog</h1>
+            <h1 className="font-roboto mb-4 text-4xl font-medium">The ADDSTRATEGIC Blog</h1>
           </Reveal>
           <p className="">
             Learn and expand your Digital Marketing and Software Development knowledge with detailed tutoriales and
@@ -28,7 +28,7 @@ export default async function Blog() {
         </Container>
       </div>
       <div className="fixed bottom-[calc(50vh-100px)] right-[calc(50%-150px)] z-10 blur-md grayscale dark:grayscale-0">
-        <Image src="/adstrategic-180.webp" width={300} height={300} alt="" />
+        <Image src="/addstrategic-180.webp" width={300} height={300} alt="" />
       </div>
 
       <Suspense fallback={<LoadingSkeleton />}>

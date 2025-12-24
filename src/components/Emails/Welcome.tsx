@@ -7,7 +7,7 @@ interface WelcomeEmailProps {
 export const WelcomeEmail = ({ userFirstName }: WelcomeEmailProps) => (
   <Html>
     <Head />
-    <Preview>Welcome to Adstrategic, exponential growth to your business.</Preview>
+    <Preview>Welcome to ADDSTRATEGIC, exponential growth to your business.</Preview>
     <Body style={main}>
       <Container style={container}>
         <Img
@@ -21,16 +21,16 @@ export const WelcomeEmail = ({ userFirstName }: WelcomeEmailProps) => (
         />
         <Text style={paragraph}>Hi {userFirstName},</Text>
         <Text style={paragraph}>
-          Welcome to Adstrategic, the team to exponential growth on Internet, we will contact you as soon as possible to
-          start the process.
+          Welcome to ADDSTRATEGIC, the team to exponential growth on Internet, we will contact you as soon as possible
+          to start the process.
         </Text>
         <Text style={paragraph}>
           Best,
           <br />
-          The Adstrategic team
+          The ADDSTRATEGIC team
         </Text>
         <Hr style={hr} />
-        <Text style={footer}>Adstrategic Inc.</Text>
+        <Text style={footer}>ADDSTRATEGIC LLC.</Text>
       </Container>
     </Body>
   </Html>

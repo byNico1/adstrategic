@@ -1,6 +1,6 @@
-# Adstrategic Website
+# ADDSTRATEGIC Website
 
-[Live Preview](https://adstrategic.org/)
+[Live Preview](https://addstrategic.org/)
 
 ![og-image](app/opengraph-image.png)
 

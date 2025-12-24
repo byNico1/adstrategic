@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://adstrategic.org/sitemap.xml
+Sitemap: https://addstrategic.com/sitemap.xml
