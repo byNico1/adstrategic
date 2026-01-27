@@ -12,6 +12,12 @@ const imagesObj = [
   "/assets/results/casisbanner.png",
   "/assets/results/google-analytics.webp",
   "/assets/results/youtube-analytics.webp",
+  "/assets/results/glowingskin.png",
+  "/assets/results/mamaquilla.png",
+  "/assets/results/modarquitectura.png",
+  "/assets/results/xcelsior.png",
+  "/assets/results/addinvoicessoft.png",
+  "/assets/results/cimacrm.png",
 ]
 
 export function ResultsCarousel() {
