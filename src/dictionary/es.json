@@ -175,6 +175,7 @@
   "form": {
     "fullNamePlaceholder": "Nombre completo",
     "phoneNumberPlaceholder": "Numero de telefono",
+    "messagePlaceholder": "Tu mensaje",
     "errorMessages": ["Hubo un error", "Intenta de nuevo."],
     "successMessages": [
       "E-mail enviado correctamente",
@@ -219,16 +220,149 @@
   ],
   "HeaderLinks": [
     { "name": "Blog", "url": "/blog" },
+    { "name": "Herramientas", "url": "/tools" },
     { "name": "Proceso", "url": "/#process" },
     { "name": "Servicios", "url": "/#services" },
     { "name": "Contacto", "url": "/#contact" }
   ],
   "FooterLinks": [
-    { "name": "Blog", "url": "/blog" },
-    { "name": "Proceso", "url": "/#process" },
-    { "name": "¿Porque elegirnos?", "url": "/#why-us" },
     { "name": "Servicios", "url": "/#services" },
-    { "name": "Testimonios", "url": "/#testimonials" },
-    { "name": "Contacto", "url": "/#contact" }
-  ]
+    { "name": "Proceso", "url": "/#process" },
+    { "name": "Contacto", "url": "/#contact" },
+    { "name": "Política de Privacidad", "url": "/privacy" },
+    { "name": "Términos de Servicio", "url": "/terms" }
+  ],
+  "toolsHub": {
+    "eyebrow": "Herramientas Gratuitas",
+    "title": "Herramientas Gratuitas para Creadores, Diseñadores y Dueños de Negocios",
+    "subtitle": "Sin cuenta. Sin registro. Solo abre y usa. Construido por ADDSTRATEGIC para ayudarte a trabajar más rápido.",
+    "cta": {
+      "title": "¿Necesitas algo más a medida?",
+      "description": "Estas herramientas son gratuitas para siempre. Pero si necesitas un sitio web completo, software personalizado o un producto digital construido desde cero, eso es exactamente lo que hacemos en ADDSTRATEGIC.",
+      "button": "Solicitar una propuesta gratuita"
+    }
+  },
+  "tools": {
+    "common": {
+      "privacy": "Tus archivos nunca salen de tu dispositivo. Todo se procesa localmente en tu navegador. No se suben archivos a ningún servidor.",
+      "breadcrumb": "Inicio > Herramientas",
+      "backToTools": "Volver a todas las herramientas"
+    },
+    "pdfCompressor": {
+      "title": "Compresor de PDF — Gratuito e Instantáneo",
+      "subtitle": "Reduce el tamaño de tus archivos PDF en segundos. Procesado en tu navegador — tus archivos nunca salen de tu dispositivo.",
+      "uploadLabel": "Suelta tu PDF aquí, o haz clic para buscar",
+      "uploadHint": "Solo archivos .pdf · Max 50MB",
+      "compressing": "Comprimiendo...",
+      "success": "Compresión completada",
+      "reduction": "Reducción",
+      "download": "Descargar PDF comprimido",
+      "cta": {
+        "text": "¿Necesitas flujos de trabajo de PDF profesionales?",
+        "button": "Ver qué construimos"
+      }
+    },
+    "pdfToWord": {
+      "title": "Conversor de PDF a Word — Gratuito en Línea",
+      "subtitle": "Convierte tu PDF en un documento de Word editable (.docx) en segundos. Gratis, sin cuenta.",
+      "uploadLabel": "Suelta tu PDF aquí · Max 20MB · Solo archivos .pdf",
+      "success": "Conversión completada",
+      "download": "Descargar archivo .docx",
+      "note": "El contenido de texto se preserva. Los diseños complejos, tablas e imágenes pueden variar en el documento convertido.",
+      "cta": {
+        "text": "¿Automatizar tus flujos de documentos?",
+        "button": "Cuéntanos sobre tu proyecto"
+      }
+    },
+    "pdfMerge": {
+      "title": "Unir PDF — Combina Archivos PDF Gratis",
+      "subtitle": "Combina múltiples PDFs en un solo archivo. Arrastra para reordenar, luego descarga. Gratis, instantáneo, sin cuenta.",
+      "uploadLabel": "Suelta archivos PDF aquí, o haz clic para buscar",
+      "uploadHint": "Max 10 archivos · 100MB total",
+      "success": "Unión completada",
+      "download": "Descargar PDF unido",
+      "cta": {
+        "text": "¿Construyendo un flujo de trabajo con muchos documentos?",
+        "button": "Solicitar una propuesta gratuita"
+      }
+    },
+    "pdfSplit": {
+      "title": "Dividir PDF — Separa Páginas de PDF Gratis",
+      "subtitle": "Divide un PDF en páginas individuales o rangos personalizados. Gratis, instantáneo, procesado en tu navegador.",
+      "uploadLabel": "Suelta tu PDF aquí · Max 50MB",
+      "configTitle": "Tu PDF tiene {{count}} páginas. ¿Cómo quieres dividirlo?",
+      "modes": {
+        "every": "Extraer cada página como un archivo separado",
+        "range": "Dividir por rango de páginas",
+        "specific": "Extraer páginas específicas"
+      },
+      "success": "División completada",
+      "download": "Descargar .zip",
+      "cta": {
+        "text": "¿Gestionando grandes flujos de documentos?",
+        "button": "Cuéntanos sobre tu proyecto"
+      }
+    },
+    "websiteCalculator": {
+      "title": "Calculadora de Costo de Sitio Web",
+      "subtitle": "Obtén una estimación instantánea para tu proyecto web. Responde unas preguntas y mira un rango de costo real en segundos.",
+      "steps": {
+        "type": "¿Qué tipo de sitio web necesitas?",
+        "features": "¿Qué funcionalidades necesitas?",
+        "design": "Diseño y alcance",
+        "contact": "¡Casi listo! ¿Quieres que te enviemos esta estimación?"
+      },
+      "resultTitle": "Tu inversión estimada en el sitio web:",
+      "cta": {
+        "text": "Esta es una estimación basada en promedios de la industria.",
+        "button": "Obtén una cotización exacta de ADDSTRATEGIC"
+      }
+    },
+    "softwareEstimator": {
+      "title": "Estimador de Costo de Desarrollo de Software",
+      "subtitle": "Obtén un rango de presupuesto realista para tu proyecto de software a medida. Apps móviles, web, CRMs — responde 4 preguntas.",
+      "resultTitle": "Inversión estimada en desarrollo:",
+      "cta": {
+        "text": "ADDSTRATEGIC ha construido CRMs, ERPs y aplicaciones web personalizadas para empresas globalmente.",
+        "button": "Cuéntanos sobre tu proyecto"
+      }
+    },
+    "colorPalette": {
+      "title": "Generador de Paletas de Colores",
+      "subtitle": "Genera paletas de colores hermosas y armoniosas desde cualquier color base. Gratis, copia HEX o variables CSS con un clic.",
+      "harmony": "Tipo de armonía",
+      "cta": {
+        "text": "¿Construyendo una identidad de marca o sitio web?",
+        "button": "Ver nuestro trabajo de diseño"
+      }
+    },
+    "imageResizer": {
+      "title": "Redimensionador e Image Compressor — Gratis en Línea",
+      "subtitle": "Redimensiona, comprime y convierte imágenes al instante. JPG, PNG, WebP. Sin subir a servidores. Gratis.",
+      "cta": {
+        "text": "¿Necesitas activos optimizados para tu sitio?",
+        "button": "Comienza tu proyecto"
+      }
+    },
+    "metaTags": {
+      "title": "Generador de Meta Tags — Herramienta SEO Gratis",
+      "subtitle": "Genera todos los meta tags HTML que tu página necesita para SEO y redes sociales. Copia y pega en tu sitio. Gratis.",
+      "previews": {
+        "google": "Vista previa de búsqueda en Google",
+        "social": "Vista previa para redes sociales (Open Graph)"
+      },
+      "cta": {
+        "text": "¿Quieres que tu sitio web posicione en Google?",
+        "button": "Construyamos tu sitio"
+      }
+    },
+    "websiteAudit": {
+      "title": "Herramienta de Auditoría Web Gratuita",
+      "subtitle": "Ingresa cualquier URL y obtén una auditoría instantánea de SEO y rendimiento. Impulsado por Google PageSpeed Insights. Gratis.",
+      "cta": {
+        "text": "ADDSTRATEGIC construye sitios que puntúan 90+ desde el primer día.",
+        "button": "Obtén una auditoría gratis + propuesta"
+      }
+    }
+  }
 }

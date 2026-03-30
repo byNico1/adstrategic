@@ -5,8 +5,9 @@ interface NewUserProps {
   userFirstName: string
   userEmail: string
   userPhone: string
+  userMessage: string
 }
-export const NewUser = ({ userFirstName, userEmail, userPhone }: NewUserProps) => (
+export const NewUser = ({ userFirstName, userEmail, userPhone, userMessage }: NewUserProps) => (
   <Html>
     <Head />
     <Preview>New users need information!</Preview>
@@ -24,6 +25,7 @@ export const NewUser = ({ userFirstName, userEmail, userPhone }: NewUserProps) =
         <Text style={paragraph}>Client Name: {userFirstName},</Text>
         <Text style={paragraph}>Client Email: {userEmail}</Text>
         <Text style={paragraph}>Client Phone: {userPhone}</Text>
+        <Text style={paragraph}>Client Message: {userMessage}</Text>
         <Text style={paragraph}>Get in touch with the client ASAP</Text>
         <Hr style={hr} />
         <Text style={footer}>ADDSTRATEGIC LLC.</Text>
@@ -36,6 +38,7 @@ NewUser.PreviewProps = {
   userFirstName: "Nicolas",
   userEmail: "mail@gmail.com",
   userPhone: "3165382781",
+  userMessage: "Hello, I would like to request a proposal.",
 } as NewUserProps
 
 export default NewUser

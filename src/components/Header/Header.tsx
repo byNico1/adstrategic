@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { IoMdClose, IoMdMenu } from "react-icons/io"
 import { Button } from "@/shadcn/button"
-import { ModeToggle } from "@/shadcn/mode-toggle"
+
 import { type getDictionary } from "@/src/get-dictionary"
 import { Locale } from "@/src/i18n-config"
 import { LanguageToggle } from "../ui/language-toggle"
@@ -66,7 +66,7 @@ export const Header = ({
           </div>
         </div>
         <div className="relative flex items-center justify-center gap-5">
-          <ModeToggle />
+
           <button className="lg:hidden" aria-label="mobile-menu" onClick={handleClick}>
             {isOpened ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}
             <span className="sr-only">Mobile menu</span>

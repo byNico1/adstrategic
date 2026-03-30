@@ -35,7 +35,7 @@ export default function RootLayout({ children, params }: { children: React.React
       </head>
       <GoogleTagManager gtmId="GTM-K3RWQCCM" />
       <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark" disableTransitionOnChange>
           <HeaderContainer params={params} />
           {children}
         </ThemeProvider>

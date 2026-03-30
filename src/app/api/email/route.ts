@@ -11,7 +11,8 @@ function isUser(obj: any): obj is User {
     typeof obj === "object" &&
     typeof obj.userFirstName === "string" &&
     typeof obj.userEmail === "string" &&
-    typeof obj.userPhone === "string"
+    typeof obj.userPhone === "string" &&
+    typeof obj.userMessage === "string"
   )
 }
 
@@ -19,13 +20,14 @@ interface User {
   userFirstName: string
   userEmail: string
   userPhone: string
+  userMessage: string
 }
 
 export async function POST(request: Request) {
   const json = await request.json()
 
   if (isUser(json)) {
-    const { userFirstName, userEmail, userPhone } = json
+    const { userFirstName, userEmail, userPhone, userMessage } = json
 
     const data = await resend.batch.send([
       {
@@ -38,7 +40,7 @@ export async function POST(request: Request) {
         from: "ADDSTRATEGIC Website <addstrategic@news.addstrategic.com>",
         to: ["adstrategicbusiness@gmail.com"],
         subject: "New ADDSTRATEGIC user has sent you an email",
-        react: NewUser({ userFirstName, userEmail, userPhone }),
+        react: NewUser({ userFirstName, userEmail, userPhone, userMessage }),
       },
     ])
     return NextResponse.json(data)

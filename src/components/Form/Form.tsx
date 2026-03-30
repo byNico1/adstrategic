@@ -13,6 +13,7 @@ import { FormData, UserSchema } from "@/types/form"
 
 const CustomPhoneInput = dynamic(() => import("@/components/Form/Input").then((mod) => mod.CustomPhoneInput))
 const Input = dynamic(() => import("@/components/Form/Input").then((mod) => mod.Input))
+const TextArea = dynamic(() => import("@/components/Form/Input").then((mod) => mod.TextArea))
 
 const Form = ({
   className,
@@ -35,6 +36,7 @@ const Form = ({
           userFirstName: data.userFirstName,
           userEmail: data.userEmail,
           userPhone: data.userPhone,
+          userMessage: data.userMessage,
         }),
       })
 
@@ -72,6 +74,11 @@ const Form = ({
               <CustomPhoneInput
                 placeholder={dictionary?.phoneNumberPlaceholder || "Phone Number"}
                 control={methods.control}
+              />
+              <TextArea
+                label={dictionary?.messagePlaceholder || "Message"}
+                id="userMessage"
+                placeholder={dictionary?.messagePlaceholder || "Message"}
               />
 
               <Button onClick={onSubmit} size="lg" type="submit" className="mt-4 w-full">

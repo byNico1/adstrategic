@@ -89,6 +89,40 @@ export const Input = ({ label, type, id, placeholder }: Props) => {
   )
 }
 
+export const TextArea = ({ label, id, placeholder }: { label: string; id: string; placeholder: string }) => {
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext()
+
+  const inputError: any = findInputError(errors, id)
+  const isInvalid = isFormInvalid(inputError)
+
+  return (
+    <div className="mb-4 flex flex-col items-start justify-center gap-4">
+      <div className="flex w-full flex-wrap items-center justify-between gap-2">
+        <label className="block pr-4 text-left font-bold text-muted-foreground" htmlFor={id}>
+          {label}
+        </label>
+        <AnimatePresence mode="wait" initial={false}>
+          {isInvalid && <InputError message={inputError.error.message} key={inputError.error.message} />}
+        </AnimatePresence>
+      </div>
+      <textarea
+        className="h-32 w-full appearance-none rounded border-2 border-gray-200 bg-gray-200 px-4 py-2 leading-tight text-gray-700 focus:border-purple-500 focus:bg-white focus:outline-none"
+        id={id}
+        placeholder={placeholder}
+        {...register(id, {
+          required: {
+            value: true,
+            message: "required",
+          },
+        })}
+      />
+    </div>
+  )
+}
+
 export const InputError = ({ message }: { message: string }) => {
   return (
     <motion.p

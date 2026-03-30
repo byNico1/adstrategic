@@ -172,6 +172,7 @@
   "form": {
     "fullNamePlaceholder": "Full name",
     "phoneNumberPlaceholder": "Phone number",
+    "messagePlaceholder": "Your message",
     "errorMessages": ["There was an error", "Try again."],
     "successMessages": [
       "E-mail sent successfully",
@@ -216,16 +217,149 @@
   ],
   "HeaderLinks": [
     { "name": "Blog", "url": "/blog" },
+    { "name": "Tools", "url": "/tools" },
     { "name": "Process", "url": "/#process" },
     { "name": "Services", "url": "/#services" },
     { "name": "Contact", "url": "/#contact" }
   ],
   "FooterLinks": [
-    { "name": "Blog", "url": "/blog" },
-    { "name": "Process", "url": "/#process" },
-    { "name": "Why choose us?", "url": "/#why-us" },
     { "name": "Services", "url": "/#services" },
-    { "name": "Testimonials", "url": "/#testimonials" },
-    { "name": "Contact", "url": "/#contact" }
-  ]
+    { "name": "Process", "url": "/#process" },
+    { "name": "Contact", "url": "/#contact" },
+    { "name": "Privacy Policy", "url": "/privacy" },
+    { "name": "Terms of Service", "url": "/terms" }
+  ],
+  "toolsHub": {
+    "eyebrow": "Free Tools",
+    "title": "Free Tools for Builders, Designers & Business Owners",
+    "subtitle": "No account required. No signup. Just open and use. Built by ADDSTRATEGIC to help you work faster.",
+    "cta": {
+      "title": "Need something more custom?",
+      "description": "These tools are free forever. But if you need a complete website, custom software, or a digital product built from scratch — that's exactly what we do at ADDSTRATEGIC.",
+      "button": "Request a free proposal"
+    }
+  },
+  "tools": {
+    "common": {
+      "privacy": "Your files never leave your device. Everything is processed locally in your browser. No files are uploaded to any server.",
+      "breadcrumb": "Home > Tools",
+      "backToTools": "Back to all tools"
+    },
+    "pdfCompressor": {
+      "title": "PDF Compressor — Free & Instant",
+      "subtitle": "Reduce your PDF file size in seconds. Processed in your browser — your files never leave your device.",
+      "uploadLabel": "Drop your PDF here, or click to browse",
+      "uploadHint": ".pdf files only · Max 50MB",
+      "compressing": "Compressing...",
+      "success": "Compression complete",
+      "reduction": "Reduction",
+      "download": "Download compressed PDF",
+      "cta": {
+        "text": "Need professional PDF workflows?",
+        "button": "See what we build"
+      }
+    },
+    "pdfToWord": {
+      "title": "PDF to Word Converter — Free Online",
+      "subtitle": "Convert your PDF to an editable Word document in seconds. Free, no account needed.",
+      "uploadLabel": "Drop your PDF here · Max 20MB · .pdf files only",
+      "success": "Conversion complete",
+      "download": "Download .docx file",
+      "note": "Text content is preserved. Complex layouts, tables, and images may vary in the converted document.",
+      "cta": {
+        "text": "Automate your document workflows?",
+        "button": "Tell us about your project"
+      }
+    },
+    "pdfMerge": {
+      "title": "PDF Merge — Combine PDF Files Free",
+      "subtitle": "Combine multiple PDFs into one file. Drag to reorder, then download. Free, instant, no account needed.",
+      "uploadLabel": "Drop PDF files here, or click to browse",
+      "uploadHint": "Max 10 files · 100MB total",
+      "success": "Merge complete",
+      "download": "Download merged PDF",
+      "cta": {
+        "text": "Building a document-heavy workflow?",
+        "button": "Request a free proposal"
+      }
+    },
+    "pdfSplit": {
+      "title": "PDF Split — Split PDF Files Free",
+      "subtitle": "Split a PDF into individual pages or custom page ranges. Free, instant, processed in your browser.",
+      "uploadLabel": "Drop your PDF here · Max 50MB",
+      "configTitle": "Your PDF has {{count}} pages. How do you want to split it?",
+      "modes": {
+        "every": "Extract every page as a separate file",
+        "range": "Split by page range",
+        "specific": "Extract specific pages"
+      },
+      "success": "Split complete",
+      "download": "Download .zip",
+      "cta": {
+        "text": "Managing large document workflows?",
+        "button": "Tell us about your project"
+      }
+    },
+    "websiteCalculator": {
+      "title": "Website Cost Calculator",
+      "subtitle": "Get an instant estimate for your website project. Answer a few questions and see a real cost range in seconds.",
+      "steps": {
+        "type": "What type of website do you need?",
+        "features": "Which features do you need?",
+        "design": "Design & scope",
+        "contact": "Almost done! Want us to send you this estimate?"
+      },
+      "resultTitle": "Your estimated website investment:",
+      "cta": {
+        "text": "This is an estimate based on industry averages.",
+        "button": "Get an exact quote from ADDSTRATEGIC"
+      }
+    },
+    "softwareEstimator": {
+      "title": "Software Development Cost Estimator",
+      "subtitle": "Get a realistic budget range for your custom software project. Mobile apps, web apps, CRMs, ERPs — answer 4 questions, get an instant estimate.",
+      "resultTitle": "Estimated development investment:",
+      "cta": {
+        "text": "ADDSTRATEGIC has built CRMs, ERPs, and custom web applications for businesses globally.",
+        "button": "Tell us about your project"
+      }
+    },
+    "colorPalette": {
+      "title": "Color Palette Generator",
+      "subtitle": "Generate beautiful, harmonious color palettes from any base color. Free, instant, copy HEX or CSS variables with one click.",
+      "harmony": "Harmony type",
+      "cta": {
+        "text": "Building a brand identity or website?",
+        "button": "See our design work"
+      }
+    },
+    "imageResizer": {
+      "title": "Image Resizer & Compressor — Free Online",
+      "subtitle": "Resize, compress, and convert images instantly. JPG, PNG, WebP. No upload to servers. Free.",
+      "cta": {
+        "text": "Need optimized assets for your site?",
+        "button": "Start your project"
+      }
+    },
+    "metaTags": {
+      "title": "Meta Tags Generator — Free SEO Tool",
+      "subtitle": "Generate all the HTML meta tags your page needs for SEO and social sharing. Copy and paste into your site. Free.",
+      "previews": {
+        "google": "Google Search Preview",
+        "social": "Social Share Preview (Open Graph)"
+      },
+      "cta": {
+        "text": "Want your website to rank on Google?",
+        "button": "Let's build your site"
+      }
+    },
+    "websiteAudit": {
+      "title": "Free Website Audit Tool",
+      "subtitle": "Enter any URL and get an instant SEO and performance audit. Powered by Google PageSpeed Insights. Free.",
+      "cta": {
+        "text": "ADDSTRATEGIC builds sites that score 90+ from day one.",
+        "button": "Get a free audit + proposal"
+      }
+    }
+  }
 }

@@ -24,34 +24,30 @@ function getLocale(request: NextRequest): string | undefined {
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
 
-  // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.
-  // If you have one
+  // Skip files in public and API routes
   if (
-    ["/addstrategic-180.webp", "/info.jpg", "/addstrategic_banner.png"].includes(pathname) ||
-    pathname.startsWith("/assets")
+    ["/addstrategic-180.webp", "/info.jpg", "/addstrategic_banner.png", "/favicon.ico"].includes(pathname) ||
+    pathname.startsWith("/assets") ||
+    pathname.startsWith("/api") ||
+    pathname.startsWith("/_next")
   )
     return
 
-  if (pathname === "/" || pathname === "/en" || pathname === "/es") {
-    // Check if there is any supported locale in the pathname
-    const pathnameIsMissingLocale = i18n.locales.every(
-      (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
-    )
+  // Check if pathname already has a supported locale
+  const pathnameIsMissingLocale = i18n.locales.every(
+    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+  )
 
-    // Redirect if there is no locale
-    if (pathnameIsMissingLocale) {
-      const locale = getLocale(request)
+  if (pathnameIsMissingLocale) {
+    const locale = getLocale(request) || i18n.defaultLocale
 
-      if (locale === i18n.defaultLocale) {
-        return NextResponse.rewrite(new URL(`/${locale}${pathname.startsWith("/") ? "" : "/"}${pathname}`, request.url))
-      }
-
-      // e.g. incoming request is /products
-      // The new URL is now /en-US/products
-      return NextResponse.redirect(new URL(`/${locale}${pathname.startsWith("/") ? "" : "/"}${pathname}`, request.url))
+    // Special case for root to avoid double redirects if possible
+    if (pathname === "/") {
+       return NextResponse.rewrite(new URL(`/${locale}`, request.url))
     }
-  } else {
-    return NextResponse.rewrite(new URL(`/en${pathname.startsWith("/") ? "" : "/"}${pathname}`, request.url))
+
+    // Rewrite all other routes to include the locale prefix internally
+    return NextResponse.rewrite(new URL(`/${locale}${pathname}`, request.url))
   }
 }
 
