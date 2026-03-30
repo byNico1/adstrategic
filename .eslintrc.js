@@ -2,11 +2,10 @@
 const fs = require("fs")
 
 module.exports = {
+  plugins: ["@typescript-eslint"],
   extends: [
     "next",
     "prettier",
-    "react-app",
-    "react-app/jest",
     "plugin:storybook/recommended",
     "plugin:tailwindcss/recommended",
   ],
@@ -27,7 +26,7 @@ module.exports = {
       },
     ],
     "sort-imports": [
-      "error",
+      "warn",
       {
         ignoreCase: true,
         ignoreDeclarationSort: true,

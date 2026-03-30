@@ -42,20 +42,21 @@ export default function PDFCompressorPage({ params: { lang } }: { params: { lang
   const common = tools.common
 
   const handleFilesSelected = (files: File[]) => {
-    if (files.length > 0) {
-      const selectedFile = files[0]
-      if (selectedFile && selectedFile.type !== "application/pdf") {
-        setError("Please upload a valid PDF file.")
-        return
-      }
-      if (selectedFile.size > 50 * 1024 * 1024) {
-        setError("File too large. Max 50MB.")
-        return
-      }
-      setFile(selectedFile || null)
-      setError(null)
-      setResult(null)
+    const selectedFile = files[0]
+    if (!selectedFile) return
+
+    if (selectedFile.type !== "application/pdf") {
+      setError("Please upload a valid PDF file.")
+      return
     }
+    if (selectedFile.size > 50 * 1024 * 1024) {
+      setError("File too large. Max 50MB.")
+      return
+    }
+
+    setFile(selectedFile)
+    setError(null)
+    setResult(null)
   }
 
   const compressPdf = async () => {
@@ -85,7 +86,7 @@ export default function PDFCompressorPage({ params: { lang } }: { params: { lang
         newSize: pdfBlob.size,
         reduction: Math.max(0, reduction),
       })
-    } catch (err: any) {
+    } catch (err) {
       console.error(err)
       setError("Error processing PDF. It might be password-protected or corrupted.")
     } finally {
@@ -99,7 +100,7 @@ export default function PDFCompressorPage({ params: { lang } }: { params: { lang
     const url = URL.createObjectURL(result.blob)
     const link = document.createElement("a")
     link.href = url
-    link.download = `${selectedFile?.name.replace(".pdf", "")}_compressed_ADDSTRATEGIC.pdf`
+    link.download = `${selectedFile.name.replace(".pdf", "")}_compressed_ADDSTRATEGIC.pdf`
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -174,7 +175,7 @@ export default function PDFCompressorPage({ params: { lang } }: { params: { lang
             </div>
 
             <Button
-              onClick={compressPDF}
+              onClick={compressPdf}
               disabled={isProcessing}
               className="w-full py-8 text-lg font-bold bg-brand hover:bg-brand/90 text-white rounded-2xl shadow-xl shadow-brand/20 transition-all active:scale-95"
             >

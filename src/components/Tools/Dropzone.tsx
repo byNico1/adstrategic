@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useRef, useState } from "react"
-import { Upload, File, X } from "lucide-react"
+import { Upload } from "lucide-react"
 import { cn } from "@/utils/utils"
 
 interface DropzoneProps {
@@ -23,6 +23,16 @@ export default function Dropzone({
 }: DropzoneProps) {
   const [isDragging, setIsDragging] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
+  const selectFiles = (files: File[]) => {
+    if (files.length === 0) return
+    if (multiple) {
+      onFilesSelected(files)
+      return
+    }
+    const firstFile = files[0]
+    if (!firstFile) return
+    onFilesSelected([firstFile])
+  }
 
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault()
@@ -37,16 +47,12 @@ export default function Dropzone({
     e.preventDefault()
     setIsDragging(false)
     const files = Array.from(e.dataTransfer.files)
-    if (files.length > 0) {
-      onFilesSelected(multiple ? files : [files[0]])
-    }
+    selectFiles(files)
   }
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files ? Array.from(e.target.files) : []
-    if (files.length > 0) {
-      onFilesSelected(multiple ? files : [files[0]])
-    }
+    selectFiles(files)
   }
 
   return (
