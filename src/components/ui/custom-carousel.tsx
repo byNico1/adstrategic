@@ -18,6 +18,11 @@ const imagesObj = [
   "/assets/results/xcelsior.png",
   "/assets/results/addinvoicessoft.png",
   "/assets/results/cimacrm.png",
+  "/assets/results/pinkcleaning.png",
+  "/assets/results/poppypawstx.png",
+  "/assets/results/vapingapestx.png",
+  "/assets/results/indesigntx.png",
+  "/assets/results/bonnetcleaning.png",
 ]
 
 export function ResultsCarousel() {

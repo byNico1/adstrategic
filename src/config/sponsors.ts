@@ -78,4 +78,18 @@ export const sponsors: Sponsor[] = [
     alt: "Logo de Sponsor 10",
     description: "Líderes en estrategia de crecimiento",
   },
+  {
+    id: "11",
+    name: "Sponsor 11",
+    image: "/assets/sponsors/L11.png",
+    alt: "Logo de Sponsor 11",
+    description: "Líderes en estrategia de crecimiento",
+  },
+  {
+    id: "12",
+    name: "Sponsor 12",
+    image: "/assets/sponsors/L12.png",
+    alt: "Logo de Sponsor 12",
+    description: "Líderes en estrategia de crecimiento",
+  },
 ]
