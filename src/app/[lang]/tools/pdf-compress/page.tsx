@@ -6,14 +6,7 @@ import { Locale } from "@/src/i18n-config"
 import ToolLayout from "@/components/Tools/ToolLayout"
 import Dropzone from "@/components/Tools/Dropzone"
 import { Button } from "@/shadcn/button"
-import { 
-  FileJson, 
-  Download, 
-  RefreshCw, 
-  CheckCircle2, 
-  AlertCircle,
-  FileText
-} from "lucide-react"
+import { FileJson, Download, RefreshCw, CheckCircle2, AlertCircle, FileText } from "lucide-react"
 import { PDFDocument } from "pdf-lib"
 import { cn } from "@/utils/utils"
 
@@ -68,18 +61,18 @@ export default function PDFCompressorPage({ params: { lang } }: { params: { lang
     try {
       const arrayBuffer = await selectedFile.arrayBuffer()
       const pdfDoc = await PDFDocument.load(arrayBuffer)
-      
+
       // Basic "compression" in pdf-lib involves re-saving the document
       // which eliminates redundant data and reorganizes the file.
-      // For more advanced compression, one would need to downsample images, 
+      // For more advanced compression, one would need to downsample images,
       // which is complex without external C++ libraries like Ghostscript.
-      // However, pdf-lib's save() often provides significant gains for bloated PDFs.
-      
+      // However, pdf-lib's save() often provides significant gains for bloated PDFs
+
       const pdfBytes = await pdfDoc.save()
       const pdfBlob = new Blob([pdfBytes as any], { type: "application/pdf" })
-      
+
       const reduction = ((file.size - pdfBlob.size) / file.size) * 100
-      
+
       setResult({
         blob: pdfBlob,
         originalSize: file.size,
@@ -125,46 +118,44 @@ export default function PDFCompressorPage({ params: { lang } }: { params: { lang
       ctaText={content.cta.text}
       ctaButtonText={content.cta.button}
     >
-      <div className="max-w-3xl mx-auto">
+      <div className="mx-auto max-w-3xl">
         {!file && !result && (
-          <Dropzone
-            onFilesSelected={handleFilesSelected}
-            label={content.uploadLabel}
-            hint={content.uploadHint}
-          />
+          <Dropzone onFilesSelected={handleFilesSelected} label={content.uploadLabel} hint={content.uploadHint} />
         )}
 
         {file && !result && (
-          <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-8 animate-in fade-in zoom-in duration-300">
-            <div className="flex items-center gap-4 mb-8 p-4 bg-white/5 rounded-2xl">
-              <div className="p-3 bg-brand/10 rounded-xl">
-                <FileText className="w-6 h-6 text-brand" />
+          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 duration-300 animate-in fade-in zoom-in">
+            <div className="mb-8 flex items-center gap-4 rounded-2xl bg-white/5 p-4">
+              <div className="bg-brand/10 rounded-xl p-3">
+                <FileText className="h-6 w-6 text-brand" />
               </div>
-              <div className="flex-1 min-w-0">
-                <p className="text-white font-bold truncate">{file.name}</p>
+              <div className="min-w-0 flex-1">
+                <p className="truncate font-bold text-white">{file.name}</p>
                 <p className="text-xs text-muted-foreground">{formatSize(file.size)}</p>
               </div>
-              <Button 
-                variant="ghost" 
-                size="icon" 
+              <Button
+                variant="ghost"
+                size="icon"
                 onClick={() => setFile(null)}
                 className="hover:bg-red-500/10 hover:text-red-500"
               >
-                <RefreshCw className="w-4 h-4" />
+                <RefreshCw className="h-4 w-4" />
               </Button>
             </div>
 
             <div className="mb-8">
-              <label className="text-sm font-bold text-white mb-4 block uppercase tracking-wider">Compression Level</label>
+              <label className="mb-4 block text-sm font-bold uppercase tracking-wider text-white">
+                Compression Level
+              </label>
               <div className="grid grid-cols-3 gap-4">
                 {(["low", "balanced", "max"] as const).map((level) => (
                   <button
                     key={level}
                     onClick={() => setCompressionLevel(level)}
                     className={cn(
-                      "py-3 px-4 rounded-xl border text-sm font-bold transition-all capitalize",
+                      "rounded-xl border px-4 py-3 text-sm font-bold capitalize transition-all",
                       compressionLevel === level
-                        ? "border-brand bg-brand text-white shadow-lg shadow-brand/20"
+                        ? "shadow-brand/20 border-brand bg-brand text-white shadow-lg"
                         : "border-white/10 bg-white/5 text-muted-foreground hover:bg-white/10 hover:text-white"
                     )}
                   >
@@ -177,49 +168,51 @@ export default function PDFCompressorPage({ params: { lang } }: { params: { lang
             <Button
               onClick={compressPdf}
               disabled={isProcessing}
-              className="w-full py-8 text-lg font-bold bg-brand hover:bg-brand/90 text-white rounded-2xl shadow-xl shadow-brand/20 transition-all active:scale-95"
+              className="hover:bg-brand/90 shadow-brand/20 w-full rounded-2xl bg-brand py-8 text-lg font-bold text-white shadow-xl transition-all active:scale-95"
             >
               {isProcessing ? (
                 <div className="flex items-center gap-3">
-                  <RefreshCw className="w-5 h-5 animate-spin" />
+                  <RefreshCw className="h-5 w-5 animate-spin" />
                   {content.compressing}
                 </div>
               ) : (
-                content.title.split(' — ')[0]
+                content.title.split(" — ")[0]
               )}
             </Button>
           </div>
         )}
 
         {result && (
-          <div className="bg-white/[0.03] border border-brand/20 rounded-3xl p-10 animate-in fade-in slide-in-from-bottom-4 duration-500 text-center">
-            <div className="inline-flex p-4 bg-brand/10 text-brand rounded-full mb-6">
-              <CheckCircle2 className="w-10 h-10" />
+          <div className="border-brand/20 rounded-3xl border bg-white/[0.03] p-10 text-center duration-500 animate-in fade-in slide-in-from-bottom-4">
+            <div className="bg-brand/10 mb-6 inline-flex rounded-full p-4 text-brand">
+              <CheckCircle2 className="h-10 w-10" />
             </div>
-            <h2 className="text-2xl font-bold text-white mb-2">{content.success}</h2>
-            <p className="text-muted-foreground mb-8 italic">Filename: {file?.name.replace(".pdf", "")}_compressed.pdf</p>
+            <h2 className="mb-2 text-2xl font-bold text-white">{content.success}</h2>
+            <p className="mb-8 italic text-muted-foreground">
+              Filename: {file?.name.replace(".pdf", "")}_compressed.pdf
+            </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 text-left">
-              <div className="p-5 rounded-2xl bg-white/5 border border-white/5">
-                <p className="text-xs font-bold text-muted-foreground uppercase mb-1">Original Size</p>
+            <div className="mb-10 grid grid-cols-1 gap-6 text-left md:grid-cols-3">
+              <div className="rounded-2xl border border-white/5 bg-white/5 p-5">
+                <p className="mb-1 text-xs font-bold uppercase text-muted-foreground">Original Size</p>
                 <p className="text-lg font-bold text-white">{formatSize(result.originalSize)}</p>
               </div>
-              <div className="p-5 rounded-2xl bg-white/5 border border-white/5">
-                <p className="text-xs font-bold text-muted-foreground uppercase mb-1">New Size</p>
+              <div className="rounded-2xl border border-white/5 bg-white/5 p-5">
+                <p className="mb-1 text-xs font-bold uppercase text-muted-foreground">New Size</p>
                 <p className="text-lg font-bold text-white">{formatSize(result.newSize)}</p>
               </div>
-              <div className="p-5 rounded-2xl bg-brand/5 border border-brand/20">
-                <p className="text-xs font-bold text-brand uppercase mb-1">{content.reduction}</p>
+              <div className="bg-brand/5 border-brand/20 rounded-2xl border p-5">
+                <p className="mb-1 text-xs font-bold uppercase text-brand">{content.reduction}</p>
                 <p className="text-2xl font-black text-brand">{result.reduction.toFixed(1)}%</p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col gap-4 sm:flex-row">
               <Button
                 onClick={downloadResult}
-                className="flex-1 py-8 bg-brand hover:bg-brand/90 text-white font-bold rounded-2xl flex items-center justify-center gap-3 active:scale-95 transition-transform"
+                className="hover:bg-brand/90 flex flex-1 items-center justify-center gap-3 rounded-2xl bg-brand py-8 font-bold text-white transition-transform active:scale-95"
               >
-                <Download className="w-6 h-6" />
+                <Download className="h-6 w-6" />
                 {content.download}
               </Button>
               <Button
@@ -228,9 +221,9 @@ export default function PDFCompressorPage({ params: { lang } }: { params: { lang
                   setFile(null)
                   setResult(null)
                 }}
-                className="py-8 px-8 border-white/10 hover:bg-white/5 text-white font-bold rounded-2xl active:scale-95 transition-transform"
+                className="rounded-2xl border-white/10 px-8 py-8 font-bold text-white transition-transform hover:bg-white/5 active:scale-95"
               >
-                <RefreshCw className="w-5 h-5 mr-3" />
+                <RefreshCw className="mr-3 h-5 w-5" />
                 Restart
               </Button>
             </div>
@@ -238,8 +231,8 @@ export default function PDFCompressorPage({ params: { lang } }: { params: { lang
         )}
 
         {error && (
-          <div className="mt-8 p-6 bg-red-500/10 border border-red-500/20 rounded-2xl flex items-center gap-4 text-red-500 text-sm animate-in shake duration-300">
-            <AlertCircle className="w-5 h-5 shrink-0" />
+          <div className="shake mt-8 flex items-center gap-4 rounded-2xl border border-red-500/20 bg-red-500/10 p-6 text-sm text-red-500 duration-300 animate-in">
+            <AlertCircle className="h-5 w-5 shrink-0" />
             <p className="font-medium">{error}</p>
           </div>
         )}
