@@ -1,10 +1,20 @@
-import { Post, QueryPostResult, QueryPostsList } from "@/types/posts"
+import { Post, PublicationPosts, QueryPostResult, QueryPostsList } from "@/types/posts"
 import { query } from "./hashnode"
 
-export async function getPostBySlug(slug: string) {
-  const {
-    data: { publication },
-  } = (await query({
+const HASHNODE_HOST = "adstrategic.hashnode.dev"
+
+export const emptyPublication: PublicationPosts = {
+  posts: {
+    edges: [],
+    pageInfo: {
+      endCursor: "",
+      hasNextPage: false,
+    },
+  },
+}
+
+export async function getPostBySlug(slug: string): Promise<Post | null> {
+  const result = (await query({
     query: `
     query($host: String!, $slug: String!) {
       publication(host: $host) {
@@ -51,17 +61,16 @@ export async function getPostBySlug(slug: string) {
     }
   `,
     variables: {
-      host: "adstrategic.hashnode.dev",
+      host: HASHNODE_HOST,
       slug: slug,
     },
-  })) as QueryPostResult
-  return publication?.post as Post
+  })) as QueryPostResult | null
+
+  return result?.data?.publication?.post ?? null
 }
 
-export async function getListOfPosts({ endData }: { endData: string | null }) {
-  const {
-    data: { publication },
-  } = (await query({
+export async function getListOfPosts({ endData }: { endData: string | null }): Promise<PublicationPosts> {
+  const result = (await query({
     query: `
     query ($host: String!, $endData: String) {
       publication(host: $host) {
@@ -91,10 +100,10 @@ export async function getListOfPosts({ endData }: { endData: string | null }) {
   }
   `,
     variables: {
-      host: "adstrategic.hashnode.dev",
+      host: HASHNODE_HOST,
       endData,
     },
-  })) as QueryPostsList
+  })) as QueryPostsList | null
 
-  return publication
+  return result?.data?.publication ?? emptyPublication
 }

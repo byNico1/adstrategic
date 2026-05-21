@@ -48,18 +48,21 @@ export interface QueryPostResult {
   }
 }
 
+export interface PublicationPosts {
+  id?: string
+  posts: {
+    edges: Array<{
+      node: Post
+    }>
+    pageInfo: {
+      endCursor: string
+      hasNextPage: boolean
+    }
+  }
+}
+
 export interface QueryPostsList {
   data: {
-    publication: {
-      posts: {
-        edges: Array<{
-          node: Post
-        }>
-        pageInfo: {
-          endCursor: string
-          hasNextPage: boolean
-        }
-      }
-    }
+    publication: PublicationPosts
   }
 }

@@ -21,14 +21,21 @@ export async function query({ query, variables, tags }: Query) {
       },
     })
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`)
+    const contentType = response.headers.get("content-type") ?? ""
+    if (!response.ok || !contentType.includes("application/json")) {
+      console.error("Hashnode API unavailable:", response.status, contentType)
+      return null
     }
 
-    const data = await response.json()
+    const data = (await response.json()) as { errors?: unknown[] }
+    if (data.errors?.length) {
+      console.error("Hashnode GraphQL errors:", data.errors)
+      return null
+    }
+
     return data
   } catch (error) {
     console.error("Error fetching data:", error)
-    throw error
+    return null
   }
 }

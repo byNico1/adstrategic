@@ -7,6 +7,14 @@ import { Post } from "@/types/posts"
 import BlogList from "./MorePosts"
 
 export function RenderPosts({ posts }: { posts: Array<Post> }) {
+  if (posts.length === 0) {
+    return (
+      <p className="mx-auto mt-16 max-w-xl px-4 text-center text-muted-foreground">
+        Blog posts are temporarily unavailable. Please check back later.
+      </p>
+    )
+  }
+
   return (
     <ul className="mx-auto mt-16 grid max-w-[26rem] grid-cols-1 gap-6 px-4 sm:max-w-[52.5rem] sm:grid-cols-2 sm:px-6 lg:max-w-7xl lg:grid-cols-3 lg:gap-y-8 lg:px-8 xl:gap-x-8">
       {posts.map((post) => {

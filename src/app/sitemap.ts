@@ -12,10 +12,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const initialPageInfo = publication.posts.pageInfo
   const fetchPosts = async (after: string | null) => {
     const publication = await getListOfPosts({ endData: after })
-
-    if (!publication) {
-      return
-    }
     const pageInfo = publication.posts.pageInfo
 
     posts.push(...publication.posts.edges.map((edge) => edge.node))
