@@ -1,21 +1,29 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
-node_modules
-.pnp
+/node_modules
+/.pnp
 .pnp.js
+.yarn/install-state.gz
+.pnpm-store/
 
 # testing
-coverage
+/coverage
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
 
 # next.js
-.next/
-out/
-build
+/.next/
+/out/
+
+# production
+/build
+/dist
 
 # misc
 .DS_Store
 *.pem
+Thumbs.db
 
 # debug
 npm-debug.log*
@@ -23,13 +31,21 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-/test-results/
-/playwright-report/
-/playwright/.cache/
+# env files (secrets)
+.env
+.env*.local
 
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+# tooling
 /.npm-only-allow
+
+# editors
+.idea/
+*.swp
+*.swo
+*~
