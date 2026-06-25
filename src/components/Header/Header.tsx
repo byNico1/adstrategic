@@ -62,7 +62,7 @@ export const Header = ({
                 </Button>
               </Link>
             ))}
-            {(pathname === "/" || pathname === "/es" || pathname === "/en") && <LanguageToggle lang={lang} />}
+            {(pathname === "/" || pathname === "/es" || pathname === "/en" || pathname.includes("/portfolio")) && <LanguageToggle lang={lang} />}
           </div>
         </div>
         <div className="relative flex items-center justify-center gap-5">

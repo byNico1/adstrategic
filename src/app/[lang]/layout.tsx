@@ -7,6 +7,11 @@ import HeaderContainer from "@/components/Header/HeaderContainer"
 import { ThemeProvider } from "@/components/theme-provider"
 
 import { i18n, type Locale } from "../../i18n-config"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://addstrategic.com/"),
+}
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
