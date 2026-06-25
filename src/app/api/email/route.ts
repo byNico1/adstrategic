@@ -4,7 +4,7 @@ import { Resend } from "resend"
 import NewUser from "@/components/Emails/NewUser"
 import WelcomeEmail from "@/components/Emails/Welcome"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY || "re_dummy")
 
 function isUser(obj: any): obj is User {
   return (

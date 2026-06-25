@@ -219,6 +219,7 @@
     { "title": "Diseño a medida" }
   ],
   "HeaderLinks": [
+    { "name": "Portafolio", "url": "/portfolio" },
     { "name": "Blog", "url": "/blog" },
     { "name": "Herramientas", "url": "/tools" },
     { "name": "Proceso", "url": "/#process" },

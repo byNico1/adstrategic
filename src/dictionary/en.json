@@ -216,6 +216,7 @@
     { "title": "Custom Design" }
   ],
   "HeaderLinks": [
+    { "name": "Portfolio", "url": "/portfolio" },
     { "name": "Blog", "url": "/blog" },
     { "name": "Tools", "url": "/tools" },
     { "name": "Process", "url": "/#process" },
