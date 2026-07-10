@@ -49,6 +49,15 @@ export const portfolioProducts: PortfolioItem[] = [
 
 export const portfolioClients: PortfolioItem[] = [
   {
+    name: "Glamfox",
+    description: {
+      es: "E-commerce para marca de cuidado de la piel coreano formulado con ingredientes naturales.",
+      en: "E-commerce for a Korean skincare brand formulated with natural ingredients.",
+    },
+    url: "https://www.glamfox.co/",
+    image: "/assets/results/Glamfox-koreanskincare.png",
+  },
+  {
     name: "Lifestyle Barber & Beauty",
     description: {
       es: "Aplicación para la gestión de citas, permitiendo a los clientes reservar servicios de barbería y belleza.",
