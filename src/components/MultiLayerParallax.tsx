@@ -10,7 +10,7 @@ const MultiLayerParallax = ({ dictionary }: { dictionary: Awaited<ReturnType<typ
 
   return (
     <section className="relative grid min-h-screen grid-rows-1 place-items-center overflow-hidden px-4 pt-28 text-center">
-      <div className="absolute inset-0 z-0 -mt-64  bg-[url('/assets/bgs/fondoaddstrategiclnd.png')] bg-contain bg-center bg-no-repeat lg:-mx-64 xl:-mx-14"></div>
+      <div className="absolute inset-0 z-0 -mt-64   bg-contain bg-center bg-no-repeat lg:-mx-64 lg:bg-[url('/assets/bgs/fondoaddstrategiclnd.png')] xl:-mx-14"></div>
       <div className="relative z-30 mx-auto max-w-3xl place-self-center">
         <div className="mb-10 flex flex-wrap justify-center gap-4 sm:flex-nowrap">
           <div className="hidden sm:block">
@@ -45,7 +45,7 @@ const MultiLayerParallax = ({ dictionary }: { dictionary: Awaited<ReturnType<typ
           </div>
         </div>
         <h1
-          className="mb-8 text-[45px] font-extrabold leading-none sm:text-7xl"
+          className="mb-8 text-4xl font-extrabold leading-none sm:text-7xl"
           dangerouslySetInnerHTML={{ __html: dictionary.intro }}
         ></h1>
         <p className="mb-8 text-lg font-medium" dangerouslySetInnerHTML={{ __html: dictionary.paragraph }}></p>
