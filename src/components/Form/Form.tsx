@@ -18,11 +18,18 @@ const TextArea = dynamic(() => import("@/components/Form/Input").then((mod) => m
 const Form = ({
   className,
   dictionary,
+  initialMessage,
 }: {
   className?: string
   dictionary?: Awaited<ReturnType<typeof getDictionary>>["form"]
+  initialMessage?: string
 }) => {
-  const methods = useForm<FormData>({ resolver: zodResolver(UserSchema) })
+  const methods = useForm<FormData>({ 
+    resolver: zodResolver(UserSchema),
+    defaultValues: {
+      userMessage: initialMessage || "",
+    }
+  })
   const [loadingState, setLoadingState] = useState<string | null>(null)
   const router = useRouter()
 
@@ -61,9 +68,9 @@ const Form = ({
           <form
             onSubmit={(e) => e.preventDefault()}
             noValidate
-            className="mx-auto w-full max-w-xl rounded-md bg-background py-8"
+            className="mx-auto w-full max-w-xl rounded-2xl border border-slate-800/50 bg-slate-900/60 p-8 shadow-2xl backdrop-blur-xl"
           >
-            <div className={`mx-auto flex w-3/4 flex-col ${className}`}>
+            <div className={`mx-auto flex w-full flex-col ${className}`}>
               <Input
                 label={dictionary?.fullNamePlaceholder || "Full Name"}
                 type="text"
@@ -81,7 +88,7 @@ const Form = ({
                 placeholder={dictionary?.messagePlaceholder || "Message"}
               />
 
-              <Button onClick={onSubmit} size="lg" type="submit" className="mt-4 w-full">
+              <Button onClick={onSubmit} size="lg" type="submit" className="mt-6 w-full text-lg shadow-lg shadow-brand/20 transition-all hover:scale-[1.02] hover:shadow-brand/40 active:scale-[0.98]">
                 {dictionary?.cta || "Send me my proposal"}
               </Button>
             </div>

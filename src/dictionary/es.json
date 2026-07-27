@@ -220,6 +220,7 @@
   ],
   "HeaderLinks": [
     { "name": "Portafolio", "url": "/portfolio" },
+    { "name": "Cómo Trabajamos", "url": "/how-we-work" },
     { "name": "Blog", "url": "/blog" },
     { "name": "Herramientas", "url": "/tools" },
     { "name": "Proceso", "url": "/#process" },
@@ -233,6 +234,140 @@
     { "name": "Política de Privacidad", "url": "/privacy" },
     { "name": "Términos de Servicio", "url": "/terms" }
   ],
+  "howWeWork": {
+    "title": "Así es trabajar con nosotros...",
+    "workflow": [
+      {
+        "title": "Llamada de Onboarding",
+        "duration": "(30 Minutos)",
+        "description": "Responderemos cualquier pregunta que tengas, te explicaremos las características y recopilaremos los detalles sobre tu negocio que necesitamos para empezar a construir tu sitio web. Esta llamada trata sobre el onboarding y asegurarnos de tener todo lo necesario para que tu proyecto avance sin problemas."
+      },
+      {
+        "title": "Construimos tu sitio web y sistemas de marketing...",
+        "duration": "(7-10 Días)",
+        "description": "Nuestro equipo de expertos inicia la fase de diseño y desarrollo, transformando tu visión en una plataforma digital de alto rendimiento. Implementamos estrategias avanzadas y código a medida para garantizar que tus sistemas estén listos para escalar."
+      },
+      {
+        "title": "Llamada de Lanzamiento",
+        "duration": "(30 Minutos)",
+        "description": "Te guiaremos a través de tu nuevo sitio web y sistemas de marketing, responderemos tus dudas y te mostraremos exactamente cómo funciona todo. Una vez que terminemos, lanzaremos oficialmente tu sitio y dejaremos todo en funcionamiento."
+      }
+    ],
+    "features": [
+      {
+        "title": "SISTEMAS SIMPLES QUE REALMENTE FUNCIONAN...",
+        "subtitle": "SITIO WEB CON MARCA Y DOMINIO PERSONALIZADO",
+        "description": "Un sitio web con tu propia marca y dominio personalizado, coincidiendo con la identidad de tu negocio y construyendo una mayor confianza en el cliente.",
+        "points": [
+          {
+            "title": "BRANDING PERSONALIZADO PROFESIONAL",
+            "desc": "El branding profesional adapta elementos visuales, mensajes y experiencia para reflejar tu marca de manera consistente."
+          },
+          {
+            "title": "PRESENCIA ONLINE CONFIABLE",
+            "desc": "Construye una presencia online consistente que aumenta la confianza, autoridad y seguridad."
+          },
+          {
+            "title": "EXPERIENCIA DE CLIENTE CONSISTENTE",
+            "desc": "Una experiencia unificada y confiable en cada punto de contacto, entregando servicio y calidad."
+          }
+        ]
+      },
+      {
+        "title": "ACTUALIZACIONES DE SITIO WEB ILIMITADAS",
+        "subtitle": "",
+        "description": "Ediciones y mejoras continuas en tu sitio web en cualquier momento, sin límite de solicitudes, manteniendo contenido, diseño y funcionalidad actualizados.",
+        "points": [
+          {
+            "title": "SITIO WEB ACTUAL, PRECISO Y OPTIMIZADO",
+            "desc": "Mantiene la frescura, precisión y rendimiento de tu sitio web mediante actualizaciones continuas y mantenimiento proactivo."
+          },
+          {
+            "title": "RÁPIDA ENTREGA PARA EDICIONES CONTINUAS",
+            "desc": "Ciclos rápidos de revisión que permiten incorporaciones de feedback ágiles y una colaboración más fluida."
+          },
+          {
+            "title": "MEJORAS CONTINUAS",
+            "desc": "Actualizaciones constantes que refinan el rendimiento, arreglan problemas y añaden mejoras."
+          }
+        ]
+      },
+      {
+        "title": "CALENDARIO DE CITAS Y CAPTURA DE LEADS",
+        "subtitle": "",
+        "description": "Permite que los clientes reserven citas y envíen su información mediante formularios en línea fáciles de usar.",
+        "points": [
+          {
+            "title": "RESERVAS ONLINE 24/7",
+            "desc": "Permite a los clientes programar citas a su conveniencia usando un calendario simple."
+          },
+          {
+            "title": "CAPTURA DE INFORMACIÓN DE LEADS",
+            "desc": "Recolecta nombres, detalles de contacto, solicitudes de servicio y otra información importante a través de formularios personalizados."
+          },
+          {
+            "title": "SEGUIMIENTO OPTIMIZADO",
+            "desc": "Mantén las solicitudes de citas y nuevos leads organizados para que tu equipo pueda responder rápida y eficientemente."
+          }
+        ]
+      },
+      {
+        "title": "TIENDA E-COMMERCE Y FACTURACIÓN INTEGRADA",
+        "subtitle": "",
+        "description": "Vende productos en línea, acepta pagos y gestiona la facturación de clientes desde un solo sistema integrado.",
+        "points": [
+          {
+            "title": "VENTA DE PRODUCTOS ONLINE",
+            "desc": "Exhibe y vende productos o servicios a través de una tienda en línea profesional y fácil de navegar."
+          },
+          {
+            "title": "PROCESAMIENTO DE PAGOS SEGURO",
+            "desc": "Acepta pagos de clientes en línea a través de una experiencia de pago optimizada y segura."
+          },
+          {
+            "title": "FACTURACIÓN Y COBRO AUTOMATIZADO",
+            "desc": "Crea, envía y gestiona facturas y registros de pago de clientes desde un sistema integrado."
+          }
+        ]
+      }
+    ],
+    "pricing": {
+      "title": "Precios Transparentes",
+      "subtitle": "Selecciona el mejor plan para tu negocio. Inversiones mínimas para iniciar.",
+      "plans": [
+        {
+          "name": "Sitio Web",
+          "price": "$599",
+          "desc": "Tu presencia en internet",
+          "features": ["Desarrollo UI/UX", "Diseño Responsivo", "Dominio Personalizado", "SEO Básico"]
+        },
+        {
+          "name": "E-Commerce",
+          "price": "$1,190",
+          "desc": "Vende en línea (con marca existente, sin marca $1,500)",
+          "features": ["Catálogo de Productos", "Pasarela de Pagos", "Facturación Integrada", "Panel de Control"]
+        },
+        {
+          "name": "Software",
+          "price": "$2,000",
+          "desc": "Aplicaciones a medida",
+          "features": ["Arquitectura a medida", "Flujos de usuario complejos", "Sistemas CRM/ERP", "Integraciones API"]
+        },
+        {
+          "name": "Mix (Web + Software)",
+          "price": "$2,700",
+          "desc": "Digitaliza y escala tu operación",
+          "features": ["Sitio web completo", "Sistema interno", "Integración perfecta", "Automatización avanzada"]
+        },
+        {
+          "name": "Proyecto Ultra",
+          "price": "$2,999",
+          "desc": "El paquete completo",
+          "features": ["Creación de Marca (Branding)", "Apertura de Redes Sociales", "E-commerce o Web Avanzada", "Estrategia Completa"]
+        }
+      ]
+    }
+  },
   "toolsHub": {
     "eyebrow": "Herramientas Gratuitas",
     "title": "Herramientas Gratuitas para Creadores, Diseñadores y Dueños de Negocios",

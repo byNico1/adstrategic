@@ -51,18 +51,23 @@ export const Header = ({
           }`}
         >
           <div className="flex w-full flex-col items-center justify-center gap-8 px-5 font-semibold max-lg:text-lg lg:flex-row">
-            {headerLinks.map((link) => (
-              <Link onClick={() => setIsOpened(false)} key={link.name} href={`${link.url}`}>
-                <Button
-                  variant="ghost"
-                  size="lg"
-                  className="max-lg:text-xl max-lg:hover:bg-blue-200 max-lg:dark:hover:bg-cyan-700"
-                >
-                  {link.name}
-                </Button>
-              </Link>
-            ))}
-            {(pathname === "/" || pathname === "/es" || pathname === "/en" || pathname.includes("/portfolio")) && <LanguageToggle lang={lang} />}
+            {headerLinks.map((link) => {
+              const isAnchor = link.url.startsWith("/#")
+              const targetUrl = isAnchor ? `/${lang}${link.url.substring(1)}` : `/${lang}${link.url}`
+              
+              return (
+                <Link onClick={() => setIsOpened(false)} key={link.name} href={targetUrl}>
+                  <Button
+                    variant="ghost"
+                    size="lg"
+                    className="max-lg:text-xl max-lg:hover:bg-blue-200 max-lg:dark:hover:bg-cyan-700"
+                  >
+                    {link.name}
+                  </Button>
+                </Link>
+              )
+            })}
+            <LanguageToggle lang={lang} />
           </div>
         </div>
         <div className="relative flex items-center justify-center gap-5">

@@ -3,7 +3,7 @@ import Image from "next/image"
 import React from "react"
 import { type getDictionary } from "@/src/get-dictionary"
 
-const Form = dynamic(() => import("@/components/Form/Form"))
+const OnboardingFlow = dynamic(() => import("@/components/Form/OnboardingFlow"))
 const Contact = ({
   dictionary,
   formDictionary,
@@ -29,7 +29,7 @@ const Contact = ({
           className="mb-8 text-5xl font-extrabold text-white lg:text-7xl"
           dangerouslySetInnerHTML={{ __html: dictionary.title }}
         ></h2>
-        <Form dictionary={formDictionary} />
+        <OnboardingFlow formDictionary={formDictionary} />
       </div>
     </section>
   )

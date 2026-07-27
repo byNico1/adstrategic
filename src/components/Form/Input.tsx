@@ -24,7 +24,7 @@ export const CustomPhoneInput = ({ control, placeholder }: { control: Control<Fo
   return (
     <div className="mb-4 flex flex-col items-start justify-center gap-4 [&>.PhoneInput]:w-full">
       <div className="flex w-full flex-wrap items-center justify-between gap-2">
-        <label className="block pr-4 text-left font-bold text-muted-foreground" htmlFor="userPhone">
+        <label className="block pr-4 text-left text-sm font-semibold text-slate-300" htmlFor="userPhone">
           {placeholder}
         </label>
         <AnimatePresence mode="wait" initial={false}>
@@ -38,16 +38,16 @@ export const CustomPhoneInput = ({ control, placeholder }: { control: Control<Fo
           validate: (value) => isValidPhoneNumber(value),
         }}
         render={({ field: { onChange, value } }) => (
-          <PhoneInput
-            value={value}
-            onChange={onChange}
-            defaultCountry="US"
-            id="userPhone"
-            numberInputProps={{
-              className:
-                "w-full appearance-none rounded border-2 border-gray-200 bg-gray-200 px-4 py-2 leading-tight text-gray-700 focus:border-purple-500 focus:bg-white focus:outline-none",
-            }}
-          />
+            <PhoneInput
+              value={value}
+              onChange={onChange}
+              defaultCountry="US"
+              id="userPhone"
+              numberInputProps={{
+                className:
+                  "w-full appearance-none rounded-lg border border-slate-700/50 bg-slate-800/50 px-4 py-3 leading-tight text-slate-100 placeholder-slate-400 backdrop-blur-sm transition-all focus:border-brand focus:bg-slate-800 focus:outline-none focus:ring-1 focus:ring-brand",
+              }}
+            />
         )}
       />
     </div>
@@ -66,7 +66,7 @@ export const Input = ({ label, type, id, placeholder }: Props) => {
   return (
     <div className="mb-4 flex flex-col items-start justify-center gap-4">
       <div className="flex w-full flex-wrap items-center justify-between gap-2">
-        <label className="block pr-4 text-left font-bold text-muted-foreground" htmlFor={id}>
+        <label className="block pr-4 text-left text-sm font-semibold text-slate-300" htmlFor={id}>
           {label}
         </label>
         <AnimatePresence mode="wait" initial={false}>
@@ -74,7 +74,7 @@ export const Input = ({ label, type, id, placeholder }: Props) => {
         </AnimatePresence>
       </div>
       <input
-        className="w-full appearance-none rounded border-2 border-gray-200 bg-gray-200 px-4 py-2 leading-tight text-gray-700 focus:border-purple-500 focus:bg-white focus:outline-none"
+        className="w-full appearance-none rounded-lg border border-slate-700/50 bg-slate-800/50 px-4 py-3 leading-tight text-slate-100 placeholder-slate-400 backdrop-blur-sm transition-all focus:border-brand focus:bg-slate-800 focus:outline-none focus:ring-1 focus:ring-brand"
         id={id}
         type={type}
         placeholder={placeholder}
@@ -101,7 +101,7 @@ export const TextArea = ({ label, id, placeholder }: { label: string; id: string
   return (
     <div className="mb-4 flex flex-col items-start justify-center gap-4">
       <div className="flex w-full flex-wrap items-center justify-between gap-2">
-        <label className="block pr-4 text-left font-bold text-muted-foreground" htmlFor={id}>
+        <label className="block pr-4 text-left text-sm font-semibold text-slate-300" htmlFor={id}>
           {label}
         </label>
         <AnimatePresence mode="wait" initial={false}>
@@ -109,7 +109,7 @@ export const TextArea = ({ label, id, placeholder }: { label: string; id: string
         </AnimatePresence>
       </div>
       <textarea
-        className="h-32 w-full appearance-none rounded border-2 border-gray-200 bg-gray-200 px-4 py-2 leading-tight text-gray-700 focus:border-purple-500 focus:bg-white focus:outline-none"
+        className="h-32 w-full appearance-none rounded-lg border border-slate-700/50 bg-slate-800/50 px-4 py-3 leading-tight text-slate-100 placeholder-slate-400 backdrop-blur-sm transition-all focus:border-brand focus:bg-slate-800 focus:outline-none focus:ring-1 focus:ring-brand resize-none custom-scrollbar"
         id={id}
         placeholder={placeholder}
         {...register(id, {

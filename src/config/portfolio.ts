@@ -49,6 +49,15 @@ export const portfolioProducts: PortfolioItem[] = [
 
 export const portfolioClients: PortfolioItem[] = [
   {
+    name: "GlowBio Peptides",
+    description: {
+      es: "Suministro de péptidos de investigación verificados desde el lote hasta la botella.",
+      en: "Supply of third-party verified research peptides from batch to bottle.",
+    },
+    url: "https://glowbiopeptides.com/",
+    image: "/assets/results/glowbiopeptides.png",
+  },
+  {
     name: "Glamfox",
     description: {
       es: "E-commerce para marca de cuidado de la piel coreano formulado con ingredientes naturales.",

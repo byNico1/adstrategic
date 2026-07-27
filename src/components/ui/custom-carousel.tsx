@@ -1,5 +1,9 @@
+"use client"
+
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image"
+import Link from "next/link"
+import { useParams } from "next/navigation"
 import * as React from "react"
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
@@ -27,6 +31,8 @@ const imagesObj = [
 
 export function ResultsCarousel() {
   const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }))
+  const params = useParams()
+  const lang = params?.lang || "es"
 
   return (
     <Carousel
@@ -42,7 +48,7 @@ export function ResultsCarousel() {
       <CarouselContent className="m-0">
         {imagesObj.map((src, index) => (
           <CarouselItem className="p-0" key={index}>
-            <div className="relative z-30 aspect-video w-full max-w-[720px] ">
+            <Link href={`/${lang}/portfolio`} className="relative z-30 block aspect-video w-full max-w-[720px]">
               <Image
                 alt="hero"
                 src={src}
@@ -54,7 +60,7 @@ export function ResultsCarousel() {
                 }}
                 className="h-full w-full"
               />
-            </div>
+            </Link>
           </CarouselItem>
         ))}
       </CarouselContent>
