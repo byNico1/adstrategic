@@ -1,9 +1,6 @@
 import { GoogleTagManager } from "@next/third-parties/google"
 import { Inter, Roboto } from "next/font/google"
 import "@/styles/globals.css"
-import Footer from "@/components/Footer"
-
-import HeaderContainer from "@/components/Header/HeaderContainer"
 import { ThemeProvider } from "@/components/theme-provider"
 
 import { i18n, type Locale } from "../../i18n-config"
@@ -41,10 +38,8 @@ export default function RootLayout({ children, params }: { children: React.React
       <GoogleTagManager gtmId="GTM-K3RWQCCM" />
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark" disableTransitionOnChange>
-          <HeaderContainer params={params} />
           {children}
         </ThemeProvider>
-        <Footer params={params} />
       </body>
     </html>
   )

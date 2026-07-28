@@ -68,7 +68,7 @@ const Form = ({
           <form
             onSubmit={(e) => e.preventDefault()}
             noValidate
-            className="mx-auto w-full max-w-xl rounded-2xl border border-slate-800/50 bg-slate-900/60 p-8 shadow-2xl backdrop-blur-xl"
+            className="w-full overflow-hidden rounded-2xl border border-slate-800/50 bg-slate-900/60 p-4 shadow-2xl backdrop-blur-xl sm:p-8"
           >
             <div className={`mx-auto flex w-full flex-col ${className}`}>
               <Input

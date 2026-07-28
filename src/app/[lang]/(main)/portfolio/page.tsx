@@ -2,10 +2,8 @@ import { Metadata } from "next"
 import { getDictionary } from "@/src/get-dictionary"
 import { Locale } from "@/src/i18n-config"
 import Container from "@/src/components/Container"
-import { portfolioProducts, portfolioClients } from "@/src/config/portfolio"
+import { portfolioProducts, portfolioClients, PortfolioItem } from "@/src/config/portfolio"
 import PortfolioCard from "./PortfolioCard"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
 
 export async function generateMetadata({ params: { lang } }: { params: { lang: Locale } }): Promise<Metadata> {
   const dictionary = await getDictionary(lang)
@@ -74,15 +72,6 @@ export default async function PortfolioPage({ params: { lang } }: { params: { la
           </div>
         </section>
       </Container>
-      
-      {/* Floating CTA Button */}
-      <div className="fixed bottom-10 left-1/2 -translate-x-1/2 z-[199]">
-        <Link href={`/${lang}/#contact`}>
-          <Button size="lg" className="text-lg px-8 py-6 shadow-xl transition-transform hover:scale-105 active:scale-95">
-            {lang === "es" ? "Comienza Ahora" : "Get Started"}
-          </Button>
-        </Link>
-      </div>
     </main>
   )
 }

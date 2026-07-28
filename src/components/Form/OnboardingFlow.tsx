@@ -15,7 +15,7 @@ type Question = {
   options: Option[]
 }
 
-const translations: Record<string, Question[]> = {
+const translations = {
   es: [
     {
       id: "q1",
@@ -23,7 +23,7 @@ const translations: Record<string, Question[]> = {
       options: [
         { label: "Desarrollo de Software a Medida / App" },
         { label: "Diseño y Desarrollo de Sitio Web" },
-        { label: "Mix (Web + Software)" },
+        { label: "E-commerce" },
         { label: "Otro", isOther: true },
       ],
     },
@@ -51,9 +51,9 @@ const translations: Record<string, Question[]> = {
       id: "q4",
       title: "¿Cuál es tu presupuesto estimado para este proyecto?",
       options: [
-        { label: "Básico / Emprendedor (Menos de $1k)" },
-        { label: "Estándar / Pyme ($1k - $5k)" },
-        { label: "Avanzado / Corporativo (Más de $5k)" },
+        { label: "Básico / Emprendedor ($1k - $5k)" },
+        { label: "Estándar / Pyme ($5k - $10k)" },
+        { label: "Avanzado / Corporativo (Más de $10k)" },
         { label: "Otro", isOther: true },
       ],
     },
@@ -65,7 +65,7 @@ const translations: Record<string, Question[]> = {
       options: [
         { label: "Custom Software Development / App" },
         { label: "Website Design & Development" },
-        { label: "Mix (Web + Software)" },
+        { label: "E-commerce" },
         { label: "Other", isOther: true },
       ],
     },
@@ -93,14 +93,16 @@ const translations: Record<string, Question[]> = {
       id: "q4",
       title: "What is your estimated budget for this project?",
       options: [
-        { label: "Basic / Startup (Under $1k)" },
-        { label: "Standard / SMB ($1k - $5k)" },
-        { label: "Advanced / Enterprise (Over $5k)" },
+        { label: "Basic / Startup ($1k - $5k)" },
+        { label: "Standard / SMB ($5k - $10k)" },
+        { label: "Advanced / Enterprise (Over $10k)" },
         { label: "Other", isOther: true },
       ],
     },
   ],
-}
+} satisfies Record<string, Question[]>
+
+type Lang = keyof typeof translations
 
 import { useParams } from "next/navigation"
 
@@ -110,33 +112,39 @@ export default function OnboardingFlow({
   formDictionary?: Awaited<ReturnType<typeof getDictionary>>["form"]
 }) {
   const { lang } = useParams()
-  const currentLang = typeof lang === 'string' && translations[lang] ? lang : 'en'
-  const questions = translations[currentLang]
+  const currentLang: Lang = lang === "es" ? "es" : "en"
+  const questions: Question[] = translations[currentLang]
 
   const [step, setStep] = useState(0)
   const [answers, setAnswers] = useState<Record<string, string>>({})
   const [otherText, setOtherText] = useState("")
 
+  const currentQuestion = questions[step]
+
   const handleOptionSelect = (option: Option) => {
+    if (!currentQuestion) return
     if (option.isOther) {
       if (!otherText.trim()) return // Don't proceed if empty
-      setAnswers((prev) => ({ ...prev, [questions[step].id]: `Otro: ${otherText}` }))
+      setAnswers((prev) => ({ ...prev, [currentQuestion.id]: `Otro: ${otherText}` }))
       setOtherText("")
     } else {
-      setAnswers((prev) => ({ ...prev, [questions[step].id]: option.label }))
+      setAnswers((prev) => ({ ...prev, [currentQuestion.id]: option.label }))
     }
     setStep((prev) => prev + 1)
   }
 
   // If completed, show original Form with compiled answers
-  if (step >= questions.length) {
-    const initialMessage = currentLang === "es" ? `Respuestas del Onboarding:
+  if (!currentQuestion) {
+    const initialMessage =
+      currentLang === "es"
+        ? `Respuestas del Onboarding:
 1. Tipo de solución: ${answers["q1"]}
 2. Objetivo: ${answers["q2"]}
 3. Etapa: ${answers["q3"]}
 4. Presupuesto: ${answers["q4"]}
 
-Mensaje Adicional:` : `Onboarding Answers:
+Mensaje Adicional:`
+        : `Onboarding Answers:
 1. Solution Type: ${answers["q1"]}
 2. Goal: ${answers["q2"]}
 3. Stage: ${answers["q3"]}
@@ -147,62 +155,65 @@ Additional Message:`
     return <Form className="!w-full" dictionary={formDictionary} initialMessage={initialMessage} />
   }
 
-  const currentQuestion = questions[step]
-  
-  const uiText = currentLang === "es" ? {
-    step: "Paso",
-    of: "de",
-    completed: "completado",
-    specify: "Especificar",
-    placeholder: "Escribe tu respuesta...",
-    next: "Siguiente"
-  } : {
-    step: "Step",
-    of: "of",
-    completed: "completed",
-    specify: "Specify",
-    placeholder: "Type your answer...",
-    next: "Next"
-  }
+  const uiText =
+    currentLang === "es"
+      ? {
+          step: "Paso",
+          of: "de",
+          completed: "completado",
+          specify: "Especificar",
+          placeholder: "Escribe tu respuesta...",
+          next: "Siguiente",
+        }
+      : {
+          step: "Step",
+          of: "of",
+          completed: "completed",
+          specify: "Specify",
+          placeholder: "Type your answer...",
+          next: "Next",
+        }
 
   return (
-    <div className="w-full max-w-xl mx-auto rounded-2xl border border-slate-800/50 bg-slate-900/60 p-8 shadow-2xl backdrop-blur-xl animate-in fade-in zoom-in duration-300">
-      <div className="mb-8">
-        <div className="flex justify-between text-sm text-muted-foreground mb-2">
-          <span>{uiText.step} {step + 1} {uiText.of} {questions.length}</span>
-          <span>{Math.round(((step) / questions.length) * 100)}% {uiText.completed}</span>
+    <div className="w-full overflow-hidden rounded-2xl border border-slate-800/50 bg-slate-900/60 p-4 shadow-2xl backdrop-blur-xl duration-300 animate-in fade-in zoom-in sm:p-8">
+      <div className="mb-6 sm:mb-8">
+        <div className="mb-2 flex justify-between text-xs text-muted-foreground sm:text-sm">
+          <span>
+            {uiText.step} {step + 1} {uiText.of} {questions.length}
+          </span>
+          <span>
+            {Math.round((step / questions.length) * 100)}% {uiText.completed}
+          </span>
         </div>
-        <div className="w-full bg-muted rounded-full h-2">
+        <div className="h-2 w-full rounded-full bg-muted">
           <div
-            className="bg-brand h-2 rounded-full transition-all duration-300"
-            style={{ width: `${((step) / questions.length) * 100}%` }}
+            className="h-2 rounded-full bg-brand transition-all duration-300"
+            style={{ width: `${(step / questions.length) * 100}%` }}
           />
         </div>
       </div>
 
-      <h3 className="text-2xl font-bold mb-6 text-foreground">{currentQuestion.title}</h3>
-      
-      <div className="flex flex-col gap-4">
+      <h3 className="mb-5 text-lg font-bold text-foreground sm:mb-6 sm:text-2xl">{currentQuestion.title}</h3>
+
+      <div className="flex flex-col gap-3 sm:gap-4">
         {currentQuestion.options.map((option, index) => (
           <div key={index}>
             {option.isOther ? (
-              <div className="flex flex-col gap-2 p-4 rounded-lg border border-slate-700/50 bg-slate-800/30 text-slate-200 transition-colors hover:border-brand shadow-sm">
-                <span className="font-medium">{option.label} ({uiText.specify})</span>
-                <div className="flex gap-2 mt-2">
+              <div className="flex flex-col gap-2 rounded-lg border border-slate-700/50 bg-slate-800/30 p-3 text-slate-200 shadow-sm transition-colors hover:border-brand sm:p-4">
+                <span className="text-sm font-medium sm:text-base">
+                  {option.label} ({uiText.specify})
+                </span>
+                <div className="mt-1 flex gap-2 sm:mt-2">
                   <input
                     value={otherText}
                     onChange={(e) => setOtherText(e.target.value)}
                     placeholder={uiText.placeholder}
-                    className="flex-1 rounded-md border border-slate-700/50 bg-slate-900/50 px-3 py-2 text-sm text-slate-100 shadow-sm transition-colors placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-brand focus:border-brand"
+                    className="min-w-0 flex-1 rounded-md border border-slate-700/50 bg-slate-900/50 px-3 py-2 text-sm text-slate-100 shadow-sm transition-colors placeholder:text-slate-400 focus:border-brand focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-brand"
                     onKeyDown={(e) => {
-                      if (e.key === 'Enter') handleOptionSelect(option)
+                      if (e.key === "Enter") handleOptionSelect(option)
                     }}
                   />
-                  <Button 
-                    variant="default" 
-                    onClick={() => handleOptionSelect(option)}
-                    disabled={!otherText.trim()}
-                  >
+                  <Button variant="default" onClick={() => handleOptionSelect(option)} disabled={!otherText.trim()}>
                     {uiText.next}
                   </Button>
                 </div>
@@ -210,7 +221,7 @@ Additional Message:`
             ) : (
               <Button
                 variant="outline"
-                className="w-full justify-start text-left h-auto py-4 px-6 text-md whitespace-normal border-slate-700/50 bg-slate-800/30 text-slate-200 hover:bg-brand hover:border-brand hover:text-white transition-all shadow-sm"
+                className="h-auto w-full justify-start whitespace-normal border-slate-700/50 bg-slate-800/30 px-4 py-3 text-left text-sm text-slate-200 shadow-sm transition-all hover:border-brand hover:bg-brand hover:text-white sm:px-6 sm:py-4 sm:text-base"
                 onClick={() => handleOptionSelect(option)}
               >
                 {option.label}

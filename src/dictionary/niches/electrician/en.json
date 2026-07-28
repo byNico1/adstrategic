@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "title": "Electrician Web Design | ADDSTRATEGIC",
+    "description": "Website design and digital marketing for electrical companies. Get more qualified leads with a high-performing electrician website."
+  },
+  "topBar": {
+    "tagline": "Proudly Serving the Trades"
+  },
+  "nav": {
+    "links": {
+      "home": "Home",
+      "industries": "Industries",
+      "testimonials": "Testimonials",
+      "about": "About"
+    },
+    "services": "Services",
+    "servicesItems": {
+      "webDesign": "Web Design",
+      "seo": "SEO",
+      "ppc": "PPC Advertising"
+    },
+    "bookCall": "Book a Call",
+    "contact": "Contact Us",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "h1": "Electrician Web Design",
+    "cta": "Book Free Strategy Call",
+    "stats": [
+      { "label": "Retention Rate" },
+      { "label": "Leads Converted" },
+      { "label": "Google Business Listings Managed" }
+    ]
+  },
+  "splitIntro": {
+    "heading": "Website Design Services for Electrical Companies",
+    "body": "If you own an electrical company, a professional website is one of the highest-ROI investments you can make. ADDSTRATEGIC builds electrician websites that turn searchers into booked jobs — with clear service pages, fast load times, and mobile-first layouts that match how your customers actually search.",
+    "bullets": [
+      "Industry-specific layouts that speak to homeowners and GCs",
+      "Mobile-first design for on-the-go local searchers",
+      "Clear calls-to-action that drive phone calls and form fills",
+      "SEO-ready structure so you rank for the jobs you want"
+    ],
+    "cta": "Book Free Strategy Call",
+    "imageOverlay": "ELECTRICAL"
+  },
+  "whySection": {
+    "heading": "Why Do Electricians Need Web Design?",
+    "intro": "Your competitors are already online. A purpose-built electrician website from a web design company that understands the trades can provide numerous benefits:",
+    "cards": [
+      {
+        "title": "Bring Users to Your Website",
+        "body": "A well-designed site paired with local SEO puts your electrical company in front of homeowners searching for help right now."
+      },
+      {
+        "title": "Stay Competitive",
+        "body": "When every other electrician in your market has a polished site, an outdated or missing web presence costs you jobs every week."
+      },
+      {
+        "title": "Improve Accessibility & Functionality",
+        "body": "Fast, accessible, easy-to-navigate pages keep visitors engaged and make it simple for them to call or request a quote."
+      }
+    ]
+  },
+  "explainer": {
+    "heading": "What is Website Design?",
+    "body": "Website design is the process of planning, creating, and arranging the content and visuals of a site so it looks professional and converts visitors into customers. For electricians, that means clear service pages, trust signals, and frictionless contact paths.",
+    "bullets": [
+      "Improving site layouts for clarity and conversion",
+      "Optimizing the site for search engines",
+      "Building mobile-responsive pages",
+      "Adding trust elements like reviews and certifications",
+      "Creating clear service and service-area pages",
+      "Integrating contact forms and click-to-call",
+      "Ensuring fast load times and accessibility"
+    ],
+    "cta": "Book Free Strategy Call"
+  },
+  "keyFactors": {
+    "heading": "Key Factors of a High-Performing Electrician Website",
+    "intro": "These are the fundamentals that separate a brochure site from a site that consistently books electrical jobs.",
+    "cards": [
+      {
+        "title": "User-Friendliness",
+        "body": "Visitors should find your services, service area, and phone number in seconds — on any device, without hunting through menus."
+      },
+      {
+        "title": "Speed",
+        "body": "Slow pages lose jobs. We build electrician websites that load fast so homeowners stay long enough to request a quote."
+      },
+      {
+        "title": "Visibility",
+        "body": "Clear structure, local SEO foundations, and optimized content help your electrical company show up when neighbors search for help."
+      }
+    ]
+  },
+  "ctaBanner": {
+    "heading": "Interested in Our Services? We're Here to Help!",
+    "body": "Whether you need a new electrician website or a rebuild that actually converts, ADDSTRATEGIC is ready to map a strategy around your market and goals.",
+    "cta": "Book Free Strategy Call"
+  },
+  "contactSection": {
+    "heading": "Contact Us Today for Professional Electrician Website Design",
+    "paragraphs": [
+      "Ready to grow your electrical company online? Our team designs websites built for the trades — clear service pages, strong CTAs, and mobile experiences that turn searches into booked calls.",
+      "Tell us about your business, your market, and your goals. We'll walk you through options and recommend the right next step — no pressure, just a clear plan."
+    ],
+    "cta": "Book Free Strategy Call"
+  },
+  "testimonials": {
+    "heading": "What Our Clients Are Saying About Us",
+    "intro": "Real feedback from trade businesses we've helped grow online. Their results speak for themselves.",
+    "roleLabel": "Satisfied Client",
+    "reviews": [
+      {
+        "text": "ADDSTRATEGIC rebuilt our electrician website from the ground up. Within weeks we were getting more qualified calls than we ever had from our old site. Highly recommend."
+      },
+      {
+        "text": "Professional, fast, and they actually understand the trades. Our new site looks sharp on mobile and our booking form converts consistently."
+      },
+      {
+        "text": "We went from a basic brochure site to a real lead engine. The strategy call alone was worth it — they knew exactly what our market needed."
+      },
+      {
+        "text": "Clear communication throughout the project. Our electrical company finally looks as professional online as we are in the field."
+      }
+    ],
+    "readMore": "Read More Reviews",
+    "leaveReview": "Leave Us a Review"
+  },
+  "footer": {
+    "links": {
+      "services": "Services",
+      "why": "Why Us",
+      "testimonials": "Testimonials",
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "legal": "© {year} ADDSTRATEGIC, Inc. All rights reserved.",
+    "phoneLabel": "Call us"
+  },
+  "accessibility": {
+    "label": "Accessibility options",
+    "toggleOutline": "Toggle focus outlines"
+  }
+}

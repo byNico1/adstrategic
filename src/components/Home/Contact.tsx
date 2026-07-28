@@ -12,7 +12,7 @@ const Contact = ({
   formDictionary: Awaited<ReturnType<typeof getDictionary>>["form"]
 }) => {
   return (
-    <section id="contact" className="relative grid min-h-[70vh] px-4 py-16 text-center sm:py-24">
+    <section id="contact" className="relative flex min-h-[70vh] flex-col items-center justify-center overflow-hidden px-4 py-16 text-center sm:py-24">
       <Image
         alt=""
         fill
@@ -24,9 +24,9 @@ const Contact = ({
         className="z-10"
       />
       <div className="absolute inset-0 z-10 bg-[#000000c3]" />
-      <div className="z-10 mx-auto max-w-3xl place-self-center text-center">
+      <div className="relative z-20 w-full max-w-2xl">
         <h2
-          className="mb-8 text-5xl font-extrabold text-white lg:text-7xl"
+          className="mb-8 text-4xl font-extrabold text-white sm:text-5xl lg:text-7xl"
           dangerouslySetInnerHTML={{ __html: dictionary.title }}
         ></h2>
         <OnboardingFlow formDictionary={formDictionary} />

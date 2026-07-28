@@ -1,0 +1,20 @@
+/* Per-niche semantic token overrides.
+ * Each class overrides only the vars that differ from the base ADDSTRATEGIC theme.
+ * Applied via NicheConfig.themeClass on the niche layout wrapper.
+ * Do NOT invent new --niche-* tokens — override existing semantic ones instead.
+ */
+
+.theme-electrician {
+  --primary: 174 40% 40%;
+  --primary-foreground: 0 0% 100%;
+  --brand: #55a7a6;
+  --accent: 174 25% 18%;
+  --accent-foreground: 0 0% 100%;
+  --ring: 174 40% 40%;
+}
+
+/* Accessibility widget focus-outline toggle stub */
+html.niche-a11y-outlines *:focus {
+  outline: 3px solid hsl(var(--ring)) !important;
+  outline-offset: 2px !important;
+}

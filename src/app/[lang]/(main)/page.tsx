@@ -1,6 +1,8 @@
 import { Metadata } from "next"
 import Contact from "@/components/Home/Contact"
 import FAQs from "@/components/Home/FAQs"
+import OfferHighlight from "@/components/Home/OfferHighlight"
+import PortfolioPreview from "@/components/Home/PortfolioPreview"
 import SheetOpener from "@/components/Home/SheetOpener"
 import SponsorsSlider from "@/components/Home/SponsorsSlider"
 import Testimonials from "@/components/Home/Testimonials"
@@ -9,6 +11,7 @@ import MultiLayerParallax from "@/components/MultiLayerParallax"
 import Process from "@/home/Process"
 import Scroller from "@/home/Scroller"
 import Services from "@/home/Services"
+import PricingSection from "@/src/components/Pricing/PricingSection"
 import { getDictionary } from "@/src/get-dictionary"
 import { Locale } from "@/src/i18n-config"
 
@@ -35,7 +38,11 @@ export default async function Web({ params: { lang } }: { params: { lang: Locale
 
       <Process dictionary={dictionary.process} />
 
-      <Services dictionary={dictionary.services} />
+      <OfferHighlight dictionary={dictionary.offerHighlight} />
+
+      <PortfolioPreview dictionary={dictionary.portfolioPreview} />
+
+      <PricingSection data={dictionary.pricing} lang={lang} />
 
       <WhyUs dictionary={dictionary.whyUs} />
 

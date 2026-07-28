@@ -1,3 +1,5 @@
+@import "./niche-themes.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -73,6 +75,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
   }
 }
 

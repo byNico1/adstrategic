@@ -18,9 +18,10 @@ export const Header = ({
   headerLinks: Awaited<ReturnType<typeof getDictionary>>["HeaderLinks"]
   lang: Locale
 }) => {
-  const pathname = usePathname()
-
   const [isOpened, setIsOpened] = useState(false)
+
+  const contactLink = headerLinks.find((link) => "cta" in link && link.cta)
+  const navLinks = headerLinks.filter((link) => !("cta" in link && link.cta))
 
   function handleClick() {
     setIsOpened((prev) => !prev)
@@ -34,14 +35,6 @@ export const Header = ({
 
       <div className="flex h-full items-center justify-around px-5 backdrop-blur">
         <Link href={"/"} className="z-50 flex items-center gap-5">
-          {/* <Image
-            priority
-            src="/addstrategic-180.webp"
-            width={180}
-            height={180}
-            alt="logo"
-            className="h-10 w-10 sm:hidden"
-          /> */}
           <Image priority src="/addstrategic_banner.png" width={180} height={180} alt="logo" className=" w-64" />
         </Link>
 
@@ -51,26 +44,44 @@ export const Header = ({
           }`}
         >
           <div className="flex w-full flex-col items-center justify-center gap-8 px-5 font-semibold max-lg:text-lg lg:flex-row">
-            {headerLinks.map((link) => {
-              const isAnchor = link.url.startsWith("/#")
-              const targetUrl = isAnchor ? `/${lang}${link.url.substring(1)}` : `/${lang}${link.url}`
-              
-              return (
-                <Link onClick={() => setIsOpened(false)} key={link.name} href={targetUrl}>
-                  <Button
-                    variant="ghost"
-                    size="lg"
-                    className="max-lg:text-xl max-lg:hover:bg-blue-200 max-lg:dark:hover:bg-cyan-700"
-                  >
-                    {link.name}
-                  </Button>
-                </Link>
-              )
-            })}
-            <LanguageToggle lang={lang} />
+            {navLinks.map((link) => (
+              <Link onClick={() => setIsOpened(false)} key={link.name} href={`${link.url}`}>
+                <Button
+                  variant="ghost"
+                  size="lg"
+                  className="max-lg:text-xl max-lg:hover:bg-blue-200 max-lg:dark:hover:bg-cyan-700"
+                >
+                  {link.name}
+                </Button>
+              </Link>
+            ))}
+
+            <div className="lg:hidden">
+              <LanguageToggle lang={lang} />
+            </div>
+
+            {contactLink && (
+              <Link href={contactLink.url} onClick={() => setIsOpened(false)} className="lg:hidden">
+                <Button size="lg" className="rounded-full">
+                  {contactLink.name}
+                </Button>
+              </Link>
+            )}
           </div>
         </div>
-        <div className="relative flex items-center justify-center gap-5">
+
+        <div className="relative z-50 flex items-center gap-2 sm:gap-3">
+          <div className="hidden lg:inline-flex">
+            <LanguageToggle lang={lang} />
+          </div>
+
+          {contactLink && (
+            <Link href={contactLink.url} className="hidden sm:inline-flex">
+              <Button size="sm" className="rounded-md px-5">
+                {contactLink.name}
+              </Button>
+            </Link>
+          )}
 
           <button className="lg:hidden" aria-label="mobile-menu" onClick={handleClick}>
             {isOpened ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}

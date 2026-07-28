@@ -159,6 +159,45 @@
   "contact": {
     "title": "Obten una propuesta de <span class='text-[#55A7A6]'>Pagina Web</span> o <span class='text-[#55A7A6]'>Software</span>"
   },
+  "offerHighlight": {
+    "eyebrow": "Lo Que Ofrecemos",
+    "title": "Sitios web desde $0 de pago inicial y $97 al mes",
+    "description": "Ofrecemos sitios web profesionales y software empresarial personalizado construidos desde cero — sin plantillas, sin atajos. Cada proyecto incluye diseño, desarrollo y soporte dedicado para que puedas enfocarte en hacer crecer tu negocio.",
+    "cta": "Agendar una Llamada",
+    "features": [
+      {
+        "title": "100% Seguro",
+        "description": "Nuestros sitios están construidos con código estático o reforzado, lo que significa que literalmente no pueden ser hackeados."
+      },
+      {
+        "title": "Diseño Personalizado",
+        "description": "Nuestros diseños son creados por un equipo de diseño interno, lo que nos permite hacer lo que quieras."
+      },
+      {
+        "title": "Entrega Rápida",
+        "description": "Sitios web estándar entregados en 6–10 días hábiles. Nos movemos rápido sin recortar atajos."
+      },
+      {
+        "title": "Garantía de Devolución",
+        "description": "Si no podemos diseñar algo que te guste, recibes tu dinero de vuelta. Respaldamos nuestro trabajo."
+      },
+      {
+        "title": "Soporte Directo",
+        "description": "Llámanos o escríbenos en cualquier momento, sin robots. Cuando contactas, hablas con una persona real."
+      },
+      {
+        "title": "SEO Optimizado",
+        "description": "Sin trucos ni mentiras. Construimos con las mejores prácticas de SEO integradas desde el primer día."
+      }
+    ]
+  },
+  "portfolioPreview": {
+    "eyebrow": "Nuestro Trabajo",
+    "title": "Algunos de los Proyectos que Hemos Realizado",
+    "subtitle": "Hemos trabajado con clientes en todo EE. UU., Canadá y Colombia en servicios para el hogar, e-commerce, restaurantes, agencias de consultoría, startups, marcas de belleza y más.",
+    "cta": "Ver Todos los Proyectos",
+    "locations": "EE. UU. · Canadá · Colombia"
+  },
   "whyUs": {
     "title": "¿Por qué <span class='text-brand'>elegirnos</span>?",
     "subtitle": "Hay una razón por la que somos la opción #1 para el diseño de sitios web.",
@@ -219,13 +258,11 @@
     { "title": "Diseño a medida" }
   ],
   "HeaderLinks": [
+    { "name": "Como trabajamos", "url": "/how-we-work" },
     { "name": "Portafolio", "url": "/portfolio" },
-    { "name": "Cómo Trabajamos", "url": "/how-we-work" },
+    { "name": "Industrias", "url": "/industries" },
     { "name": "Blog", "url": "/blog" },
-    { "name": "Herramientas", "url": "/tools" },
-    { "name": "Proceso", "url": "/#process" },
-    { "name": "Servicios", "url": "/#services" },
-    { "name": "Contacto", "url": "/#contact" }
+    { "name": "Contactanos", "url": "/#contact", "cta": true }
   ],
   "FooterLinks": [
     { "name": "Servicios", "url": "/#services" },
@@ -330,43 +367,54 @@
           }
         ]
       }
-    ],
-    "pricing": {
-      "title": "Precios Transparentes",
-      "subtitle": "Selecciona el mejor plan para tu negocio. Inversiones mínimas para iniciar.",
-      "plans": [
-        {
-          "name": "Sitio Web",
-          "price": "$599",
-          "desc": "Tu presencia en internet",
-          "features": ["Desarrollo UI/UX", "Diseño Responsivo", "Dominio Personalizado", "SEO Básico"]
-        },
-        {
-          "name": "E-Commerce",
-          "price": "$1,190",
-          "desc": "Vende en línea (con marca existente, sin marca $1,500)",
-          "features": ["Catálogo de Productos", "Pasarela de Pagos", "Facturación Integrada", "Panel de Control"]
-        },
-        {
-          "name": "Software",
-          "price": "$2,000",
-          "desc": "Aplicaciones a medida",
-          "features": ["Arquitectura a medida", "Flujos de usuario complejos", "Sistemas CRM/ERP", "Integraciones API"]
-        },
-        {
-          "name": "Mix (Web + Software)",
-          "price": "$2,700",
-          "desc": "Digitaliza y escala tu operación",
-          "features": ["Sitio web completo", "Sistema interno", "Integración perfecta", "Automatización avanzada"]
-        },
-        {
-          "name": "Proyecto Ultra",
-          "price": "$2,999",
-          "desc": "El paquete completo",
-          "features": ["Creación de Marca (Branding)", "Apertura de Redes Sociales", "E-commerce o Web Avanzada", "Estrategia Completa"]
-        }
-      ]
-    }
+    ]
+  },
+  "pricing": {
+    "title": "Precios Transparentes",
+    "subtitle": "Selecciona el mejor plan para tu negocio. Inversiones mínimas para iniciar.",
+    "customSoftware": {
+      "eyebrow": "Soluciones Empresariales a Medida",
+      "title": "Desarrollo de Software Personalizado",
+      "description": "Cada negocio es diferente — y cada solución de software que construimos también lo es. Ya sea que necesites un CRM, ERP, herramienta interna, sistema de automatización o una plataforma completamente personalizada, estructuramos cada proyecto individualmente para que se adapte exactamente a tus necesidades y presupuesto.",
+      "highlight": "Hecho a la medida de tu negocio. Con precio según tus objetivos.",
+      "cta": "Agenda una Llamada Gratuita",
+      "badge": "Cotización Personalizada"
+    },
+    "plans": [
+      {
+        "name": "E-Commerce",
+        "price": "$2,299",
+        "desc": "Vende en línea (con marca existente, sin marca $2,500)",
+        "features": ["Catálogo de Productos", "Pasarela de Pagos", "Facturación Integrada", "Panel de Control"]
+      },
+      {
+        "name": "Sitio Web Total",
+        "price": "$1,299",
+        "desc": "Tu presencia en internet",
+        "features": [
+          "Desarrollo UI/UX",
+          "Hospedaje Incluido",
+          "+$250 Para Agregar un Blog",
+          "Diseño Responsivo",
+          "SEO",
+          "Ediciones Ilimitadas"
+        ]
+      },
+      {
+        "name": "Mensual",
+        "price": "$97 al mes",
+        "desc": "Tu presencia en internet",
+        "features": [
+          "Desarrollo UI/UX",
+          "Hospedaje Incluido",
+          "+$250 Para Agregar un Blog",
+          "Diseño Responsivo",
+          "SEO",
+          "Ediciones Ilimitadas",
+          "Actualizaciones de por Vida"
+        ]
+      }
+    ]
   },
   "toolsHub": {
     "eyebrow": "Herramientas Gratuitas",
@@ -499,6 +547,32 @@
         "text": "ADDSTRATEGIC construye sitios que puntúan 90+ desde el primer día.",
         "button": "Obtén una auditoría gratis + propuesta"
       }
+    }
+  },
+  "industries": {
+    "metadata": {
+      "title": "Industrias que Servimos | ADDSTRATEGIC",
+      "description": "ADDSTRATEGIC construye sitios web de alta conversión y soluciones de marketing digital adaptadas a industrias específicas. Explora nuestras soluciones por industria."
+    },
+    "hero": {
+      "badge": "Soluciones por Industria",
+      "title": "Hablamos el <span class='text-brand'>Idioma de tu Industria</span>",
+      "subtitle": "Los sitios web genéricos no conquistan clientes. Construimos experiencias digitales especializadas diseñadas para las necesidades únicas de tu oficio o profesión.",
+      "cta": "Ver Todas las Soluciones"
+    },
+    "grid": {
+      "heading": "Elige Tu Industria",
+      "subheading": "Selecciona tu sector para explorar estrategias personalizadas, resultados reales y un sitio web diseñado en torno a cómo tus clientes realmente buscan y contratan."
+    },
+    "card": {
+      "viewDetails": "Ver Detalles",
+      "learnMore": "Saber más"
+    },
+    "cta": {
+      "title": "¿No ves tu industria?",
+      "subtitle": "Creamos soluciones personalizadas para cualquier oficio, servicio o negocio profesional. Cuéntanos sobre tu nicho y diseñaremos una estrategia que funcione.",
+      "button": "Habla con Nuestro Equipo",
+      "href": "#contact"
     }
   }
 }

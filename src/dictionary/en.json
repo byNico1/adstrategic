@@ -156,6 +156,45 @@
   "contact": {
     "title": "Get a proposal for a <span class='text-[#55A7A6]'>Website</span> or <span class='text-[#55A7A6]'>Software</span>"
   },
+  "offerHighlight": {
+    "eyebrow": "What We Offer",
+    "title": "Websites Starting At $0 Down And $97 Per Month",
+    "description": "We offer professional websites and custom business software built from the ground up — no templates, no shortcuts. Every project includes design, development, and dedicated support so you can focus on growing your business.",
+    "cta": "Schedule a Call",
+    "features": [
+      {
+        "title": "100% Secure",
+        "description": "Our sites are built with static or hardened code, meaning there's literally nothing that can be hacked."
+      },
+      {
+        "title": "Custom Designed",
+        "description": "Our designs are made by an in-house design team, which allows us to make anything you want."
+      },
+      {
+        "title": "Fast Delivery",
+        "description": "Standard websites delivered in 6–10 business days. We move fast without cutting corners."
+      },
+      {
+        "title": "Money Back Guarantee",
+        "description": "If we can't design something you like, you get your money back. We stand by our work."
+      },
+      {
+        "title": "Direct Support",
+        "description": "Call or text us anytime, no phone trees or robots. When you reach out, you get a real person."
+      },
+      {
+        "title": "SEO Optimized",
+        "description": "No snake oil, no tricks. We build with SEO best practices baked in from day one."
+      }
+    ]
+  },
+  "portfolioPreview": {
+    "eyebrow": "Our Work",
+    "title": "Some of the Work We've Done",
+    "subtitle": "We have worked with clients all over the US, Canada and Colombia for home services, e-commerce, restaurants, consulting agencies, start ups, beauty brands, and more.",
+    "cta": "See All Projects",
+    "locations": "USA · Canada · Colombia"
+  },
   "whyUs": {
     "title": "Why <span class='text-brand'>choose us</span>?",
     "subtitle": "There's a reason we're the #1 choice for website design.",
@@ -216,13 +255,12 @@
     { "title": "Custom Design" }
   ],
   "HeaderLinks": [
+    { "name": "How we work", "url": "/how-we-work" },
     { "name": "Portfolio", "url": "/portfolio" },
-    { "name": "How We Work", "url": "/how-we-work" },
+    { "name": "Industries", "url": "/industries" },
     { "name": "Blog", "url": "/blog" },
-    { "name": "Tools", "url": "/tools" },
-    { "name": "Process", "url": "/#process" },
     { "name": "Services", "url": "/#services" },
-    { "name": "Contact", "url": "/#contact" }
+    { "name": "Contact Us", "url": "/#contact", "cta": true }
   ],
   "FooterLinks": [
     { "name": "Services", "url": "/#services" },
@@ -327,43 +365,54 @@
           }
         ]
       }
-    ],
-    "pricing": {
-      "title": "Transparent Pricing",
-      "subtitle": "Select the best plan for your business. Minimum investments to start.",
-      "plans": [
-        {
-          "name": "Website",
-          "price": "$599",
-          "desc": "Your presence on the internet",
-          "features": ["UI/UX Development", "Responsive Design", "Custom Domain", "Basic SEO"]
-        },
-        {
-          "name": "E-Commerce",
-          "price": "$1,190",
-          "desc": "Sell online (with existing brand, without brand $1,500)",
-          "features": ["Product Catalog", "Payment Gateway", "Integrated Billing", "Admin Panel"]
-        },
-        {
-          "name": "Software",
-          "price": "$2,000",
-          "desc": "Custom applications",
-          "features": ["Custom Architecture", "Complex User Flows", "CRM/ERP Systems", "API Integrations"]
-        },
-        {
-          "name": "Mix (Web + Software)",
-          "price": "$2,700",
-          "desc": "Digitize and scale your operation",
-          "features": ["Complete Website", "Internal System", "Seamless Integration", "Advanced Automation"]
-        },
-        {
-          "name": "Ultra Project",
-          "price": "$2,999",
-          "desc": "The complete package",
-          "features": ["Brand Creation (Branding)", "Social Media Setup", "Advanced E-commerce or Web", "Full Strategy"]
-        }
-      ]
-    }
+    ]
+  },
+  "pricing": {
+    "title": "Transparent Pricing",
+    "subtitle": "Select the best plan for your business. Minimum investments to start.",
+    "customSoftware": {
+      "eyebrow": "Enterprise & Custom Solutions",
+      "title": "Custom Software Development",
+      "description": "Every business is different — and so is every software solution we build. Whether you need a CRM, ERP, internal tool, automation system, or a fully custom platform, we scope each project individually to match your exact requirements and budget. No off-the-shelf pricing, because no two solutions are the same.",
+      "highlight": "Tailored to your business. Priced for your goals.",
+      "cta": "Book a Free Strategy Call",
+      "badge": "Custom Quote"
+    },
+    "plans": [
+      {
+        "name": "E-Commerce",
+        "price": "$2,299",
+        "desc": "Sell online (with existing brand, without brand $2,500)",
+        "features": ["Product Catalog", "Payment Gateway", "Integrated Billing", "Admin Panel"]
+      },
+      {
+        "name": "Website Total",
+        "price": "$1,299",
+        "desc": "Your presence on the internet",
+        "features": [
+          "UI/UX Development",
+          "Includes Hosting",
+          "+$250 To Add A Blog",
+          "Responsive Design",
+          "SEO",
+          "Unlimited Edits"
+        ]
+      },
+      {
+        "name": "Monthly",
+        "price": "$97 per month",
+        "desc": "Your presence on the internet",
+        "features": [
+          "UI/UX Development",
+          "Includes Hosting",
+          "+$250 To Add A Blog",
+          "Responsive Design",
+          "SEO",
+          "Unlimited Edits",
+          "Lifetime Updates"
+        ]
+      }
+    ]
   },
   "toolsHub": {
     "eyebrow": "Free Tools",
@@ -496,6 +545,32 @@
         "text": "ADDSTRATEGIC builds sites that score 90+ from day one.",
         "button": "Get a free audit + proposal"
       }
+    }
+  },
+  "industries": {
+    "metadata": {
+      "title": "Industries We Serve | ADDSTRATEGIC",
+      "description": "ADDSTRATEGIC builds high-converting websites and digital marketing solutions tailored to specific industries. Explore our industry-focused solutions."
+    },
+    "hero": {
+      "badge": "Industry-Focused Solutions",
+      "title": "We Speak <span class='text-brand'>Your Industry's</span> Language",
+      "subtitle": "Cookie-cutter websites don't win customers. We build specialized digital experiences designed for the unique needs of your trade or profession.",
+      "cta": "See All Solutions"
+    },
+    "grid": {
+      "heading": "Choose Your Industry",
+      "subheading": "Select your field to explore tailored strategies, real results, and a website built around how your customers actually search and hire."
+    },
+    "card": {
+      "viewDetails": "View Details",
+      "learnMore": "Learn more"
+    },
+    "cta": {
+      "title": "Don't see your industry?",
+      "subtitle": "We build custom solutions for any trade, service, or professional business. Tell us about your niche and we'll craft a strategy that works.",
+      "button": "Talk to Our Team",
+      "href": "#contact"
     }
   }
 }

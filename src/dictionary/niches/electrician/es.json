@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "title": "Diseño Web para Electricistas | ADDSTRATEGIC",
+    "description": "Diseño web y marketing digital para empresas eléctricas. Consigue más leads calificados con un sitio web de alto rendimiento."
+  },
+  "topBar": {
+    "tagline": "Orgullosamente al servicio de los oficios"
+  },
+  "nav": {
+    "links": {
+      "home": "Inicio",
+      "industries": "Industrias",
+      "testimonials": "Testimonios",
+      "about": "Nosotros"
+    },
+    "services": "Servicios",
+    "servicesItems": {
+      "webDesign": "Diseño Web",
+      "seo": "SEO",
+      "ppc": "Publicidad PPC"
+    },
+    "bookCall": "Agendar llamada",
+    "contact": "Contáctanos",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "hero": {
+    "h1": "Diseño Web para Electricistas",
+    "cta": "Agenda una llamada estratégica gratis",
+    "stats": [
+      { "label": "Tasa de retención" },
+      { "label": "Leads convertidos" },
+      { "label": "Fichas de Google Business gestionadas" }
+    ]
+  },
+  "splitIntro": {
+    "heading": "Servicios de diseño web para empresas eléctricas",
+    "body": "Si tienes una empresa eléctrica, un sitio web profesional es una de las mejores inversiones que puedes hacer. ADDSTRATEGIC crea sitios para electricistas que convierten buscadores en trabajos agendados — con páginas de servicios claras, carga rápida y diseños mobile-first.",
+    "bullets": [
+      "Layouts específicos del sector para dueños de casa y contratistas",
+      "Diseño mobile-first para búsquedas locales",
+      "Llamados a la acción claros que generan llamadas y formularios",
+      "Estructura lista para SEO para posicionarte en los trabajos que quieres"
+    ],
+    "cta": "Agenda una llamada estratégica gratis",
+    "imageOverlay": "ELÉCTRICO"
+  },
+  "whySection": {
+    "heading": "¿Por qué los electricistas necesitan diseño web?",
+    "intro": "Tus competidores ya están en línea. Un sitio web para electricistas diseñado por una empresa que entiende los oficios puede ofrecer numerosos beneficios:",
+    "cards": [
+      {
+        "title": "Atrae usuarios a tu sitio",
+        "body": "Un sitio bien diseñado junto con SEO local pone tu empresa eléctrica frente a quienes buscan ayuda ahora mismo."
+      },
+      {
+        "title": "Mantente competitivo",
+        "body": "Cuando los demás electricistas de tu mercado tienen un sitio pulido, una presencia web desactualizada o inexistente te cuesta trabajos cada semana."
+      },
+      {
+        "title": "Mejora accesibilidad y funcionalidad",
+        "body": "Páginas rápidas, accesibles y fáciles de navegar mantienen a los visitantes interesados y facilitan que llamen o pidan una cotización."
+      }
+    ]
+  },
+  "explainer": {
+    "heading": "¿Qué es el diseño web?",
+    "body": "El diseño web es el proceso de planificar, crear y organizar el contenido y los visuales de un sitio para que se vea profesional y convierta visitantes en clientes. Para electricistas, eso significa páginas de servicios claras, señales de confianza y caminos de contacto sin fricción.",
+    "bullets": [
+      "Mejorar layouts del sitio para claridad y conversión",
+      "Optimizar el sitio para motores de búsqueda",
+      "Construir páginas responsivas para móviles",
+      "Agregar elementos de confianza como reseñas y certificaciones",
+      "Crear páginas de servicios y zonas de cobertura claras",
+      "Integrar formularios de contacto y click-to-call",
+      "Asegurar tiempos de carga rápidos y accesibilidad"
+    ],
+    "cta": "Agenda una llamada estratégica gratis"
+  },
+  "keyFactors": {
+    "heading": "Factores clave de un sitio web de alto rendimiento para electricistas",
+    "intro": "Estos son los fundamentos que separan un sitio de brochure de uno que agenda trabajos eléctricos de forma constante.",
+    "cards": [
+      {
+        "title": "Facilidad de uso",
+        "body": "Los visitantes deben encontrar tus servicios, zona de cobertura y teléfono en segundos — en cualquier dispositivo, sin buscar entre menús."
+      },
+      {
+        "title": "Velocidad",
+        "body": "Las páginas lentas pierden trabajos. Construimos sitios para electricistas que cargan rápido para que los clientes se queden el tiempo suficiente para pedir una cotización."
+      },
+      {
+        "title": "Visibilidad",
+        "body": "Una estructura clara, bases de SEO local y contenido optimizado ayudan a que tu empresa eléctrica aparezca cuando los vecinos buscan ayuda."
+      }
+    ]
+  },
+  "ctaBanner": {
+    "heading": "¿Interesado en nuestros servicios? ¡Estamos para ayudarte!",
+    "body": "Ya sea que necesites un sitio nuevo para tu empresa eléctrica o un rediseño que realmente convierta, ADDSTRATEGIC está listo para trazar una estrategia alrededor de tu mercado y tus metas.",
+    "cta": "Agenda una llamada estratégica gratis"
+  },
+  "contactSection": {
+    "heading": "Contáctanos hoy para un diseño web profesional para electricistas",
+    "paragraphs": [
+      "¿Listo para hacer crecer tu empresa eléctrica en línea? Nuestro equipo diseña sitios pensados para los oficios — páginas de servicios claras, CTAs fuertes y experiencias móviles que convierten búsquedas en llamadas agendadas.",
+      "Cuéntanos sobre tu negocio, tu mercado y tus objetivos. Te guiaremos por las opciones y te recomendaremos el siguiente paso correcto — sin presión, solo un plan claro."
+    ],
+    "cta": "Agenda una llamada estratégica gratis"
+  },
+  "testimonials": {
+    "heading": "Lo que dicen nuestros clientes",
+    "intro": "Comentarios reales de negocios de oficios que hemos ayudado a crecer en línea. Sus resultados hablan por sí solos.",
+    "roleLabel": "Cliente satisfecho",
+    "reviews": [
+      {
+        "text": "ADDSTRATEGIC reconstruyó el sitio de nuestra empresa eléctrica desde cero. En semanas teníamos más llamadas calificadas que nunca con el sitio anterior. Muy recomendado."
+      },
+      {
+        "text": "Profesionales, rápidos, y realmente entienden los oficios. Nuestro nuevo sitio se ve excelente en móvil y el formulario de reserva convierte de forma constante."
+      },
+      {
+        "text": "Pasamos de un sitio básico a un verdadero motor de leads. Solo la llamada estratégica valió la pena — sabían exactamente lo que necesitaba nuestro mercado."
+      },
+      {
+        "text": "Comunicación clara durante todo el proyecto. Nuestra empresa eléctrica finalmente se ve tan profesional en línea como en el campo."
+      }
+    ],
+    "readMore": "Ver más reseñas",
+    "leaveReview": "Déjanos una reseña"
+  },
+  "footer": {
+    "links": {
+      "services": "Servicios",
+      "why": "Por qué nosotros",
+      "testimonials": "Testimonios",
+      "contact": "Contacto",
+      "privacy": "Política de privacidad",
+      "terms": "Términos de servicio"
+    },
+    "legal": "© {year} ADDSTRATEGIC, Inc. Todos los derechos reservados.",
+    "phoneLabel": "Llámanos"
+  },
+  "accessibility": {
+    "label": "Opciones de accesibilidad",
+    "toggleOutline": "Alternar contornos de foco"
+  }
+}

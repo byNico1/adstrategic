@@ -15,7 +15,7 @@ export default async function HowWeWorkPage({ params: { lang } }: { params: { la
 
   return (
     <main className="min-h-screen bg-[#0F172A] pt-20">
-      <HowWeWorkClient data={dictionary.howWeWork} lang={lang} />
+      <HowWeWorkClient data={dictionary.howWeWork} pricing={dictionary.pricing} lang={lang} />
       <div className="relative z-50 bg-slate-950 py-16">
         <Scroller dictionary={dictionary.scrollerData} />
       </div>
