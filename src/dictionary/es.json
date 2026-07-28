@@ -261,7 +261,7 @@
     { "name": "Como trabajamos", "url": "/how-we-work" },
     { "name": "Portafolio", "url": "/portfolio" },
     { "name": "Industrias", "url": "/industries" },
-    { "name": "Blog", "url": "/blog" },
+    { "name": "Herramientas", "url": "/tools" },
     { "name": "Contactanos", "url": "/#contact", "cta": true }
   ],
   "FooterLinks": [

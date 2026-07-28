@@ -258,7 +258,7 @@
     { "name": "How we work", "url": "/how-we-work" },
     { "name": "Portfolio", "url": "/portfolio" },
     { "name": "Industries", "url": "/industries" },
-    { "name": "Blog", "url": "/blog" },
+    { "name": "Tools", "url": "/tools" },
     { "name": "Services", "url": "/#services" },
     { "name": "Contact Us", "url": "/#contact", "cta": true }
   ],
