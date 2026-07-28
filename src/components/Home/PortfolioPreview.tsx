@@ -5,7 +5,7 @@ import Link from "next/link"
 import { useParams } from "next/navigation"
 import { useState } from "react"
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi"
-import { portfolioClients } from "@/src/config/portfolio"
+import { portfolioClients, type PortfolioItem } from "@/src/config/portfolio"
 
 type PortfolioPreviewDictionary = {
   eyebrow: string
@@ -23,7 +23,7 @@ const LOCATION_BADGES = [
   { label: "Colombia", flag: "🇨🇴" },
 ]
 
-function PreviewCard({ item, lang, index }: { item: (typeof portfolioClients)[0]; lang: string; index: number }) {
+function PreviewCard({ item, lang, index }: { item: PortfolioItem; lang: string; index: number }) {
   const [imgSrc, setImgSrc] = useState(item.image)
 
   return (
@@ -72,7 +72,9 @@ function PreviewCard({ item, lang, index }: { item: (typeof portfolioClients)[0]
 export default function PortfolioPreview({ dictionary }: { dictionary: PortfolioPreviewDictionary }) {
   const params = useParams()
   const lang = (params?.lang as string) || "en"
-  const featuredItems = FEATURED_INDICES.map((i) => portfolioClients[i])
+  const featuredItems = FEATURED_INDICES.map((i) => portfolioClients[i]).filter(
+    (item): item is PortfolioItem => item !== undefined,
+  )
 
   return (
     <section className="relative mx-auto max-w-screen-2xl overflow-hidden px-6 pt-16 sm:pt-24 lg:px-12">

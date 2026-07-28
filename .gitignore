@@ -53,4 +53,4 @@ yarn-error.log*
 #agents
 .agent/
 emil-design-eng/
-
+.cursor/
