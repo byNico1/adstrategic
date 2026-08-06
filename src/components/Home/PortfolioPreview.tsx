@@ -15,7 +15,7 @@ type PortfolioPreviewDictionary = {
   locations: string
 }
 
-const FEATURED_INDICES = [1, 5, 8]
+const FEATURED_INDICES = [0, 2, 6]
 
 const LOCATION_BADGES = [
   { label: "USA", flag: "🇺🇸" },

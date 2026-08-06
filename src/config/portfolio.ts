@@ -49,6 +49,15 @@ export const portfolioProducts: PortfolioItem[] = [
 
 export const portfolioClients: PortfolioItem[] = [
   {
+    name: "Unique Catering & Bakery",
+    description: {
+      es: "Servicio de catering exclusivo y repostería artesanal para bodas, eventos sociales y corporativos en Austin, Texas.",
+      en: "Premium artisanal bakery and exclusive catering for weddings, social gatherings, and corporate events in Austin, Texas.",
+    },
+    url: "https://unique-jet.vercel.app/",
+    image: "/assets/results/unique.png",
+  },
+  {
     name: "GlowBio Peptides",
     description: {
       es: "Suministro de péptidos de investigación verificados desde el lote hasta la botella.",
