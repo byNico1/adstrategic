@@ -123,6 +123,240 @@
       }
     ]
   },
+  "restaurantServices": {
+    "title": "Restaurant Digital Solutions",
+    "description": "Digital experiences designed to help restaurants modernize how they present menus, connect with customers and turn physical touchpoints into digital interactions.",
+    "cards": [
+      {
+        "id": "digital-menu-basic",
+        "title": "Digital Menu",
+        "subtitle": "Basic",
+        "price": "$55",
+        "billing": "one-time",
+        "description": "A professional, responsive digital menu designed around your restaurant's brand.",
+        "features": [
+          "Custom design",
+          "Menu categories",
+          "Prices and descriptions",
+          "Responsive mobile design",
+          "Brand-matched interface",
+          "Digital publishing",
+          "1-month guarantee"
+        ],
+        "limitations": [
+          "No post-launch edits included",
+          "Domain not included"
+        ],
+        "cta": "Get Your Digital Menu",
+        "route": "/services/digital-menu"
+      },
+      {
+        "id": "digital-menu-essence",
+        "title": "Digital Menu",
+        "subtitle": "Essence",
+        "price": "$65",
+        "billing": "per month",
+        "description": "Turn your menu into an interactive digital experience with unlimited updates and richer content.",
+        "features": [
+          "Everything in Basic",
+          "Unlimited edits",
+          "Interactive dishes",
+          "Animations",
+          "Videos",
+          "Ingredient information",
+          "Allergy information",
+          "Custom interactions",
+          "Continuous updates"
+        ],
+        "cta": "Build My Menu",
+        "route": "/services/digital-menu/essence",
+        "highlight": true
+      },
+      {
+        "id": "nfc-touchpoints",
+        "title": "NFC Digital Touchpoints",
+        "subtitle": "One Tap. Any Destination.",
+        "price": "Custom",
+        "billing": "based on configuration",
+        "description": "NFC stickers, cards and plaques that instantly connect physical spaces to digital destinations.",
+        "examples": [
+          "Digital Menu",
+          "Google Reviews",
+          "Payment Links",
+          "Reservations",
+          "Instagram",
+          "Ordering",
+          "WhatsApp",
+          "Any custom URL"
+        ],
+        "cta": "Explore NFC",
+        "route": "/services/nfc"
+      }
+    ]
+  },
+  "digitalMenu": {
+    "metadata": {
+      "title": "Digital Menu Design for Restaurants | ADDSTRATEGIC",
+      "description": "Custom digital menus for restaurants with responsive design, branding, pricing, descriptions and optional interactive experiences."
+    },
+    "hero": {
+      "eyebrow": "RESTAURANT DIGITAL SOLUTIONS",
+      "headline": "Your Menu, Digitized.",
+      "subheadline": "Turn your restaurant menu into a fast, responsive digital experience designed around your brand.",
+      "price": "$55 one-time",
+      "primary_cta": "Get Your Digital Menu",
+      "secondary_cta": "See What's Included"
+    },
+    "problemSolution": {
+      "title": "Still using printed menus or PDF files?",
+      "description": "Give your customers a faster, cleaner and more modern way to explore your menu directly from their phone."
+    },
+    "features": {
+      "title": "Everything you need to go digital.",
+      "items": [
+        "Custom menu design",
+        "Restaurant branding integration",
+        "Categories and sections",
+        "Prices and descriptions",
+        "Responsive mobile experience",
+        "Digital publishing",
+        "1-month guarantee"
+      ]
+    },
+    "pricing": {
+      "title": "Choose your digital menu experience",
+      "plans": [
+        {
+          "name": "Basic",
+          "price": "$55",
+          "billing": "one-time"
+        },
+        {
+          "name": "Essence",
+          "price": "$65",
+          "billing": "monthly"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to digitize your menu?",
+      "button": "Start Your Menu"
+    }
+  },
+  "digitalMenuEssence": {
+    "metadata": {
+      "title": "Interactive Digital Menus for Restaurants | ADDSTRATEGIC",
+      "description": "Interactive digital menus with animations, videos, allergy information, interactive dishes and unlimited monthly updates."
+    },
+    "hero": {
+      "eyebrow": "ESSENCE DIGITAL MENU",
+      "headline": "More Than a Menu.",
+      "headline_emphasis": "An Experience.",
+      "subheadline": "Transform your restaurant menu into an interactive digital experience designed around your brand.",
+      "price": "$65/month",
+      "primary_cta": "Build My Menu"
+    },
+    "interactiveDemo": {
+      "title": "Make every dish more engaging.",
+      "description": "Give customers more than a list of dishes. Let them explore your menu through images, videos, animations, ingredients and interactive information."
+    },
+    "featureGrid": {
+      "items": [
+        "Interactive dishes",
+        "Animations",
+        "Videos",
+        "Ingredient information",
+        "Allergy information",
+        "Custom interactions",
+        "Unlimited edits",
+        "Responsive design"
+      ]
+    },
+    "experienceFlow": {
+      "title": "From menu item to digital experience.",
+      "steps": [
+        "Discover the dish",
+        "Explore the visuals",
+        "View ingredients",
+        "Check allergens",
+        "Choose what to order"
+      ]
+    },
+    "pricing": {
+      "price": "$65/month",
+      "description": "Unlimited edits while your membership remains active."
+    },
+    "cta": {
+      "title": "Your menu can do more.",
+      "button": "Start My Digital Menu"
+    }
+  },
+  "nfcTouchpoints": {
+    "metadata": {
+      "title": "NFC Digital Touchpoints for Businesses | ADDSTRATEGIC",
+      "description": "NFC stickers, cards and plaques that instantly connect customers to menus, reviews, payments, reservations and any digital destination."
+    },
+    "hero": {
+      "eyebrow": "NFC DIGITAL SOLUTIONS",
+      "headline": "One Tap.",
+      "headline_emphasis": "Anywhere.",
+      "subheadline": "Connect your customers to anything with a simple tap.",
+      "primary_cta": "Explore NFC"
+    },
+    "interactiveDemo": {
+      "title": "Tap. Connect. Done.",
+      "description": "A customer brings their phone close to an NFC touchpoint and is instantly redirected to the destination configured by the business."
+    },
+    "useCases": {
+      "title": "One technology. Multiple possibilities.",
+      "items": [
+        {
+          "title": "Digital Menu",
+          "description": "Send customers directly to your digital menu."
+        },
+        {
+          "title": "Reviews",
+          "description": "Make leaving a review faster and easier."
+        },
+        {
+          "title": "Payments",
+          "description": "Connect customers directly to a payment destination."
+        },
+        {
+          "title": "Reservations",
+          "description": "Send customers to your booking experience."
+        },
+        {
+          "title": "Social Media",
+          "description": "Connect physical spaces with your social channels."
+        },
+        {
+          "title": "Custom Destination",
+          "description": "Redirect customers to virtually any digital destination."
+        }
+      ]
+    },
+    "physicalToDigital": {
+      "title": "Turn physical spaces into digital touchpoints.",
+      "description": "Use NFC stickers, cards or plaques to connect real-world interactions with digital experiences."
+    },
+    "audiences": {
+      "title": "Built for more than restaurants.",
+      "items": [
+        "Restaurants",
+        "Hotels",
+        "Retail businesses",
+        "Events",
+        "Service businesses",
+        "Offices",
+        "Personal brands"
+      ]
+    },
+    "cta": {
+      "title": "What should your customers access with one tap?",
+      "button": "Create My NFC Solution"
+    }
+  },
   "testimonials": {
     "title": "Testimonials",
     "testimonialsData": [
@@ -259,7 +493,15 @@
     { "name": "Portfolio", "url": "/portfolio" },
     { "name": "Industries", "url": "/industries" },
     { "name": "Tools", "url": "/tools" },
-    { "name": "Services", "url": "/#services" },
+    { "name": "Services", "url": "/#services", "sublinks": [
+      { "name": "Web Development", "url": "/#services" },
+      { "name": "Custom Software + Web Development", "url": "/#services" },
+      { "name": "Business Software Development", "url": "/#services" },
+      { "name": "Restaurant Digital Solutions", "url": "/#restaurant-services" },
+      { "name": "Digital Menu", "url": "/services/digital-menu", "indent": true },
+      { "name": "Digital Menu Essence", "url": "/services/digital-menu/essence", "indent": true },
+      { "name": "NFC Digital Touchpoints", "url": "/services/nfc", "indent": true }
+    ]},
     { "name": "Contact Us", "url": "/#contact", "cta": true }
   ],
   "FooterLinks": [
@@ -411,6 +653,32 @@
           "Unlimited Edits",
           "Lifetime Updates"
         ]
+      },
+      {
+        "name": "Digital Menu",
+        "price": "$55 / $65",
+        "desc": "Digital solutions for restaurants",
+        "features": [
+          "Basic: Custom design ($55 one-time)",
+          "Essence: Interactive + Updates ($65/mo)",
+          "Restaurant branding integration",
+          "Responsive mobile experience"
+        ],
+        "cta": "View Digital Menu",
+        "route": "/services/digital-menu"
+      },
+      {
+        "name": "NFC Touchpoints",
+        "price": "Custom",
+        "desc": "Connect physical spaces to digital destinations",
+        "features": [
+          "NFC cards, plaques and stickers",
+          "Connect to Digital Menu or Reviews",
+          "Connect to Payment links or WhatsApp",
+          "Instant interaction without apps"
+        ],
+        "cta": "Explore NFC",
+        "route": "/services/nfc"
       }
     ]
   },

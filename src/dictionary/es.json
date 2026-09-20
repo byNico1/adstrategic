@@ -126,6 +126,240 @@
       }
     ]
   },
+  "restaurantServices": {
+    "title": "Soluciones Digitales para Restaurantes",
+    "description": "Experiencias digitales diseñadas para ayudar a los restaurantes a modernizar la forma en que presentan sus menús, conectan con sus clientes y convierten puntos de contacto físicos en interacciones digitales.",
+    "cards": [
+      {
+        "id": "digital-menu-basic",
+        "title": "Menú Digital",
+        "subtitle": "Básico",
+        "price": "$55",
+        "billing": "pago único",
+        "description": "Un menú digital profesional y responsivo diseñado en torno a la marca de tu restaurante.",
+        "features": [
+          "Diseño personalizado",
+          "Categorías de menú",
+          "Precios y descripciones",
+          "Diseño móvil responsivo",
+          "Interfaz adaptada a la marca",
+          "Publicación digital",
+          "Garantía de 1 mes"
+        ],
+        "limitations": [
+          "No incluye ediciones post-lanzamiento",
+          "Dominio no incluido"
+        ],
+        "cta": "Obtén tu Menú Digital",
+        "route": "/services/digital-menu"
+      },
+      {
+        "id": "digital-menu-essence",
+        "title": "Menú Digital",
+        "subtitle": "Essence",
+        "price": "$65",
+        "billing": "por mes",
+        "description": "Convierte tu menú en una experiencia digital interactiva con actualizaciones ilimitadas y contenido más rico.",
+        "features": [
+          "Todo en Básico",
+          "Ediciones ilimitadas",
+          "Platos interactivos",
+          "Animaciones",
+          "Videos",
+          "Información de ingredientes",
+          "Información de alergias",
+          "Interacciones personalizadas",
+          "Actualizaciones continuas"
+        ],
+        "cta": "Construye mi Menú",
+        "route": "/services/digital-menu/essence",
+        "highlight": true
+      },
+      {
+        "id": "nfc-touchpoints",
+        "title": "Puntos de Contacto NFC",
+        "subtitle": "Un toque. Cualquier destino.",
+        "price": "Personalizado",
+        "billing": "basado en la configuración",
+        "description": "Pegatinas, tarjetas y placas NFC que conectan instantáneamente espacios físicos con destinos digitales.",
+        "examples": [
+          "Menú Digital",
+          "Reseñas de Google",
+          "Enlaces de pago",
+          "Reservas",
+          "Instagram",
+          "Pedidos",
+          "WhatsApp",
+          "Cualquier URL personalizada"
+        ],
+        "cta": "Explora NFC",
+        "route": "/services/nfc"
+      }
+    ]
+  },
+  "digitalMenu": {
+    "metadata": {
+      "title": "Diseño de Menú Digital para Restaurantes | ADDSTRATEGIC",
+      "description": "Menús digitales personalizados para restaurantes con diseño responsivo, marca, precios, descripciones y experiencias interactivas opcionales."
+    },
+    "hero": {
+      "eyebrow": "SOLUCIONES DIGITALES PARA RESTAURANTES",
+      "headline": "Tu Menú, Digitalizado.",
+      "subheadline": "Convierte el menú de tu restaurante en una experiencia digital rápida y responsiva diseñada en torno a tu marca.",
+      "price": "$55 pago único",
+      "primary_cta": "Obtén tu Menú Digital",
+      "secondary_cta": "Mira qué incluye"
+    },
+    "problemSolution": {
+      "title": "¿Aún usas menús impresos o archivos PDF?",
+      "description": "Ofrece a tus clientes una forma más rápida, limpia y moderna de explorar tu menú directamente desde su teléfono."
+    },
+    "features": {
+      "title": "Todo lo que necesitas para ser digital.",
+      "items": [
+        "Diseño de menú personalizado",
+        "Integración de la marca del restaurante",
+        "Categorías y secciones",
+        "Precios y descripciones",
+        "Experiencia móvil responsiva",
+        "Publicación digital",
+        "Garantía de 1 mes"
+      ]
+    },
+    "pricing": {
+      "title": "Elige tu experiencia de menú digital",
+      "plans": [
+        {
+          "name": "Básico",
+          "price": "$55",
+          "billing": "pago único"
+        },
+        {
+          "name": "Essence",
+          "price": "$65",
+          "billing": "mensual"
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para digitalizar tu menú?",
+      "button": "Comienza tu Menú"
+    }
+  },
+  "digitalMenuEssence": {
+    "metadata": {
+      "title": "Menús Digitales Interactivos para Restaurantes | ADDSTRATEGIC",
+      "description": "Menús digitales interactivos con animaciones, videos, información de alergias, platos interactivos y actualizaciones mensuales ilimitadas."
+    },
+    "hero": {
+      "eyebrow": "MENÚ DIGITAL ESSENCE",
+      "headline": "Más que un Menú.",
+      "headline_emphasis": "Una Experiencia.",
+      "subheadline": "Transforma el menú de tu restaurante en una experiencia digital interactiva diseñada en torno a tu marca.",
+      "price": "$65/mes",
+      "primary_cta": "Construye mi Menú"
+    },
+    "interactiveDemo": {
+      "title": "Haz que cada plato sea más atractivo.",
+      "description": "Ofrece a tus clientes más que una lista de platos. Permíteles explorar tu menú a través de imágenes, videos, animaciones, ingredientes e información interactiva."
+    },
+    "featureGrid": {
+      "items": [
+        "Platos interactivos",
+        "Animaciones",
+        "Videos",
+        "Información de ingredientes",
+        "Información de alergias",
+        "Interacciones personalizadas",
+        "Ediciones ilimitadas",
+        "Diseño responsivo"
+      ]
+    },
+    "experienceFlow": {
+      "title": "Del artículo del menú a la experiencia digital.",
+      "steps": [
+        "Descubre el plato",
+        "Explora lo visual",
+        "Ver ingredientes",
+        "Revisar alérgenos",
+        "Elige qué ordenar"
+      ]
+    },
+    "pricing": {
+      "price": "$65/mes",
+      "description": "Ediciones ilimitadas mientras tu membresía siga activa."
+    },
+    "cta": {
+      "title": "Tu menú puede hacer más.",
+      "button": "Inicia mi Menú Digital"
+    }
+  },
+  "nfcTouchpoints": {
+    "metadata": {
+      "title": "Puntos de Contacto Digitales NFC para Empresas | ADDSTRATEGIC",
+      "description": "Pegatinas, tarjetas y placas NFC que conectan instantáneamente a los clientes con menús, reseñas, pagos, reservas y cualquier destino digital."
+    },
+    "hero": {
+      "eyebrow": "SOLUCIONES DIGITALES NFC",
+      "headline": "Un Toque.",
+      "headline_emphasis": "Donde Sea.",
+      "subheadline": "Conecta a tus clientes a cualquier cosa con un simple toque.",
+      "primary_cta": "Explora NFC"
+    },
+    "interactiveDemo": {
+      "title": "Toca. Conecta. Listo.",
+      "description": "Un cliente acerca su teléfono a un punto de contacto NFC y es redirigido instantáneamente al destino configurado por la empresa."
+    },
+    "useCases": {
+      "title": "Una tecnología. Múltiples posibilidades.",
+      "items": [
+        {
+          "title": "Menú Digital",
+          "description": "Envía a los clientes directamente a tu menú digital."
+        },
+        {
+          "title": "Reseñas",
+          "description": "Haz que dejar una reseña sea más rápido y sencillo."
+        },
+        {
+          "title": "Pagos",
+          "description": "Conecta a los clientes directamente a un destino de pago."
+        },
+        {
+          "title": "Reservas",
+          "description": "Envía a los clientes a tu experiencia de reserva."
+        },
+        {
+          "title": "Redes Sociales",
+          "description": "Conecta los espacios físicos con tus canales sociales."
+        },
+        {
+          "title": "Destino Personalizado",
+          "description": "Redirige a los clientes a prácticamente cualquier destino digital."
+        }
+      ]
+    },
+    "physicalToDigital": {
+      "title": "Convierte los espacios físicos en puntos de contacto digitales.",
+      "description": "Usa pegatinas, tarjetas o placas NFC para conectar interacciones del mundo real con experiencias digitales."
+    },
+    "audiences": {
+      "title": "Construido para más que restaurantes.",
+      "items": [
+        "Restaurantes",
+        "Hoteles",
+        "Negocios minoristas",
+        "Eventos",
+        "Negocios de servicios",
+        "Oficinas",
+        "Marcas personales"
+      ]
+    },
+    "cta": {
+      "title": "¿A qué deberían acceder tus clientes con un toque?",
+      "button": "Crea mi Solución NFC"
+    }
+  },
   "testimonials": {
     "title": "Testimonios",
     "testimonialsData": [
@@ -262,6 +496,15 @@
     { "name": "Portafolio", "url": "/portfolio" },
     { "name": "Industrias", "url": "/industries" },
     { "name": "Herramientas", "url": "/tools" },
+    { "name": "Servicios", "url": "/#services", "sublinks": [
+      { "name": "Desarrollo Web", "url": "/#services" },
+      { "name": "Software A La Medida + Desarrollo Web", "url": "/#services" },
+      { "name": "Desarrollo de Software Empresarial", "url": "/#services" },
+      { "name": "Soluciones Digitales para Restaurantes", "url": "/#restaurant-services" },
+      { "name": "Menú Digital", "url": "/services/digital-menu", "indent": true },
+      { "name": "Menú Digital Essence", "url": "/services/digital-menu/essence", "indent": true },
+      { "name": "Puntos de Contacto NFC", "url": "/services/nfc", "indent": true }
+    ]},
     { "name": "Contactanos", "url": "/#contact", "cta": true }
   ],
   "FooterLinks": [
@@ -413,6 +656,32 @@
           "Ediciones Ilimitadas",
           "Actualizaciones de por Vida"
         ]
+      },
+      {
+        "name": "Menú Digital",
+        "price": "$55 / $65",
+        "desc": "Soluciones digitales para restaurantes",
+        "features": [
+          "Básico: Diseño personalizado ($55 único)",
+          "Essence: Interactivo + Actualizaciones ($65/mes)",
+          "Integración de marca del restaurante",
+          "Experiencia móvil responsiva"
+        ],
+        "cta": "Ver Menú Digital",
+        "route": "/services/digital-menu"
+      },
+      {
+        "name": "Puntos NFC",
+        "price": "A Medida",
+        "desc": "Conecta espacios físicos con destinos digitales",
+        "features": [
+          "Tarjetas, placas y pegatinas NFC",
+          "Conecta a Menú Digital o Reseñas",
+          "Conecta a Enlaces de pago o WhatsApp",
+          "Interacción al instante sin apps"
+        ],
+        "cta": "Explorar NFC",
+        "route": "/services/nfc"
       }
     ]
   },

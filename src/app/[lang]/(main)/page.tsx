@@ -10,7 +10,7 @@ import WhyUs from "@/components/Home/WhyUs"
 import MultiLayerParallax from "@/components/MultiLayerParallax"
 import Process from "@/home/Process"
 import Scroller from "@/home/Scroller"
-import Services from "@/home/Services"
+
 import PricingSection from "@/src/components/Pricing/PricingSection"
 import { getDictionary } from "@/src/get-dictionary"
 import { Locale } from "@/src/i18n-config"
@@ -35,6 +35,7 @@ export default async function Web({ params: { lang } }: { params: { lang: Locale
       <MultiLayerParallax dictionary={dictionary.hero} />
 
       <SponsorsSlider dictionary={dictionary.sponsors} />
+
 
       <Process dictionary={dictionary.process} />
 

@@ -10,6 +10,8 @@ import { Button } from "@/shadcn/button"
 import { type getDictionary } from "@/src/get-dictionary"
 import { Locale } from "@/src/i18n-config"
 import { LanguageToggle } from "../ui/language-toggle"
+import { ChevronDown } from "lucide-react"
+import { cn } from "@/utils/utils"
 
 export const Header = ({
   headerLinks,
@@ -45,15 +47,44 @@ export const Header = ({
         >
           <div className="flex w-full flex-col items-center justify-center gap-8 px-5 font-semibold max-lg:text-lg lg:flex-row">
             {navLinks.map((link) => (
-              <Link onClick={() => setIsOpened(false)} key={link.name} href={`${link.url}`}>
-                <Button
-                  variant="ghost"
-                  size="lg"
-                  className="max-lg:text-xl max-lg:hover:bg-blue-200 max-lg:dark:hover:bg-cyan-700"
-                >
-                  {link.name}
-                </Button>
-              </Link>
+              "sublinks" in link && link.sublinks ? (
+                <div key={link.name} className="group relative w-full lg:w-auto">
+                  <div className="flex items-center w-full justify-center lg:justify-start">
+                    <Link href={`${link.url}`} onClick={() => setIsOpened(false)}>
+                      <Button
+                        variant="ghost"
+                        size="lg"
+                        className="max-lg:text-xl max-lg:hover:bg-blue-200 max-lg:dark:hover:bg-cyan-700"
+                      >
+                        {link.name}
+                        <ChevronDown className="ml-1 h-4 w-4 transition-transform group-hover:rotate-180 hidden lg:inline-block" />
+                      </Button>
+                    </Link>
+                  </div>
+                  <div className="hidden max-lg:flex max-lg:flex-col max-lg:items-center max-lg:mt-2 lg:group-hover:block lg:absolute lg:top-full lg:left-0 lg:w-72 lg:bg-white lg:dark:bg-slate-900 lg:border lg:border-gray-200 lg:dark:border-slate-800 lg:shadow-xl lg:rounded-xl lg:py-2 z-[100]">
+                    {link.sublinks.map((sub: any) => (
+                      <Link key={sub.name} href={`${sub.url}`} onClick={() => setIsOpened(false)} className="block w-full text-center lg:text-left">
+                        <Button
+                          variant="ghost"
+                          className={cn("w-full lg:justify-start rounded-none px-4 py-3 text-sm font-medium hover:bg-gray-100 dark:hover:bg-slate-800", sub.indent ? "lg:pl-8 text-brand" : "text-gray-800 dark:text-gray-200")}
+                        >
+                          {sub.name}
+                        </Button>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link onClick={() => setIsOpened(false)} key={link.name} href={`${link.url}`}>
+                  <Button
+                    variant="ghost"
+                    size="lg"
+                    className="max-lg:text-xl max-lg:hover:bg-blue-200 max-lg:dark:hover:bg-cyan-700"
+                  >
+                    {link.name}
+                  </Button>
+                </Link>
+              )
             ))}
 
             <div className="lg:hidden">

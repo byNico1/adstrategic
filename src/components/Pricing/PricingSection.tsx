@@ -4,8 +4,9 @@ import { useCallback } from "react"
 import { CheckCircle2, ChevronLeft, ChevronRight, Code2, ArrowRight, Cpu, Layers, Workflow } from "lucide-react"
 import Container from "@/src/components/Container"
 import useEmblaCarousel from "embla-carousel-react"
-import Autoplay from "embla-carousel-autoplay"
+import AutoScroll from "embla-carousel-auto-scroll"
 import { motion } from "framer-motion"
+import Link from "next/link"
 import type { getDictionary } from "@/src/get-dictionary"
 
 type PricingDictionary = Awaited<ReturnType<typeof getDictionary>>["pricing"]
@@ -17,8 +18,8 @@ const fadeUp = {
 
 export default function PricingSection({ data, lang }: { data: PricingDictionary; lang: string }) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, align: "center", breakpoints: { "(min-width: 768px)": { align: "start" } } },
-    [Autoplay({ delay: 5000, stopOnInteraction: true })]
+    { loop: true, align: "center", dragFree: true, breakpoints: { "(min-width: 768px)": { align: "start" } } },
+    [AutoScroll({ playOnInit: true, speed: 1, stopOnInteraction: false, stopOnMouseEnter: true })]
   )
 
   const scrollPrev = useCallback(() => {
@@ -60,49 +61,62 @@ export default function PricingSection({ data, lang }: { data: PricingDictionary
               const isPopular = index === 2
 
               return (
-                <div key={index} className="min-w-0 flex-[0_0_100%] pl-4 md:flex-[0_0_50%] lg:flex-[0_0_33.333%]">
+                <div key={index} className="min-w-0 flex-[0_0_100%] pl-4 md:flex-[0_0_50%] lg:flex-[0_0_300px]">
                   <div
                     className={`relative flex h-full flex-col rounded-3xl border ${
                       isPopular
                         ? "border-brand bg-slate-800/90 shadow-[0_0_30px_rgba(6,182,212,0.15)]"
                         : "border-slate-800 bg-slate-900/80"
-                    } p-8 backdrop-blur-xl transition-all duration-300`}
+                    } p-6 backdrop-blur-xl transition-all duration-300`}
                   >
                     {isPopular && (
-                      <div className="shadow-brand/20 absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-brand px-4 py-1 text-sm font-bold uppercase tracking-wider text-white shadow-lg">
+                      <div className="shadow-brand/20 absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-brand px-3 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-lg whitespace-nowrap">
                         {lang === "es" ? "Más Popular" : "Most Popular"}
                       </div>
                     )}
 
-                    <h3 className="mb-2 text-2xl font-bold text-white">{plan.name}</h3>
-                    <p className="mb-6 h-10 text-sm text-slate-400">{plan.desc}</p>
+                    <h3 className="mb-2 text-xl font-bold text-white">{plan.name}</h3>
+                    <p className="mb-4 h-10 text-xs text-slate-400">{plan.desc}</p>
 
-                    <div className="mb-8">
-                      <span className="text-sm font-semibold uppercase tracking-wider text-slate-500">
+                    <div className="mb-6">
+                      <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                         {lang === "es" ? "Desde" : "Starts at"}
                       </span>
-                      <div className="mt-1 text-5xl font-black text-white">{plan.price}</div>
+                      <div className="mt-1 text-4xl font-black text-white">{plan.price}</div>
                     </div>
 
-                    <ul className="mb-8 flex-1 space-y-4">
+                    <ul className="mb-6 flex-1 space-y-3">
                       {plan.features.map((feat, fIdx) => (
-                        <li key={fIdx} className="flex items-start gap-3 text-slate-300">
-                          <CheckCircle2 className="h-5 w-5 shrink-0 text-brand" />
+                        <li key={fIdx} className="flex items-start gap-2.5 text-sm text-slate-300">
+                          <CheckCircle2 className="h-4 w-4 shrink-0 text-brand mt-0.5" />
                           <span>{feat}</span>
                         </li>
                       ))}
                     </ul>
 
-                    <button
-                      onClick={openSheet}
-                      className={`w-full cursor-pointer rounded-xl py-4 text-lg font-bold transition-all hover:scale-[1.02] active:scale-95 ${
-                        isPopular
-                          ? "shadow-brand/20 bg-brand text-white shadow-lg"
-                          : "border border-slate-700 bg-slate-800 text-white hover:bg-slate-700"
-                      }`}
-                    >
-                      {lang === "es" ? "Comenzar Proyecto" : "Start Project"}
-                    </button>
+                    {(plan as any).route ? (
+                      <Link
+                        href={(plan as any).route}
+                        className={`w-full text-center block cursor-pointer rounded-xl py-3 text-base font-bold transition-all hover:scale-[1.02] active:scale-95 ${
+                          isPopular
+                            ? "shadow-brand/20 bg-brand text-white shadow-lg"
+                            : "border border-slate-700 bg-slate-800 text-white hover:bg-slate-700"
+                        }`}
+                      >
+                        {(plan as any).cta || (lang === "es" ? "Comenzar Proyecto" : "Start Project")}
+                      </Link>
+                    ) : (
+                      <button
+                        onClick={openSheet}
+                        className={`w-full cursor-pointer rounded-xl py-3 text-base font-bold transition-all hover:scale-[1.02] active:scale-95 ${
+                          isPopular
+                            ? "shadow-brand/20 bg-brand text-white shadow-lg"
+                            : "border border-slate-700 bg-slate-800 text-white hover:bg-slate-700"
+                        }`}
+                      >
+                        {(plan as any).cta || (lang === "es" ? "Comenzar Proyecto" : "Start Project")}
+                      </button>
+                    )}
                   </div>
                 </div>
               )
