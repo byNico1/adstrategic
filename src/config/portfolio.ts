@@ -49,6 +49,15 @@ export const portfolioProducts: PortfolioItem[] = [
 
 export const portfolioClients: PortfolioItem[] = [
   {
+    name: "Smart Snack Nutrition",
+    description: {
+      es: "Club de nutrición y bienestar en Pembroke Pines, Florida, especializado en batidos de proteína, tés energéticos, bowls de açaí y snacks saludables.",
+      en: "Nutrition club and wellness bar in Pembroke Pines, Florida, specializing in protein shakes, clean energy teas, fresh açaí bowls, and healthy snacks.",
+    },
+    url: "https://www.smartsnacksflorida.com/",
+    image: "/assets/results/samrtsnackpicture.png",
+  },
+  {
     name: "Unique Catering & Bakery",
     description: {
       es: "Servicio de catering exclusivo y repostería artesanal para bodas, eventos sociales y corporativos en Austin, Texas.",
