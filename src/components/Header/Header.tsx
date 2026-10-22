@@ -62,9 +62,10 @@ export const Header = ({
         >
           <div className="flex w-full flex-col items-center justify-center gap-6 px-5 font-semibold max-lg:text-lg lg:flex-row lg:gap-8">
             {navLinks.map((link) => {
-              const hasSublinks = "sublinks" in link && Boolean(link.sublinks && link.sublinks.length > 0)
+              const sublinks = "sublinks" in link ? link.sublinks : undefined
+              const hasSublinks = Boolean(sublinks && sublinks.length > 0)
 
-              if (hasSublinks) {
+              if (hasSublinks && sublinks) {
                 const isOpen = openAccordion === link.name
                 return (
                   <div key={link.name} className="w-full lg:w-auto">
@@ -93,7 +94,7 @@ export const Header = ({
                         )}
                       >
                         <div className="overflow-hidden flex flex-col items-center gap-1 rounded-2xl bg-slate-900/70 border border-white/10 p-2 backdrop-blur-md">
-                          {link.sublinks.map((sub: any) => (
+                          {sublinks.map((sub: any) => (
                             <Link
                               key={sub.name}
                               href={`${sub.url}`}
@@ -127,7 +128,7 @@ export const Header = ({
                         </Link>
                       </div>
                       <div className="hidden group-hover:block absolute top-full left-0 w-72 bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 shadow-xl rounded-xl py-2 z-[100]">
-                        {link.sublinks.map((sub: any) => (
+                        {sublinks.map((sub: any) => (
                           <Link
                             key={sub.name}
                             href={`${sub.url}`}
